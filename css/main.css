@@ -2782,28 +2782,3 @@ ul.breadcrumb li:last-child {
     padding: 10px 12px;
   }
 }
-.header-inner {
-  border-radius: 20px 20px 20px 20px;
-}
-.sidebar {
-  transition-duration: 0.4s;
-  border-radius: 10px 10px 10px 10px;
-}
-.sidebar-inner {
-  background: var(--content-bg-color);
-  border-radius: 10px 10px 10px 10px;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-  box-sizing: border-box;
-  color: var(--text-color);
-  width: 240px;
-}
-body {
-  background: url("/images/background.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 50%;
-  color: var(--text-color);
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 1em;
-  line-height: 2;
-}
