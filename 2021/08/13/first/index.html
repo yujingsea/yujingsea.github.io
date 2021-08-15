@@ -375,6 +375,7 @@
 
 
 
+    <div class="comments gitalk-container"></div>
 </div>
   </main>
 
@@ -429,6 +430,23 @@
 
 
 
+
+    、
+        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        <script type="text/javascript"> 
+            var gitalk = new Gitalk({
+                clientID: '', 
+                clientSecret: '',
+                id: 'markdown语法笔记（Typora)', 
+                repo: 'blogtalk',
+                owner: '',                     
+                admin: '', 
+                distractionFreeMode: ,
+            }) 
+            gitalk.render('gitalk-container') 
+        </script>  
+     
 
 </body>
 </html>
