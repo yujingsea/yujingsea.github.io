@@ -171,6 +171,27 @@
       </tags>
   </entry>
   <entry>
+    <title>搭建博客的原因</title>
+    <url>/2021/08/15/third/</url>
+    <content><![CDATA[<h1 id="搭建博客的原因"><a href="#搭建博客的原因" class="headerlink" title="搭建博客的原因"></a>搭建博客的原因</h1><p>也许是心血来潮，看到别人的博客满满都是学习编程的<strong>笔记</strong>，忍不住要试一下。也许这也算是<strong>他律</strong>了，尽管访问量不见上涨，我依旧有发博客的动力，也许只是刚开始有新鲜感（都这么说），但这东西确实上瘾。我觉得程序员的快乐来源中，成功运行程序的<strong>成就感，满足感</strong>应该是占比不少的。</p>
+<span id="more"></span>
+
+<p>也许暑假更应该了解大学，规划未来的<strong>路线</strong>，而不是继续学习许多新的知识，当然，我不否认预习的好处。</p>
+<p>我已经打算<strong>考研</strong>，至少要去了解如何尽快过四六级，计算机考研考什么，考专硕还是学硕，奖学金怎么申请，面试笔试内容是什么，有哪些网站可以更好刷题，保研的条件我是否能企及……</p>
+<p>我前几天又重温了2018年的华语辩论世界杯，辩题是21世纪青年人应该做加法还是减法，作为即将步入大学生活的青年，没有阅历不要紧，可以做适当的减法，到了大学，经历过便自然懂了，更应该做加法。青云姐姐的一句“趁着年轻，我偏要勉强”令我无比动容。</p>
+<p><img src="http://p6.itc.cn/images01/20210112/f6c38f135f9c43c9853db7395dad59a7.jpeg"></p>
+<p>只有构建好框架，才能往里面填充一些东西。博客就是一个框架，如果做的好，甚至会成为我面试时简历上的一个闪光点。</p>
+<p>信息爆炸的时代，利用爬虫可以高效抓取网络信息，学习计算机，一方面是为了<strong>高薪</strong>，另一方面是让计算机成为我的大脑，让我能<strong>高效获取</strong>高质的<strong>信息</strong>。</p>
+<p><img src="https://bbs-img-cbc-cn.obs.cn-north-1.myhuaweicloud.com/data/attachment/forum/202012/29/15055096ql2xdaub4r8bg7.png" alt="查看源图像"></p>
+<p>话说回来，这是一个<strong>静态</strong>博客，我可以个性化布局，可以在本地写文章，网络成本低，完全<strong>免费</strong>，更适合我这种一无所知的小白。我用的是近年流行的方法，hexo部署到github,我没有期望太多访问量，所以关于链接无法被百度收录的问题也不必在乎（github禁止百度爬虫，当然有大佬也能解决）。我用的是热门的nexT主题，出问题了容易得到网络<strong>帮助</strong>。</p>
+<p>经验都是<strong>坑</strong>出来的，我搭建hexo时用cmd安装不了git，又在git bash重试了一遍。</p>
+<p>搭建成功的那份喜悦，让我觉得一切都值得。</p>
+]]></content>
+      <tags>
+        <tag>message</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C语言入门笔记（2）</title>
     <url>/2021/08/17/sixth/</url>
     <content><![CDATA[<h1 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h1><p>一个表达式是一系列运算符和算子的组合，用来计算一个值</p>
@@ -224,27 +245,6 @@
 ]]></content>
       <tags>
         <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搭建博客的原因</title>
-    <url>/2021/08/15/third/</url>
-    <content><![CDATA[<h1 id="搭建博客的原因"><a href="#搭建博客的原因" class="headerlink" title="搭建博客的原因"></a>搭建博客的原因</h1><p>也许是心血来潮，看到别人的博客满满都是学习编程的<strong>笔记</strong>，忍不住要试一下。也许这也算是<strong>他律</strong>了，尽管访问量不见上涨，我依旧有发博客的动力，也许只是刚开始有新鲜感（都这么说），但这东西确实上瘾。我觉得程序员的快乐来源中，成功运行程序的<strong>成就感，满足感</strong>应该是占比不少的。</p>
-<span id="more"></span>
-
-<p>也许暑假更应该了解大学，规划未来的<strong>路线</strong>，而不是继续学习许多新的知识，当然，我不否认预习的好处。</p>
-<p>我已经打算<strong>考研</strong>，至少要去了解如何尽快过四六级，计算机考研考什么，考专硕还是学硕，奖学金怎么申请，面试笔试内容是什么，有哪些网站可以更好刷题，保研的条件我是否能企及……</p>
-<p>我前几天又重温了2018年的华语辩论世界杯，辩题是21世纪青年人应该做加法还是减法，作为即将步入大学生活的青年，没有阅历不要紧，可以做适当的减法，到了大学，经历过便自然懂了，更应该做加法。青云姐姐的一句“趁着年轻，我偏要勉强”令我无比动容。</p>
-<p><img src="http://p6.itc.cn/images01/20210112/f6c38f135f9c43c9853db7395dad59a7.jpeg"></p>
-<p>只有构建好框架，才能往里面填充一些东西。博客就是一个框架，如果做的好，甚至会成为我面试时简历上的一个闪光点。</p>
-<p>信息爆炸的时代，利用爬虫可以高效抓取网络信息，学习计算机，一方面是为了<strong>高薪</strong>，另一方面是让计算机成为我的大脑，让我能<strong>高效获取</strong>高质的<strong>信息</strong>。</p>
-<p><img src="https://bbs-img-cbc-cn.obs.cn-north-1.myhuaweicloud.com/data/attachment/forum/202012/29/15055096ql2xdaub4r8bg7.png" alt="查看源图像"></p>
-<p>话说回来，这是一个<strong>静态</strong>博客，我可以个性化布局，可以在本地写文章，网络成本低，完全<strong>免费</strong>，更适合我这种一无所知的小白。我用的是近年流行的方法，hexo部署到github,我没有期望太多访问量，所以关于链接无法被百度收录的问题也不必在乎（github禁止百度爬虫，当然有大佬也能解决）。我用的是热门的nexT主题，出问题了容易得到网络<strong>帮助</strong>。</p>
-<p>经验都是<strong>坑</strong>出来的，我搭建hexo时用cmd安装不了git，又在git bash重试了一遍。</p>
-<p>搭建成功的那份喜悦，让我觉得一切都值得。</p>
-]]></content>
-      <tags>
-        <tag>message</tag>
       </tags>
   </entry>
 </search>
