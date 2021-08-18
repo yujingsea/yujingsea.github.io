@@ -46,7 +46,7 @@
 
 <p>这里输入5，5，结果为0.000000，又出错了</p>
 <p>到这里要指出：</p>
-<p>在c语言中<font color="red">两个整数的运算结果只能是整数</font>，用&amp;d得到的是整数，用&amp;f得不到正确结果，如果把3换成3.0，系统在计算时会把a+b的结果化为浮点数，<font color="red">浮点数间的运算就是浮点数</font>。我们再试一下</p>
+<p>在c语言中<font color="red">两个整数的运算结果只能是整数</font>，用%d得到的是整数，用%f得不到正确结果，如果把3换成3.0，系统在计算时会把a+b的结果化为浮点数，<font color="red">浮点数间的运算就是浮点数</font>。我们再试一下</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">&quot;%d %d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;结果为%f。\n&quot;</span>,((a+b)/<span class="number">3.0</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>这里输入5，5，结果正确，为3.333333</p>
@@ -56,15 +56,23 @@
       </tags>
   </entry>
   <entry>
+    <title>评论区开放！</title>
+    <url>/2021/08/15/fourth/</url>
+    <content><![CDATA[<h1 id="gitalk已启用"><a href="#gitalk已启用" class="headerlink" title="gitalk已启用"></a>gitalk已启用</h1><p>nexT支持gitalk,评论者只需有GitHub账号即可，账号可在github官网免费注册，注册真不麻烦，github是一个共享源码的网站，不会有安全隐患，欢迎注册/登录github留言！又白嫖了一次嘿嘿</p>
+]]></content>
+      <tags>
+        <tag>message</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>markdown语法笔记（Typora)</title>
     <url>/2021/08/13/first/</url>
-    <content><![CDATA[<p><em>不学这个怎么迅速发文章。。。</em></p>
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><p> #+空格+内容 回车执行/ctrl+1，ctrl+0复原</p>
+    <content><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><p> #+空格+内容 回车执行/ctrl+1，ctrl+0复原</p>
+<span id="more"></span>
+
 <h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p>##+同上/ctrl+2</p>
 <h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p>###+同上/ctrl+3</p>
 <p>……</p>
-<span id="more"></span>
-
 <h1 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h1><p>编号标点后有空格，回车自动添加序号,添加/删除序号，会自动补序号，两次回车或下键取消序号</p>
 <p>tab降级</p>
 <p>shift+tab升级</p>
@@ -133,7 +141,6 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">java: System.out.println(<span class="string">&quot;hello,world!&quot;</span>);</span><br></pre></td></tr></table></figure>
 
 <h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>ctrl+shift+i</p>
-<p><img src="/2021/08/13/first/Users\Acer\Pictures\thumb-1920-911186.jpg"></p>
 <p><code>![1]</code>(C:\Users\Acer\Pictures\1.jpg省略了一个圆括号</p>
 <p>就这吧，Typora软件很方便</p>
 <p>快捷键应该用于频繁使用的语法</p>
@@ -162,33 +169,51 @@
       </tags>
   </entry>
   <entry>
-    <title>评论区开放！</title>
-    <url>/2021/08/15/fourth/</url>
-    <content><![CDATA[<h1 id="gitalk已启用"><a href="#gitalk已启用" class="headerlink" title="gitalk已启用"></a>gitalk已启用</h1><p>nexT支持gitalk,评论者只需有GitHub账号即可，账号可在github官网免费注册，注册真不麻烦，github是一个共享源码的网站，不会有安全隐患，欢迎注册/登录github留言！又白嫖了一次嘿嘿</p>
-]]></content>
-      <tags>
-        <tag>message</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搭建博客的原因</title>
-    <url>/2021/08/15/third/</url>
-    <content><![CDATA[<h1 id="搭建博客的原因"><a href="#搭建博客的原因" class="headerlink" title="搭建博客的原因"></a>搭建博客的原因</h1><p>也许是心血来潮，看到别人的博客满满都是学习编程的<strong>笔记</strong>，忍不住要试一下。也许这也算是<strong>他律</strong>了，尽管访问量不见上涨，我依旧有发博客的动力，也许只是刚开始有新鲜感（都这么说），但这东西确实上瘾。我觉得程序员的快乐来源中，成功运行程序的<strong>成就感，满足感</strong>应该是占比不少的。</p>
+    <title>C语言入门笔记（3）</title>
+    <url>/2021/08/18/seventh/</url>
+    <content><![CDATA[<h1 id="多重循环"><a href="#多重循环" class="headerlink" title="多重循环"></a>多重循环</h1><p>goto的使用</p>
+<p>使用goto可以跳出多重循环，不建议在其他时候使用</p>
 <span id="more"></span>
 
-<p>也许暑假更应该了解大学，规划未来的<strong>路线</strong>，而不是继续学习许多新的知识，当然，我不否认预习的好处。</p>
-<p>我已经打算<strong>考研</strong>，至少要去了解如何尽快过四六级，计算机考研考什么，考专硕还是学硕，奖学金怎么申请，面试笔试内容是什么，有哪些网站可以更好刷题，保研的条件我是否能企及……</p>
-<p>我前几天又重温了2018年的华语辩论世界杯，辩题是21世纪青年人应该做加法还是减法，作为即将步入大学生活的青年，没有阅历不要紧，可以做适当的减法，到了大学，经历过便自然懂了，更应该做加法。青云姐姐的一句“趁着年轻，我偏要勉强”令我无比动容。</p>
-<p><img src="http://p6.itc.cn/images01/20210112/f6c38f135f9c43c9853db7395dad59a7.jpeg"></p>
-<p>只有构建好框架，才能往里面填充一些东西。博客就是一个框架，如果做的好，甚至会成为我面试时简历上的一个闪光点。</p>
-<p>信息爆炸的时代，利用爬虫可以高效抓取网络信息，学习计算机，一方面是为了<strong>高薪</strong>，另一方面是让计算机成为我的大脑，让我能<strong>高效获取</strong>高质的<strong>信息</strong>。</p>
-<p><img src="https://bbs-img-cbc-cn.obs.cn-north-1.myhuaweicloud.com/data/attachment/forum/202012/29/15055096ql2xdaub4r8bg7.png" alt="查看源图像"></p>
-<p>话说回来，这是一个<strong>静态</strong>博客，我可以个性化布局，可以在本地写文章，网络成本低，完全<strong>免费</strong>，更适合我这种一无所知的小白。我用的是近年流行的方法，hexo部署到github,我没有期望太多访问量，所以关于链接无法被百度收录的问题也不必在乎（github禁止百度爬虫，当然有大佬也能解决）。我用的是热门的nexT主题，出问题了容易得到网络<strong>帮助</strong>。</p>
-<p>经验都是<strong>坑</strong>出来的，我搭建hexo时用cmd安装不了git，又在git bash重试了一遍。</p>
-<p>搭建成功的那份喜悦，让我觉得一切都值得。</p>
+<img src="/2021/08/18/seventh/1.jpg" class title="blog">
+
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>&lt;类型&gt;变量名称[下标，即元素数量]</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a [<span class="number">100</span>]</span><br></pre></td></tr></table></figure>
+
+<p>数组是一种容器</p>
+<p>其中所有的元素具有相同的数据类型</p>
+<p>一旦创建无法改变大小</p>
+<p>数组各元素在内存中连续依次排列</p>
+<p>可出现在赋值的左边或右边，叫做左值或右值</p>
+<p>下标范围为[0，数组大小-1]，超出界限则视为<font color="red">越界</font>，容易出错却不容易报错</p>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>举一个求和函数的例子</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">void</span> sum （ <span class="keyword">int</span> a,<span class="keyword">int</span> b )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> ( i = a;i &lt;= b; i++ )&#123;</span><br><span class="line">        sum += i;</span><br><span class="line">    &#125;</span><br><span class="line">    print (<span class="string">&quot;%d到&amp;d的和为%d\n&quot;</span>,a,b,sum);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sum(<span class="number">1</span>,<span class="number">10</span>);</span><br><span class="line">sum(<span class="number">20</span>,<span class="number">30</span>);</span><br><span class="line">sum(<span class="number">40</span>,<span class="number">50</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="函数头"><a href="#函数头" class="headerlink" title="函数头"></a>函数头</h2><p>其中第一行是函数头，void叫做返回类型，sum是起的函数名，括号内是参数表</p>
+<p>函数头的括号起到了表示函数调用的作用，里面没有参数也不能被删去，如果有参数要给出正确的数量和顺序</p>
+<p>函数可以<font color="red">简化</font>重复的程序,依次进行初始化和返回</p>
+<h2 id="函数体"><a href="#函数体" class="headerlink" title="函数体"></a>函数体</h2><p>最大的代码块内是函数体</p>
+<p>如果想把函数放在主函数下，要先把函数头作为<font color="red">声明</font>放在最前面，告诉编译器你创建了一个何类型，何函数名，何参数的函数，以免系统<font color="red">自上而下</font>识别到函数<font color="red">定义</font>时报错</p>
+<h2 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h2><p>return可以停止函数的执行，并送回一个值，返回的值可以赋给函数外的变量，函数内的变量与函数外的变量<font color="red">无关</font>，return可以单独使用，也可以接表达式</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">return</span>;</span><br><span class="line"><span class="keyword">return</span> a;</span><br></pre></td></tr></table></figure>
+
+<p><strong>int</strong>类型的函数返回值</p>
+<p>需要用return停止函数执行并返回结果</p>
+<p><strong>void</strong>类型的函数不返回值，也就是说调用时不能做返回值的赋值</p>
+<p>不能使用带值的return，也可以不用return</p>
+<h2 id="逗号运算符"><a href="#逗号运算符" class="headerlink" title="逗号运算符"></a>逗号运算符</h2><p>调用函数时的圆括号里的逗号是标点符号，不是运算符</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">i(a,b);</span><br><span class="line">i((a,b));</span><br></pre></td></tr></table></figure>
+
+<h2 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h2><p>循环语句，判断语句可以嵌套，函数则不能嵌套</p>
+<h1 id="本地变量"><a href="#本地变量" class="headerlink" title="本地变量"></a>本地变量</h1><p>定义在函数内部的变量都时本地变量（目前学过的都是）</p>
+<h2 id="生存期"><a href="#生存期" class="headerlink" title="生存期"></a>生存期</h2><p>变量从出现到消失的时期</p>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>变量起作用的代码范围</p>
+<p>对于本地变量，它的生存期和作用域就是大括号（块）</p>
+<h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><p>本地变量定义在块内，可以是函数的块，也可以是语句的块内，也可以定义在语句的块内，甚至可以随便拉一对大括号来定义变量</p>
+<p>块外定义的变量在块内仍有效</p>
 ]]></content>
       <tags>
-        <tag>message</tag>
+        <tag>C</tag>
       </tags>
   </entry>
   <entry>
@@ -245,6 +270,27 @@
 ]]></content>
       <tags>
         <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搭建博客的原因</title>
+    <url>/2021/08/15/third/</url>
+    <content><![CDATA[<h1 id="搭建博客的原因"><a href="#搭建博客的原因" class="headerlink" title="搭建博客的原因"></a>搭建博客的原因</h1><p>也许是心血来潮，看到别人的博客满满都是学习编程的<strong>笔记</strong>，忍不住要试一下。也许这也算是<strong>他律</strong>了，尽管访问量不见上涨，我依旧有发博客的动力，也许只是刚开始有新鲜感（都这么说），但这东西确实上瘾。我觉得程序员的快乐来源中，成功运行程序的<strong>成就感，满足感</strong>应该是占比不少的。</p>
+<span id="more"></span>
+
+<p>也许暑假更应该了解大学，规划未来的<strong>路线</strong>，而不是继续学习许多新的知识，当然，我不否认预习的好处。</p>
+<p>我已经打算<strong>考研</strong>，至少要去了解如何尽快过四六级，计算机考研考什么，考专硕还是学硕，奖学金怎么申请，面试笔试内容是什么，有哪些网站可以更好刷题，保研的条件我是否能企及……</p>
+<p>我前几天又重温了2018年的华语辩论世界杯，辩题是21世纪青年人应该做加法还是减法，作为即将步入大学生活的青年，没有阅历不要紧，可以做适当的减法，到了大学，经历过便自然懂了，更应该做加法。青云姐姐的一句“趁着年轻，我偏要勉强”令我无比动容。</p>
+<p><img src="http://p6.itc.cn/images01/20210112/f6c38f135f9c43c9853db7395dad59a7.jpeg"></p>
+<p>只有构建好框架，才能往里面填充一些东西。博客就是一个框架，如果做的好，甚至会成为我面试时简历上的一个闪光点。</p>
+<p>信息爆炸的时代，利用爬虫可以高效抓取网络信息，学习计算机，一方面是为了<strong>高薪</strong>，另一方面是让计算机成为我的大脑，让我能<strong>高效获取</strong>高质的<strong>信息</strong>。</p>
+<p><img src="https://bbs-img-cbc-cn.obs.cn-north-1.myhuaweicloud.com/data/attachment/forum/202012/29/15055096ql2xdaub4r8bg7.png" alt="查看源图像"></p>
+<p>话说回来，这是一个<strong>静态</strong>博客，我可以个性化布局，可以在本地写文章，网络成本低，完全<strong>免费</strong>，更适合我这种一无所知的小白。我用的是近年流行的方法，hexo部署到github,我没有期望太多访问量，所以关于链接无法被百度收录的问题也不必在乎（github禁止百度爬虫，当然有大佬也能解决）。我用的是热门的nexT主题，出问题了容易得到网络<strong>帮助</strong>。</p>
+<p>经验都是<strong>坑</strong>出来的，我搭建hexo时用cmd安装不了git，又在git bash重试了一遍。</p>
+<p>搭建成功的那份喜悦，让我觉得一切都值得。</p>
+]]></content>
+      <tags>
+        <tag>message</tag>
       </tags>
   </entry>
 </search>
