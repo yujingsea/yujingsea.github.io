@@ -299,7 +299,7 @@
 <p>除了printf函数，剩下的是c语言的基本框架</p>
 <h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p>a = 0;</p>
 <p>把0赋值给a，a作为变量保存了数据0，a之后还可变为其它值。</p>
-<p>a是一种标识符，<font color='red'>只能有字母，数字，下划线组成，数字不能位于头部，关键字不能做标识符</font>。</p>
+<p>a是一种标识符，<font color="red">只能有字母，数字，下划线组成，数字不能位于头部，关键字不能做标识符</font>。</p>
 <p>关键字用多了就记住了，例如char,do,while,if,sizeof….</p>
 <h1 id="赋值与初始化"><a href="#赋值与初始化" class="headerlink" title="赋值与初始化"></a>赋值与初始化</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a;</span><br></pre></td></tr></table></figure>
 
@@ -308,9 +308,9 @@
 <p>这里定义了一个变量a,但你不知道a是几，系统保存的可能是一个任意的数；</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a =<span class="number">0</span>;</span><br></pre></td></tr></table></figure>
 
-<p>在定义变量时，建议<font color='red'>在代码开头的地方定义变量</font>，因为ansi c标准只能在代码开头的地方定义变量，c99标准则无此要求。</p>
+<p>在定义变量时，建议<font color="red">在代码开头的地方定义变量</font>，因为ansi c标准只能在代码开头的地方定义变量，c99标准则无此要求。</p>
 <p>a被初始化为0，系统保存的a的值是0。</p>
-<p><font color='red'>初始化是一个好习惯</font>，不这样做可能会莫名报错，尤其到指针那一块。</p>
+<p><font color="red">初始化是一个好习惯</font>，不这样做可能会莫名报错，尤其到指针那一块。</p>
 <h1 id="scanf函数"><a href="#scanf函数" class="headerlink" title="scanf函数"></a>scanf函数</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a);</span><br></pre></td></tr></table></figure>
 
 <p>%d意为取整数a，&amp;取地址，让我输入a</p>
@@ -332,7 +332,7 @@
 
 <p>这里输入5，5，结果为0.000000，又出错了</p>
 <p>到这里要指出：</p>
-<p>在c语言中<font color='red'>两个整数的运算结果只能是整数</font>，用&amp;d得到的是整数，用&amp;f得不到正确结果，如果把3换成3.0，系统在计算时会把a+b的结果化为浮点数，<font color='red'>浮点数间的运算就是浮点数</font>。我们再试一下</p>
+<p>在c语言中<font color="red">两个整数的运算结果只能是整数</font>，用&amp;d得到的是整数，用&amp;f得不到正确结果，如果把3换成3.0，系统在计算时会把a+b的结果化为浮点数，<font color="red">浮点数间的运算就是浮点数</font>。我们再试一下</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">&quot;%d %d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;结果为%f。\n&quot;</span>,((a+b)/<span class="number">3.0</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>这里输入5，5，结果正确，为3.333333</p>
