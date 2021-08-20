@@ -255,7 +255,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-20 10:26:06 / 修改时间：13:49:28" itemprop="dateCreated datePublished" datetime="2021-08-20T10:26:06+08:00">2021-08-20</time>
+      <time title="创建时间：2021-08-20 10:26:06 / 修改时间：13:52:40" itemprop="dateCreated datePublished" datetime="2021-08-20T10:26:06+08:00">2021-08-20</time>
     </span>
 
   
@@ -288,130 +288,14 @@
 <p>代表定义了一个3行5列的二维数组</p>
 <p>但a [2] [4]</p>
 <p>指的是数组中第3行第5列的那个元素</p>
-<p>因为计算机是<strong>从0开始数数</strong>的</p>
-<p>多维数组也可借此类推</p>
-<h2 id="二维数组的初始化"><a href="#二维数组的初始化" class="headerlink" title="二维数组的初始化"></a>二维数组的初始化</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a [] [<span class="number">5</span>] = &#123;</span><br><span class="line">&#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">5</span>&#125;</span><br><span class="line">&#123;<span class="number">4</span>,<span class="number">7</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">6</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line">也可以将元素放在一行，只是不便阅读</span><br><span class="line"><span class="keyword">int</span> a [] [<span class="number">5</span>] = &#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">6</span>&#125;</span><br></pre></td></tr></table></figure>
-
-<p>列数必须给出，行数可以省略，由编译器来数</p>
-<p>每行一个{}，逗号分隔</p>
-<p>最后的逗号可以存在</p>
-<p>如果省略了元素，表示补零</p>
-<p>也可以用定位（c99 only)</p>
-<h1 id="数组的大小"><a href="#数组的大小" class="headerlink" title="数组的大小"></a>数组的大小</h1><p>sizeof可以表示出某个类型或变量在内存中占据的字节数</p>
-<p>因此数组的元素个数可以用**sizeof(a)/sizeof(a[0])**表示</p>
-<p>这样表述的好处是，一旦修改数组中初始的数据，不需要再修改遍历的代码</p>
-<h1 id="数组的赋值"><a href="#数组的赋值" class="headerlink" title="数组的赋值"></a>数组的赋值</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> b[] = a;</span><br></pre></td></tr></table></figure>
-
-<p>这是不可行的</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> b[] = <span class="keyword">int</span> <span class="keyword">const</span> b[]</span><br></pre></td></tr></table></figure>
-
-
-
-<p>b[]被定义后具有了常属性，不能直接赋值给另一个数组</p>
-<p>但可以让b数组遍历读入a数组的每一个元素，完成所谓的复制，代码如下：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">4</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> b[<span class="number">4</span>];</span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;<span class="number">4</span>; i++ )</span><br><span class="line">&#123;</span><br><span class="line">b[i] = a[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//遍历数组做赋值</span></span><br><span class="line"><span class="keyword">int</span> k;</span><br><span class="line"><span class="keyword">for</span> ( k=<span class="number">0</span>; k&lt;<span class="number">4</span>; k++ ) </span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">&quot;%d &quot;</span>,b[k]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//遍历输出b数组</span></span><br></pre></td></tr></table></figure>
-
-<img src="/2021/08/20/eight/1.jpg" class title="blog">
-
-<p>结果正确，但有些人遍历输出时也用了i</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">4</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> b[<span class="number">4</span>];</span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;<span class="number">4</span>; i++ )</span><br><span class="line">&#123;</span><br><span class="line">b[i] = a[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;<span class="number">4</span>; i++ ) </span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">&quot;%d &quot;</span>,b[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>运行确实没问题，但要指出的是：<font color="red">一专多能是不好的代码</font></p>
-<p>当然也可以用<strong>指针</strong>，这里不再赘述</p>
-<h1 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h1><p>一维数组的遍历可以用一个for循环</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++ ) &#123;</span><br><span class="line">    a [i] = ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>二维数组的遍历则需要用两个for循环</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++ ) &#123;</span><br><span class="line">    <span class="keyword">for</span> (j=<span class="number">0</span>; j&lt;<span class="number">5</span>; j++) &#123;</span><br><span class="line">        a [i] [j] = ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>遍历数组可以做数组的初始化，可以输出数组，可以搜索数组中的元素等等</p>
-<p>在遍历时一般用for循环，<font color="red">最好用0和&lt;</font>,而不是1和&lt;=,因为前者遍历时最大的i<font color="red">恰好是数组的最大下标</font></p>
-<h1 id="运算符-amp"><a href="#运算符-amp" class="headerlink" title="运算符&amp;"></a>运算符&amp;</h1><h2 id="变量的地址"><a href="#变量的地址" class="headerlink" title="变量的地址"></a>变量的地址</h2><p>使用&amp;可以获得变量的地址，地址的大小是否与int相同取决于编译器是32位还是64位</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%x&quot;</span>,&amp;i);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p&quot;</span>,&amp;i);</span><br></pre></td></tr></table></figure>
-
-<p>所以要输出一个变量的地址时，更应该用%p而不是%x，%x只是把地址当成一个16进制的整数，地址并不总和整数相同</p>
-<h2 id="数组的地址"><a href="#数组的地址" class="headerlink" title="数组的地址"></a>数组的地址</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>,&amp;a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>,a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>,&amp;a[<span class="number">0</span>]);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>,&amp;a[<span class="number">1</span>]);</span><br><span class="line">结果为：</span><br><span class="line"><span class="number">0xbff8dd44</span></span><br><span class="line"><span class="number">0xbff8dd44</span></span><br><span class="line"><span class="number">0xbff8dd44</span></span><br><span class="line"><span class="number">0xbff8dd48</span></span><br></pre></td></tr></table></figure>
-
-<p>从中我们可以看出地址&amp;a == a == a[0]，且相邻的元素差4个字节</p>
-<h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h1><p>指针就是保存地址的变量</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>* p == <span class="keyword">int</span> *p</span><br></pre></td></tr></table></figure>
-
-<p>两种写法都一样,类型是int,不是int*</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="keyword">int</span>* p = &amp;i;</span><br></pre></td></tr></table></figure>
-
-<p>i的地址传给了*p,也就是说p指向了i</p>
-<h2 id="指针变量"><a href="#指针变量" class="headerlink" title="指针变量"></a>指针变量</h2><p>普通变量的值是实际的值</p>
-<p>指针变量的值是具有实际值的地址</p>
-<h2 id="作为参数的指针"><a href="#作为参数的指针" class="headerlink" title="作为参数的指针"></a>作为参数的指针</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">( <span class="keyword">int</span> *p )</span></span>;</span><br><span class="line">f( &amp;i );</span><br></pre></td></tr></table></figure>
-
-<p>参数是普通变量的地址</p>
-<p>在这个函数内可以通过这个指针访问外面的变量i</p>
-<h2 id="运算符“-”"><a href="#运算符“-”" class="headerlink" title="运算符“ * ”"></a>运算符“ * ”</h2><p>*是一个单目运算符，用来访问指针的值所表示的地址上的变量</p>
-<p>*P可以做左值和又值</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> k = *p;</span><br><span class="line">*p = k + <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-
-<h2 id="数组作为指针"><a href="#数组作为指针" class="headerlink" title="数组作为指针"></a>数组作为指针</h2><p>数组变量是特殊的指针,因为数组本身表达地址</p>
-<p>因此对于int*p=a，无需用&amp;取地址，但是数组的单元表达的是变量，需要用&amp;取地址</p>
-<p>即a == &amp;a[0],指针也可以用[]运算符</p>
-<p>下面四种函数原型等价</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> *ar,<span class="keyword">int</span> n)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> *,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> ar[],<span class="keyword">int</span> n)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> [],<span class="keyword">int</span>)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<p>另外在函数参数中数组相当于指针</p>
-<h2 id="利用指针交换两个数组"><a href="#利用指针交换两个数组" class="headerlink" title="* 利用指针交换两个数组"></a>* 利用指针交换两个数组</h2><p>代码如下</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">3</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;,b[<span class="number">3</span>]=&#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;,t,i,*p1=a,*p2=b;</span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">&#123;</span><br><span class="line">	t=*p1;</span><br><span class="line">    *p1=*p2;</span><br><span class="line">    *p2=t;</span><br><span class="line">	p1++;</span><br><span class="line">    p2++;</span><br><span class="line">&#125;</span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\t&quot;</span>,a[i]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\t&quot;</span>,b[i]);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<img src="/2021/08/20/eight/2.jpg" class title="blog">
-
-<p>结果正确</p>
-<h1 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h1><h2 id="char"><a href="#char" class="headerlink" title="char"></a>char</h2><p>char是一种整数，也是一种特殊的类型：字符。</p>
-<p>用单引号表示的字符字面量：’a’,’1’</p>
-<p>‘’也是一个字符</p>
-<p>printf和scanf里用%c输入字符</p>
-<h2 id="字符的输入输出"><a href="#字符的输入输出" class="headerlink" title="字符的输入输出"></a>字符的输入输出</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> <span class="keyword">char</span> i = <span class="string">&#x27;1&#x27;</span>;</span><br><span class="line"><span class="built_in">scanf</span>( <span class="string">&quot;%c&quot;</span>,&amp;i );得到<span class="number">1</span></span><br><span class="line"><span class="built_in">scanf</span>( <span class="string">&quot;%d&quot;</span>,&amp;i );得到<span class="number">49</span></span><br></pre></td></tr></table></figure>
-
-<p>因为’1‘的ASCII编码是49</p>
-<h2 id="混合输入"><a href="#混合输入" class="headerlink" title="混合输入"></a>混合输入</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span><span class="built_in">scanf</span>(<span class="string">&quot;%d %c&quot;</span>,&amp;i,&amp;c);</span><br><span class="line"><span class="number">2.</span><span class="built_in">scanf</span>(<span class="string">&quot;%d%c&quot;</span>,&amp;i,&amp;c);</span><br></pre></td></tr></table></figure>
-
-<p>二者不同，在于2中读取输入的两个值时，如果有空格会读取空格，空格的ASCII码为32</p>
-<h2 id="字符计算"><a href="#字符计算" class="headerlink" title="字符计算"></a>字符计算</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c =<span class="string">&#x27;A&#x27;</span>;</span><br><span class="line">c++;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%c\n&quot;</span>,c);</span><br><span class="line">结果为B    </span><br></pre></td></tr></table></figure>
-
-<p>说明一个字符加一个数字得到ASCII码表中那个数之后的字符</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i =<span class="string">&#x27;Z&#x27;</span>-<span class="string">&#x27;A&#x27;</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,i);</span><br><span class="line">结果为<span class="number">25</span></span><br></pre></td></tr></table></figure>
-
-<p>说明两个字符的减，得到的是它们在表中的距离</p>
-<p>大小写转换也可以通过字符计算实现</p>
-<h2 id="逃逸字符"><a href="#逃逸字符" class="headerlink" title="逃逸字符"></a>逃逸字符</h2><p>用来表达<strong>无法印出的控制字符</strong>或<strong>特殊作用的字符</strong></p>
-<img src="/2021/08/20/eight/3.jpg" class title="blog">
-
-<p>要指出的是回车和换行是两个动作，只是编译器顺带着换行一起执行了</p>
-<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> word[] = &#123;<span class="string">&#x27;H&#x27;</span>,<span class="string">&#x27;e&#x27;</span>,<span class="string">&#x27;l&#x27;</span>,<span class="string">&#x27;l&#x27;</span>,<span class="string">&#x27;o&#x27;</span>,<span class="string">&#x27;!&#x27;</span>,<span class="string">&#x27;\0&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
-
-<p>字符串以数组形式存在，以数组或指针的形式访问</p>
-<p>\0是结束的标志，它不是字符串的一部分，但它占用一个字节的空间</p>
-<p>string.h 里有很多处理字符的函数</p>
-<p>两个相邻的字符串常量会相连</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;123&quot;</span></span><br><span class="line">       <span class="string">&quot;456&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>会输出123456</p>
-<p>另外不能用运算符对字符串做运算</p>
-<p>”a“就相当于对a做了初始化</p>
-<h2 id="字符串常量"><a href="#字符串常量" class="headerlink" title="字符串常量"></a>字符串常量</h2><p>字符串初始化后便不可变，字符串在内存中是<font color="red">只读</font>的</p>
-<p>用指针改变字符串会触发系统的保护机制，引起严重后果</p>
-<h2 id="字符串的赋值"><a href="#字符串的赋值" class="headerlink" title="字符串的赋值"></a>字符串的赋值</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *t = <span class="string">&quot;title&quot;</span>;</span><br><span class="line"><span class="keyword">char</span> *s;</span><br><span class="line">s = t;</span><br></pre></td></tr></table></figure>
-
-<p>这样做只是让指针s指向了t所指的字符串，并没有产生新的字符串</p>
-<h2 id="字符串输入输出"><a href="#字符串输入输出" class="headerlink" title="字符串输入输出"></a>字符串输入输出</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[<span class="number">8</span>]</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>,a);</span><br></pre></td></tr></table></figure>
-
-<p>scanf的读入是不安全的，因为不知道要读入的内容的长度</p>
-<p>但可以这样：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[<span class="number">8</span>]</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%7s&quot;</span>,a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%7s&quot;</span>,a);</span><br></pre></td></tr></table></figure>
-
-<p>“7”告诉了scanf最多读7个</p>
-<p>两个scanf可以连续读入</p>
-<h2 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h2><p>char*a不能直接用，要先对a初始化，否则出不出错就靠运气了</p>
-<p>终于码完了。。。</p>
-<p><font color="cornflowerblue">C语言入门篇完结！！！</font></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/08/20/eight/" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
