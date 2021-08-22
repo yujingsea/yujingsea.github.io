@@ -139,15 +139,6 @@
       </tags>
   </entry>
   <entry>
-    <title>评论区开放！</title>
-    <url>/2021/08/15/fourth/</url>
-    <content><![CDATA[<h1 id="gitalk已启用"><a href="#gitalk已启用" class="headerlink" title="gitalk已启用"></a>gitalk已启用</h1><p>nexT支持gitalk,评论者只需有GitHub账号即可，账号可在github官网免费注册，注册真不麻烦，github是一个共享源码的网站，不会有安全隐患，欢迎注册/登录github留言！又白嫖了一次嘿嘿</p>
-]]></content>
-      <tags>
-        <tag>message</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>markdown语法笔记（Typora)</title>
     <url>/2021/08/13/first/</url>
     <content><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><p> #+空格+内容 回车执行/ctrl+1，ctrl+0复原</p>
@@ -285,6 +276,15 @@
       </tags>
   </entry>
   <entry>
+    <title>评论区开放！</title>
+    <url>/2021/08/15/fourth/</url>
+    <content><![CDATA[<h1 id="gitalk已启用"><a href="#gitalk已启用" class="headerlink" title="gitalk已启用"></a>gitalk已启用</h1><p>nexT支持gitalk,评论者只需有GitHub账号即可，账号可在github官网免费注册，注册真不麻烦，github是一个共享源码的网站，不会有安全隐患，欢迎注册/登录github留言！又白嫖了一次嘿嘿</p>
+]]></content>
+      <tags>
+        <tag>message</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>牛客网做题时遇到的细节</title>
     <url>/2021/08/22/ninth/</url>
     <content><![CDATA[<h1 id="做题时遇到的碎知识"><a href="#做题时遇到的碎知识" class="headerlink" title="做题时遇到的碎知识"></a>做题时遇到的碎知识</h1><h2 id="1-四舍五入"><a href="#1-四舍五入" class="headerlink" title="1. 四舍五入"></a>1. 四舍五入</h2><span id="more"></span>
@@ -303,7 +303,7 @@
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%10d&quot;</span>,a);</span><br></pre></td></tr></table></figure>
 
 <p>printf可以使用使用格式控制串“%md”输出域宽为m的十进制整数</p>
-<h2 id="5-进制与前导"><a href="#5-进制与前导" class="headerlink" title="5. 进制与前导"></a>5. 进制与前导</h2><p>H表示的是Hex,表示是16进制数。前导标志是0x；<br>B表示的是Bit,表示是二进制.无前导标志；<br>O表示的是Octal,也可简写为OCT表示是八进制,前导为0；<br>D表示是Decem,表示十进制。无前导标志；</p>
+<h2 id="5-进制的前导"><a href="#5-进制的前导" class="headerlink" title="5. 进制的前导"></a>5. 进制的前导</h2><p>H表示的是Hex,表示是16进制数。前导标志是0x；<br>B表示的是Bit,表示是二进制.无前导标志；<br>O表示的是Octal,也可简写为OCT表示是八进制,前导为0；<br>D表示是Decem,表示十进制。无前导标志；</p>
 <p>原题让输出1234的八进制与十六进制（大写）</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%#o %#X\n&quot;</span>,<span class="number">1234</span>,<span class="number">1234</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -311,6 +311,28 @@
 ]]></content>
       <tags>
         <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>也许今天是个不错的开始</title>
+    <url>/2021/08/14/second/</url>
+    <content><![CDATA[<p> 很多时候我都难以做到真正的自律，更多的时候是<strong>他律</strong>。可谁会有时间监督我呢，我无可否认我的缺陷，但我的<strong>弱点</strong>有时却可以弥补缺陷，我举几个可行度高的例子。</p>
+<span id="more"></span>
+
+<h1 id="图书馆"><a href="#图书馆" class="headerlink" title="图书馆"></a>图书馆</h1><p>对于我来说，去图书馆是寻找压力的方式之一。我会先略显仓促地选择好合适的座位，等到安静下来，焦虑的心已然平复，我会完全融入群体当中，这时我会把读书和学习当作理所应当的事。那些来来往往，装模做样，假装学习的人也只能凸显我的安静。我不时给自己积极的心理暗示，尽管我本来就难以呆在人多的地方，我还是努力去利用好这样宁静而又略带紧张的氛围。</p>
+<p><img src="https://mz.eastday.com/22584710.jpg" alt="查看源图像"></p>
+<p>当然还有<strong>线上</strong>的自习室，不过效果会差很多，最好提前约好同学结伴上线。qq自带的自习室我也曾用过，有一次学了一上午，效果还不错。</p>
+<h1 id="强制锁机"><a href="#强制锁机" class="headerlink" title="强制锁机"></a>强制锁机</h1><p>这属实是无奈之举，我也曾在假期使用过，有一些app支持强制锁机，是你反悔也没有退出键的那种，不过可能会对手机正常使用，信息接受造成不可预估的影响。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-65e826e4d58bd6149962061acbd4608e_720w.jpg?source=1940ef5c" alt="img"></p>
+<h1 id="女朋友？"><a href="#女朋友？" class="headerlink" title="女朋友？"></a>女朋友？</h1><p>没错，好吧，这个我还没体验过。。。</p>
+<p>不过两人共勉确实是不错的设想，也许你们有一天会明白程序员的浪漫，我暂且把dev-c++当成女友吧，今晚<strong>码</strong>上见。</p>
+<p>话说今天我被强喂了不少狗粮呢[哭笑]</p>
+<p><img src="https://tse1-mm.cn.bing.net/th/id/R-C.cbb4c3c2058543dcba1c9cc15f0f62a1?rik=k9pGZKFw6C8zNA&riu=http://www.wsm.cn/uploads/allimg/161104/26-161104091331.jpg&ehk=lmqLW5yF0bTbg/Kh1EQEn5FanN8wAyOrqGQNa9VLgzY=&risl=&pid=ImgRaw&r=0" alt="查看源图像"></p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>也许明天也是个不错的开始，哦不，就今天！</p>
+<p><img src="https://pic4.zhimg.com/v2-b10e616220e087e44ec7766d55b3cd1d_r.jpg" alt="查看源图像"></p>
+]]></content>
+      <tags>
+        <tag>daily life</tag>
       </tags>
   </entry>
   <entry>
@@ -359,28 +381,6 @@
 ]]></content>
       <tags>
         <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>也许今天是个不错的开始</title>
-    <url>/2021/08/14/second/</url>
-    <content><![CDATA[<p> 很多时候我都难以做到真正的自律，更多的时候是<strong>他律</strong>。可谁会有时间监督我呢，我无可否认我的缺陷，但我的<strong>弱点</strong>有时却可以弥补缺陷，我举几个可行度高的例子。</p>
-<span id="more"></span>
-
-<h1 id="图书馆"><a href="#图书馆" class="headerlink" title="图书馆"></a>图书馆</h1><p>对于我来说，去图书馆是寻找压力的方式之一。我会先略显仓促地选择好合适的座位，等到安静下来，焦虑的心已然平复，我会完全融入群体当中，这时我会把读书和学习当作理所应当的事。那些来来往往，装模做样，假装学习的人也只能凸显我的安静。我不时给自己积极的心理暗示，尽管我本来就难以呆在人多的地方，我还是努力去利用好这样宁静而又略带紧张的氛围。</p>
-<p><img src="https://mz.eastday.com/22584710.jpg" alt="查看源图像"></p>
-<p>当然还有<strong>线上</strong>的自习室，不过效果会差很多，最好提前约好同学结伴上线。qq自带的自习室我也曾用过，有一次学了一上午，效果还不错。</p>
-<h1 id="强制锁机"><a href="#强制锁机" class="headerlink" title="强制锁机"></a>强制锁机</h1><p>这属实是无奈之举，我也曾在假期使用过，有一些app支持强制锁机，是你反悔也没有退出键的那种，不过可能会对手机正常使用，信息接受造成不可预估的影响。</p>
-<p><img src="https://pic1.zhimg.com/80/v2-65e826e4d58bd6149962061acbd4608e_720w.jpg?source=1940ef5c" alt="img"></p>
-<h1 id="女朋友？"><a href="#女朋友？" class="headerlink" title="女朋友？"></a>女朋友？</h1><p>没错，好吧，这个我还没体验过。。。</p>
-<p>不过两人共勉确实是不错的设想，也许你们有一天会明白程序员的浪漫，我暂且把dev-c++当成女友吧，今晚<strong>码</strong>上见。</p>
-<p>话说今天我被强喂了不少狗粮呢[哭笑]</p>
-<p><img src="https://tse1-mm.cn.bing.net/th/id/R-C.cbb4c3c2058543dcba1c9cc15f0f62a1?rik=k9pGZKFw6C8zNA&riu=http://www.wsm.cn/uploads/allimg/161104/26-161104091331.jpg&ehk=lmqLW5yF0bTbg/Kh1EQEn5FanN8wAyOrqGQNa9VLgzY=&risl=&pid=ImgRaw&r=0" alt="查看源图像"></p>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>也许明天也是个不错的开始，哦不，就今天！</p>
-<p><img src="https://pic4.zhimg.com/v2-b10e616220e087e44ec7766d55b3cd1d_r.jpg" alt="查看源图像"></p>
-]]></content>
-      <tags>
-        <tag>daily life</tag>
       </tags>
   </entry>
   <entry>
@@ -440,6 +440,26 @@
       </tags>
   </entry>
   <entry>
+    <title>计算机入门图书分享</title>
+    <url>/2021/08/21/tenth/</url>
+    <content><![CDATA[<h1 id="3本入门图书"><a href="#3本入门图书" class="headerlink" title="3本入门图书"></a>3本入门图书</h1><p><a href="https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg">https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg</a><br>0000</p>
+<span id="more"></span>
+
+<p>包含3本</p>
+<p>1.c++primerplus6</p>
+<img src="/2021/08/21/tenth/1.jpg" class title="blog">
+
+<p>2.算法竞赛入门经典 紫书</p>
+<img src="/2021/08/21/tenth/2.jpg" class title="blog">
+
+<p>3.算法竞赛入门经典训练指南</p>
+<img src="/2021/08/21/tenth/3.jpg" class title="blog">
+]]></content>
+      <tags>
+        <tag>share</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>搭建博客的原因</title>
     <url>/2021/08/15/third/</url>
     <content><![CDATA[<h1 id="搭建博客的原因"><a href="#搭建博客的原因" class="headerlink" title="搭建博客的原因"></a>搭建博客的原因</h1><p>也许是心血来潮，看到别人的博客满满都是学习编程的<strong>笔记</strong>，忍不住要试一下。也许这也算是<strong>他律</strong>了，尽管访问量不见上涨，我依旧有发博客的动力，也许只是刚开始有新鲜感（都这么说），但这东西确实上瘾。我觉得程序员的快乐来源中，成功运行程序的<strong>成就感，满足感</strong>应该是占比不少的。</p>
@@ -458,26 +478,6 @@
 ]]></content>
       <tags>
         <tag>message</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机入门图书分享</title>
-    <url>/2021/08/21/tenth/</url>
-    <content><![CDATA[<h1 id="3本入门图书"><a href="#3本入门图书" class="headerlink" title="3本入门图书"></a>3本入门图书</h1><p><a href="https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg">https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg</a><br>0000</p>
-<span id="more"></span>
-
-<p>包含3本</p>
-<p>1.c++primerplus6</p>
-<img src="/2021/08/21/tenth/1.jpg" class title="blog">
-
-<p>2.算法竞赛入门经典 紫书</p>
-<img src="/2021/08/21/tenth/2.jpg" class title="blog">
-
-<p>3.算法竞赛入门经典训练指南</p>
-<img src="/2021/08/21/tenth/3.jpg" class title="blog">
-]]></content>
-      <tags>
-        <tag>share</tag>
       </tags>
   </entry>
 </search>
