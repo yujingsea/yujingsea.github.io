@@ -25,28 +25,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yujingsea.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="gitalk已启用nexT支持gitalk,评论者只需有GitHub账号即可，账号可在github官网免费注册，注册真不麻烦，github是一个共享源码的网站，不会有安全隐患，欢迎注册&#x2F;登录github留言！又白嫖了一次嘿嘿">
+<meta name="description" content="做题时遇到的碎知识1. 四舍五入">
 <meta property="og:type" content="article">
-<meta property="og:title" content="评论区开放！">
-<meta property="og:url" content="https://yujingsea.github.io/2021/08/15/fourth/index.html">
+<meta property="og:title" content="牛客网做题时遇到的细节">
+<meta property="og:url" content="https://yujingsea.github.io/2021/08/22/ninth/index.html">
 <meta property="og:site_name" content="瑜璟博客">
-<meta property="og:description" content="gitalk已启用nexT支持gitalk,评论者只需有GitHub账号即可，账号可在github官网免费注册，注册真不麻烦，github是一个共享源码的网站，不会有安全隐患，欢迎注册&#x2F;登录github留言！又白嫖了一次嘿嘿">
+<meta property="og:description" content="做题时遇到的碎知识1. 四舍五入">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-08-15T12:14:07.000Z">
-<meta property="article:modified_time" content="2021-08-15T15:29:19.867Z">
+<meta property="article:published_time" content="2021-08-22T05:34:39.000Z">
+<meta property="article:modified_time" content="2021-08-22T06:29:29.489Z">
 <meta property="article:author" content="瑜璟">
-<meta property="article:tag" content="message">
+<meta property="article:tag" content="C">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://yujingsea.github.io/2021/08/15/fourth/">
+<link rel="canonical" href="https://yujingsea.github.io/2021/08/22/ninth/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yujingsea.github.io/2021/08/15/fourth/","path":"2021/08/15/fourth/","title":"评论区开放！"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yujingsea.github.io/2021/08/22/ninth/","path":"2021/08/22/ninth/","title":"牛客网做题时遇到的细节"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>评论区开放！ | 瑜璟博客</title>
+<title>牛客网做题时遇到的细节 | 瑜璟博客</title>
   
 
 
@@ -154,7 +154,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#gitalk%E5%B7%B2%E5%90%AF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">gitalk已启用</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%81%9A%E9%A2%98%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E7%A2%8E%E7%9F%A5%E8%AF%86"><span class="nav-number">1.</span> <span class="nav-text">做题时遇到的碎知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%9B%9B%E8%88%8D%E4%BA%94%E5%85%A5"><span class="nav-number">1.1.</span> <span class="nav-text">1. 四舍五入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E8%BE%93%E5%87%BA%E7%A1%AE%E5%AE%9A%E4%BD%8D%E6%95%B0%E7%9A%84%E5%B0%8F%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">2. 输出确定位数的小数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E8%BE%93%E5%87%BA%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="nav-number">1.3.</span> <span class="nav-text">3. 输出返回值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%9F%9F%E5%AE%BD"><span class="nav-number">1.4.</span> <span class="nav-text">4. 域宽</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E8%BF%9B%E5%88%B6%E4%B8%8E%E5%89%8D%E5%AF%BC"><span class="nav-number">1.5.</span> <span class="nav-text">5. 进制与前导</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -234,7 +234,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yujingsea.github.io/2021/08/15/fourth/">
+    <link itemprop="mainEntityOfPage" href="https://yujingsea.github.io/2021/08/22/ninth/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -247,7 +247,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          评论区开放！
+          牛客网做题时遇到的细节
         </h1>
 
         <div class="post-meta-container">
@@ -259,7 +259,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-15 20:14:07 / 修改时间：23:29:19" itemprop="dateCreated datePublished" datetime="2021-08-15T20:14:07+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-22 13:34:39 / 修改时间：14:29:29" itemprop="dateCreated datePublished" datetime="2021-08-22T13:34:39+08:00">2021-08-22</time>
     </span>
 
   
@@ -276,14 +276,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>112</span>
+      <span>675</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -294,7 +294,27 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="gitalk已启用"><a href="#gitalk已启用" class="headerlink" title="gitalk已启用"></a>gitalk已启用</h1><p>nexT支持gitalk,评论者只需有GitHub账号即可，账号可在github官网免费注册，注册真不麻烦，github是一个共享源码的网站，不会有安全隐患，欢迎注册/登录github留言！又白嫖了一次嘿嘿</p>
+        <h1 id="做题时遇到的碎知识"><a href="#做题时遇到的碎知识" class="headerlink" title="做题时遇到的碎知识"></a>做题时遇到的碎知识</h1><h2 id="1-四舍五入"><a href="#1-四舍五入" class="headerlink" title="1. 四舍五入"></a>1. 四舍五入</h2><span id="more"></span>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">单精度保留小数点后两位:a = (<span class="keyword">int</span>)(a*<span class="number">100</span>+<span class="number">0.5</span>)/<span class="number">100.0</span>;</span><br><span class="line">双精度保留小数点后两位:a = (<span class="keyword">int</span>)(a*<span class="number">10000</span>+<span class="number">0.5</span>)/<span class="number">10000.0</span>;</span><br><span class="line">整数只需(<span class="keyword">int</span>)(a+<span class="number">0.5</span>)即可</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-输出确定位数的小数"><a href="#2-输出确定位数的小数" class="headerlink" title="2. 输出确定位数的小数"></a>2. 输出确定位数的小数</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%<span class="number">.1</span>f   %<span class="number">.1</span>lf</span><br><span class="line"></span><br><span class="line">%<span class="number">.2</span>f   %<span class="number">.2</span>lf</span><br></pre></td></tr></table></figure>
+
+<p>在%后加上点和位数表示要保留小数点后几位</p>
+<h2 id="3-输出返回值"><a href="#3-输出返回值" class="headerlink" title="3. 输出返回值"></a>3. 输出返回值</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">int</span> a=<span class="built_in">printf</span>(<span class="string">&quot;Hello world!&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>打印函数的返回值就是字符个数，\n是一个字符，要单独打印</p>
+<h2 id="4-域宽"><a href="#4-域宽" class="headerlink" title="4. 域宽"></a>4. 域宽</h2><p>指存放输出数据的宽度</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%10d&quot;</span>,a);</span><br></pre></td></tr></table></figure>
+
+<p>printf可以使用使用格式控制串“%md”输出域宽为m的十进制整数</p>
+<h2 id="5-进制与前导"><a href="#5-进制与前导" class="headerlink" title="5. 进制与前导"></a>5. 进制与前导</h2><p>H表示的是Hex,表示是16进制数。前导标志是0x；<br>B表示的是Bit,表示是二进制.无前导标志；<br>O表示的是Octal,也可简写为OCT表示是八进制,前导为0；<br>D表示是Decem,表示十进制。无前导标志；</p>
+<p>原题让输出1234的八进制与十六进制（大写）</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%#o %#X\n&quot;</span>,<span class="number">1234</span>,<span class="number">1234</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用#可以使前导显示，结果的大小写取决于%后x的大小写</p>
 
     </div>
 
@@ -318,21 +338,18 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/message/" rel="tag"><i class="fa fa-tag"></i> message</a>
+              <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/08/15/third/" rel="prev" title="搭建博客的原因">
-                  <i class="fa fa-chevron-left"></i> 搭建博客的原因
+                <a href="/2021/08/21/tenth/" rel="prev" title="计算机入门图书分享">
+                  <i class="fa fa-chevron-left"></i> 计算机入门图书分享
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/08/17/fifth/" rel="next" title="C语言入门笔记（1）">
-                  C语言入门笔记（1） <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -420,7 +437,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"yujingsea","repo":"blogtalk","client_id":"b8fe95277dc187c0bbc3","client_secret":"25133a5ace7a6c270a39c52b6331fdf5021a4396","admin_user":"yujingsea","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"e273fb0e4f3182798fc27e8e59568829"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"yujingsea","repo":"blogtalk","client_id":"b8fe95277dc187c0bbc3","client_secret":"25133a5ace7a6c270a39c52b6331fdf5021a4396","admin_user":"yujingsea","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"f90f6cdce3dd76ba49cc3e2509346082"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
