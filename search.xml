@@ -1,70 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>C语言入门笔记（1）</title>
-    <url>/2021/08/17/fifth/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>我觉得目前比较好的c语言入门网课有b站的失乐-try上传的C语言入门视频，以及中国大学mooc中浙大翁恺老师的<a href="https://www.icourse163.org/course/ZJU-199001">C语言程序设计入门视频</a>。都对新手友好到了极点。我这里选的是翁恺老师的课，比较系统，也比较专业。我会着重指出易错易忘的知识，以便复习，其他不再赘述。</p>
-<span id="more"></span>
-
-<p>关于对计算机知识的深入理解，我推荐b站搬运的YouTube的<a href="https://b23.tv/J0ghf3">计算机科学速成课</a>，里面把计算机的历史，发展，进化讲的<strong>相对容易</strong>理解些，虽然有些知识我听不懂，但我大为震撼。</p>
-<h1 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h1><p>Windows系统推荐dev-C++，当然也可以线上编译，不过不能保存</p>
-<h1 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span> ( <span class="string">&quot;hello world\n&quot;</span> );</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>除了printf函数，剩下的是c语言的基本框架</p>
-<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p>a = 0;</p>
-<p>把0赋值给a，a作为变量保存了数据0，a之后还可变为其它值。</p>
-<p>a是一种标识符，<font color="red">只能有字母，数字，下划线组成，数字不能位于头部，关键字不能做标识符</font>。</p>
-<p>关键字用多了就记住了，例如char,do,while,if,sizeof….</p>
-<h1 id="赋值与初始化"><a href="#赋值与初始化" class="headerlink" title="赋值与初始化"></a>赋值与初始化</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>这里定义了一个变量a,但你不知道a是几，系统保存的可能是一个任意的数；</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a =<span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-
-<p>在定义变量时，建议<font color="red">在代码开头的地方定义变量</font>，因为ansi c标准只能在代码开头的地方定义变量，c99标准则无此要求。</p>
-<p>a被初始化为0，系统保存的a的值是0。</p>
-<p><font color="red">初始化是一个好习惯</font>，不这样做可能会莫名报错，尤其到指针那一块。</p>
-<h1 id="scanf函数"><a href="#scanf函数" class="headerlink" title="scanf函数"></a>scanf函数</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">a=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a);</span><br></pre></td></tr></table></figure>
-
-<p>%d意为取整数a，&amp;取地址，让我输入a</p>
-<h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">b = <span class="number">1</span></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">1</span> + b</span><br></pre></td></tr></table></figure>
-
-<p>直接写在程序里的1是直接量，是常量的一种。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> a = <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<p>const作为修饰符加在int的前面，使a成为一个具有常属性的变量，即常变量a不能再被修改，否则会报错。</p>
-<h1 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h1><p>分为单精度浮点数和双精度浮点数，双精度浮点数能保留更多位小数，更精确,%f是取小数。</p>
-<p>我们试一下下面的运算</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">&quot;%d %d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;结果为%d。\n&quot;</span>,((a+b)/<span class="number">3</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里输入5，5，结果为3，没有小数</p>
-<p>如果输入10 ，10，结果不是6.666…而是6，这里说明4舍5入不符合</p>
-<p>这里需要知道%f是取单精度，%lf是双精度</p>
-<p>我们再试一下输出小数结果</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">&quot;%d %d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;结果为%f。\n&quot;</span>,((a+b)/<span class="number">3</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里输入5，5，结果为0.000000，又出错了</p>
-<p>到这里要指出：</p>
-<p>在c语言中<font color="red">两个整数的运算结果只能是整数</font>，用%d得到的是整数，用%f得不到正确结果，如果把3换成3.0，系统在计算时会把a+b的结果化为浮点数，<font color="red">浮点数间的运算就是浮点数</font>。我们再试一下</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">&quot;%d %d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;结果为%f。\n&quot;</span>,((a+b)/<span class="number">3.0</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里输入5，5，结果正确，为3.333333</p>
-]]></content>
-      <tags>
-        <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>评论区开放！</title>
-    <url>/2021/08/15/fourth/</url>
-    <content><![CDATA[<h1 id="gitalk已启用"><a href="#gitalk已启用" class="headerlink" title="gitalk已启用"></a>gitalk已启用</h1><p>nexT支持gitalk,评论者只需有GitHub账号即可，账号可在github官网免费注册，注册真不麻烦，github是一个共享源码的网站，不会有安全隐患，欢迎注册/登录github留言！又白嫖了一次嘿嘿</p>
-]]></content>
-      <tags>
-        <tag>message</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C语言入门笔记（4）</title>
     <url>/2021/08/20/eight/</url>
     <content><![CDATA[<h1 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a [<span class="number">3</span>] [<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
@@ -203,6 +139,61 @@
       </tags>
   </entry>
   <entry>
+    <title>C语言入门笔记（1）</title>
+    <url>/2021/08/17/fifth/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>我觉得目前比较好的c语言入门网课有b站的失乐-try上传的C语言入门视频，以及中国大学mooc中浙大翁恺老师的<a href="https://www.icourse163.org/course/ZJU-199001">C语言程序设计入门视频</a>。都对新手友好到了极点。我这里选的是翁恺老师的课，比较系统，也比较专业。我会着重指出易错易忘的知识，以便复习，其他不再赘述。</p>
+<span id="more"></span>
+
+<p>关于对计算机知识的深入理解，我推荐b站搬运的YouTube的<a href="https://b23.tv/J0ghf3">计算机科学速成课</a>，里面把计算机的历史，发展，进化讲的<strong>相对容易</strong>理解些，虽然有些知识我听不懂，但我大为震撼。</p>
+<h1 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h1><p>Windows系统推荐dev-C++，当然也可以线上编译，不过不能保存</p>
+<h1 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span> ( <span class="string">&quot;hello world\n&quot;</span> );</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>除了printf函数，剩下的是c语言的基本框架</p>
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p>a = 0;</p>
+<p>把0赋值给a，a作为变量保存了数据0，a之后还可变为其它值。</p>
+<p>a是一种标识符，<font color="red">只能有字母，数字，下划线组成，数字不能位于头部，关键字不能做标识符</font>。</p>
+<p>关键字用多了就记住了，例如char,do,while,if,sizeof….</p>
+<h1 id="赋值与初始化"><a href="#赋值与初始化" class="headerlink" title="赋值与初始化"></a>赋值与初始化</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>这里定义了一个变量a,但你不知道a是几，系统保存的可能是一个任意的数；</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a =<span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+<p>在定义变量时，建议<font color="red">在代码开头的地方定义变量</font>，因为ansi c标准只能在代码开头的地方定义变量，c99标准则无此要求。</p>
+<p>a被初始化为0，系统保存的a的值是0。</p>
+<p><font color="red">初始化是一个好习惯</font>，不这样做可能会莫名报错，尤其到指针那一块。</p>
+<h1 id="scanf函数"><a href="#scanf函数" class="headerlink" title="scanf函数"></a>scanf函数</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">a=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a);</span><br></pre></td></tr></table></figure>
+
+<p>%d意为取整数a，&amp;取地址，让我输入a</p>
+<h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">b = <span class="number">1</span></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">1</span> + b</span><br></pre></td></tr></table></figure>
+
+<p>直接写在程序里的1是直接量，是常量的一种。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> a = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>const作为修饰符加在int的前面，使a成为一个具有常属性的变量，即常变量a不能再被修改，否则会报错。</p>
+<h1 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h1><p>分为单精度浮点数和双精度浮点数，双精度浮点数能保留更多位小数，更精确,%f是取小数。</p>
+<p>我们试一下下面的运算</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">&quot;%d %d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;结果为%d。\n&quot;</span>,((a+b)/<span class="number">3</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里输入5，5，结果为3，没有小数</p>
+<p>如果输入10 ，10，结果不是6.666…而是6，这里说明4舍5入不符合</p>
+<p>这里需要知道%f是取单精度，%lf是双精度</p>
+<p>我们再试一下输出小数结果</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">&quot;%d %d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;结果为%f。\n&quot;</span>,((a+b)/<span class="number">3</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里输入5，5，结果为0.000000，又出错了</p>
+<p>到这里要指出：</p>
+<p>在c语言中<font color="red">两个整数的运算结果只能是整数</font>，用%d得到的是整数，用%f得不到正确结果，如果把3换成3.0，系统在计算时会把a+b的结果化为浮点数，<font color="red">浮点数间的运算就是浮点数</font>。我们再试一下</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">&quot;%d %d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;结果为%f。\n&quot;</span>,((a+b)/<span class="number">3.0</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里输入5，5，结果正确，为3.333333</p>
+]]></content>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>markdown语法笔记（Typora)</title>
     <url>/2021/08/13/first/</url>
     <content><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><p> #+空格+内容 回车执行/ctrl+1，ctrl+0复原</p>
@@ -285,11 +276,20 @@
 ]]></content>
   </entry>
   <entry>
+    <title>评论区开放！</title>
+    <url>/2021/08/15/fourth/</url>
+    <content><![CDATA[<h1 id="gitalk已启用"><a href="#gitalk已启用" class="headerlink" title="gitalk已启用"></a>gitalk已启用</h1><p>nexT支持gitalk,评论者只需有GitHub账号即可，账号可在github官网免费注册，注册真不麻烦，github是一个共享源码的网站，不会有安全隐患，欢迎注册/登录github留言！又白嫖了一次嘿嘿</p>
+]]></content>
+      <tags>
+        <tag>message</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>牛客网做题时遇到的细节</title>
     <url>/2021/08/22/ninth/</url>
     <content><![CDATA[<h1 id="做题时遇到的碎知识"><a href="#做题时遇到的碎知识" class="headerlink" title="做题时遇到的碎知识"></a>做题时遇到的碎知识</h1><h2 id="1-四舍五入"><a href="#1-四舍五入" class="headerlink" title="1. 四舍五入"></a>1. 四舍五入</h2><span id="more"></span>
 
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">单精度保留小数点后两位:a = (<span class="keyword">int</span>)(a*<span class="number">100</span>+<span class="number">0.5</span>)/<span class="number">100.0</span>;</span><br><span class="line">双精度保留小数点后两位:a = (<span class="keyword">int</span>)(a*<span class="number">10000</span>+<span class="number">0.5</span>)/<span class="number">10000.0</span>;</span><br><span class="line">整数只需(<span class="keyword">int</span>)(a+<span class="number">0.5</span>)即可</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">单精度保留小数点后两位:a = (<span class="keyword">int</span>)(a*<span class="number">100</span>+<span class="number">0.5</span>)/<span class="number">100.0</span>;</span><br><span class="line">双精度保留小数点后两位:a = (<span class="keyword">int</span>)(a*<span class="number">10000</span>+<span class="number">0.5</span>)/<span class="number">10000.0</span>;</span><br><span class="line">正整数:(<span class="keyword">int</span>)(a+<span class="number">0.5</span>)，负整数把+换成-;</span><br><span class="line">math.h头文件里有round(...),可直接四舍五入</span><br></pre></td></tr></table></figure>
 
 
 
@@ -326,7 +326,16 @@
 <h2 id="9-EOF"><a href="#9-EOF" class="headerlink" title="9.EOF"></a>9.EOF</h2><p>在stdio.h中就规定了EOF就是-1，EOF即END OF FILE,在while循环中以EOF作为文件结束标志</p>
 <p>我们常见到while(scanf(“%d”,a)!=EOF){…}</p>
 <p>可用于多组输入</p>
-]]></content>
+<h2 id="10-位移运算符"><a href="#10-位移运算符" class="headerlink" title="10.位移运算符"></a>10.位移运算符</h2><p>&lt;&lt;和&gt;&gt;,通过箭头方向可以很好的辨别，分别是C语言位运算符中的左移运算符和右移运算符，如表达式13&lt;&lt;2，它的运算过程为：</p>
+<p>13的用二进制（四个字节，不考虑符号）表示为，0000 0000 0000 0000 0000 0000 0000 1101，那么向左移两位，右侧补0，则变为0000 0000 0000 0000 0000 0000 0011 0100 换成十进制即变为52</p>
+<p>同理，再举一个例子，如表达式25&gt;&gt;3，表示25的二进制位向右移三位，由</p>
+<p>0000 0000 0000 0000 0000 0000 0001 1001 变为0000 0000 0000 0000 0000 0000 0000 0011 即十进制3</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a,b;</span><br><span class="line">    a=<span class="number">13</span>&lt;&lt;<span class="number">2</span>;</span><br><span class="line">    b=<span class="number">25</span>&gt;&gt;<span class="number">3</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;a=%d,b=%d\n&quot;</span>,a,b);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出为a=52，b=3</p>
+<p>应用：1.左移N位的本质是乘以2的N次方</p>
+<p>​            2.右移N位的本质是除以2的N次方</p>
+<h2 id="11"><a href="#11" class="headerlink" title="11."></a>11.</h2>]]></content>
       <tags>
         <tag>C</tag>
       </tags>
