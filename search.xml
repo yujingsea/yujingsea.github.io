@@ -538,4 +538,14 @@
         <tag>message</tag>
       </tags>
   </entry>
+  <entry>
+    <title>算法竞赛入门（C语言）（持续更新）</title>
+    <url>/2021/09/09/twelfth/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>尽可能全面，寻找每个经典问题的最优解</p>
+<p>鸽了好长一段时间，去牛客网做了做入门题，我在138道基础题中见到好多新奇的解题思路，于是想把我见到的算法做个集合。参考经典的算法竞赛入门书，百度，csdn,牛客网的大佬们……郑轻oj找时间再刷，还是要把基础打好。</p>
+]]></content>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
 </search>
