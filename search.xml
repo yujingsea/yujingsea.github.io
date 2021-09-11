@@ -316,28 +316,6 @@
       </tags>
   </entry>
   <entry>
-    <title>也许今天是个不错的开始</title>
-    <url>/2021/08/14/second/</url>
-    <content><![CDATA[<p> 很多时候我都难以做到真正的自律，更多的时候是<strong>他律</strong>。可谁会有时间监督我呢，我无可否认我的缺陷，但我的<strong>弱点</strong>有时却可以弥补缺陷，我举几个可行度高的例子。</p>
-<span id="more"></span>
-
-<h1 id="图书馆"><a href="#图书馆" class="headerlink" title="图书馆"></a>图书馆</h1><p>对于我来说，去图书馆是寻找压力的方式之一。我会先略显仓促地选择好合适的座位，等到安静下来，焦虑的心已然平复，我会完全融入群体当中，这时我会把读书和学习当作理所应当的事。那些来来往往，装模做样，假装学习的人也只能凸显我的安静。我不时给自己积极的心理暗示，尽管我本来就难以呆在人多的地方，我还是努力去利用好这样宁静而又略带紧张的氛围。</p>
-<p><img src="https://mz.eastday.com/22584710.jpg" alt="查看源图像"></p>
-<p>当然还有<strong>线上</strong>的自习室，不过效果会差很多，最好提前约好同学结伴上线。qq自带的自习室我也曾用过，有一次学了一上午，效果还不错。</p>
-<h1 id="强制锁机"><a href="#强制锁机" class="headerlink" title="强制锁机"></a>强制锁机</h1><p>这属实是无奈之举，我也曾在假期使用过，有一些app支持强制锁机，是你反悔也没有退出键的那种，不过可能会对手机正常使用，信息接受造成不可预估的影响。</p>
-<p><img src="https://pic1.zhimg.com/80/v2-65e826e4d58bd6149962061acbd4608e_720w.jpg?source=1940ef5c" alt="img"></p>
-<h1 id="女朋友？"><a href="#女朋友？" class="headerlink" title="女朋友？"></a>女朋友？</h1><p>没错，好吧，这个我还没体验过。。。</p>
-<p>不过两人共勉确实是不错的设想，也许你们有一天会明白程序员的浪漫，我暂且把dev-c++当成女友吧，今晚<strong>码</strong>上见。</p>
-<p>话说今天我被强喂了不少狗粮呢[哭笑]</p>
-<p><img src="https://tse1-mm.cn.bing.net/th/id/R-C.cbb4c3c2058543dcba1c9cc15f0f62a1?rik=k9pGZKFw6C8zNA&riu=http://www.wsm.cn/uploads/allimg/161104/26-161104091331.jpg&ehk=lmqLW5yF0bTbg/Kh1EQEn5FanN8wAyOrqGQNa9VLgzY=&risl=&pid=ImgRaw&r=0" alt="查看源图像"></p>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>也许明天也是个不错的开始，哦不，就今天！</p>
-<p><img src="https://pic4.zhimg.com/v2-b10e616220e087e44ec7766d55b3cd1d_r.jpg" alt="查看源图像"></p>
-]]></content>
-      <tags>
-        <tag>daily life</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>牛客网做题时遇到的细节（持续更新）</title>
     <url>/2021/08/22/ninth/</url>
     <content><![CDATA[<h2 id="1-四舍五入"><a href="#1-四舍五入" class="headerlink" title="1. 四舍五入"></a>1. 四舍五入</h2><span id="more"></span>
@@ -390,6 +368,76 @@
 <p>应用：</p>
 <p>1.左移N位的本质是乘以2的N次方</p>
 <p>2.右移N位的本质是除以2的N次方</p>
+]]></content>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>也许今天是个不错的开始</title>
+    <url>/2021/08/14/second/</url>
+    <content><![CDATA[<p> 很多时候我都难以做到真正的自律，更多的时候是<strong>他律</strong>。可谁会有时间监督我呢，我无可否认我的缺陷，但我的<strong>弱点</strong>有时却可以弥补缺陷，我举几个可行度高的例子。</p>
+<span id="more"></span>
+
+<h1 id="图书馆"><a href="#图书馆" class="headerlink" title="图书馆"></a>图书馆</h1><p>对于我来说，去图书馆是寻找压力的方式之一。我会先略显仓促地选择好合适的座位，等到安静下来，焦虑的心已然平复，我会完全融入群体当中，这时我会把读书和学习当作理所应当的事。那些来来往往，装模做样，假装学习的人也只能凸显我的安静。我不时给自己积极的心理暗示，尽管我本来就难以呆在人多的地方，我还是努力去利用好这样宁静而又略带紧张的氛围。</p>
+<p><img src="https://mz.eastday.com/22584710.jpg" alt="查看源图像"></p>
+<p>当然还有<strong>线上</strong>的自习室，不过效果会差很多，最好提前约好同学结伴上线。qq自带的自习室我也曾用过，有一次学了一上午，效果还不错。</p>
+<h1 id="强制锁机"><a href="#强制锁机" class="headerlink" title="强制锁机"></a>强制锁机</h1><p>这属实是无奈之举，我也曾在假期使用过，有一些app支持强制锁机，是你反悔也没有退出键的那种，不过可能会对手机正常使用，信息接受造成不可预估的影响。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-65e826e4d58bd6149962061acbd4608e_720w.jpg?source=1940ef5c" alt="img"></p>
+<h1 id="女朋友？"><a href="#女朋友？" class="headerlink" title="女朋友？"></a>女朋友？</h1><p>没错，好吧，这个我还没体验过。。。</p>
+<p>不过两人共勉确实是不错的设想，也许你们有一天会明白程序员的浪漫，我暂且把dev-c++当成女友吧，今晚<strong>码</strong>上见。</p>
+<p>话说今天我被强喂了不少狗粮呢[哭笑]</p>
+<p><img src="https://tse1-mm.cn.bing.net/th/id/R-C.cbb4c3c2058543dcba1c9cc15f0f62a1?rik=k9pGZKFw6C8zNA&riu=http://www.wsm.cn/uploads/allimg/161104/26-161104091331.jpg&ehk=lmqLW5yF0bTbg/Kh1EQEn5FanN8wAyOrqGQNa9VLgzY=&risl=&pid=ImgRaw&r=0" alt="查看源图像"></p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>也许明天也是个不错的开始，哦不，就今天！</p>
+<p><img src="https://pic4.zhimg.com/v2-b10e616220e087e44ec7766d55b3cd1d_r.jpg" alt="查看源图像"></p>
+]]></content>
+      <tags>
+        <tag>daily life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C语言入门笔记（3）</title>
+    <url>/2021/08/18/seventh/</url>
+    <content><![CDATA[<h1 id="多重循环"><a href="#多重循环" class="headerlink" title="多重循环"></a>多重循环</h1><p>goto的使用</p>
+<p>使用goto可以跳出多重循环，不建议在其他时候使用</p>
+<span id="more"></span>
+
+<img src="/2021/08/18/seventh/1.jpg" class title="blog">
+
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>&lt;类型&gt;变量名称[下标，即元素数量]</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a [<span class="number">100</span>]</span><br></pre></td></tr></table></figure>
+
+<p>数组是一种容器</p>
+<p>其中所有的元素具有相同的数据类型</p>
+<p>一旦创建无法改变大小</p>
+<p>数组各元素在内存中连续依次排列</p>
+<p>可出现在赋值的左边或右边，叫做左值或右值</p>
+<p>下标范围为[0，数组大小-1]，超出界限则视为<font color="red">越界</font>，容易出错却不容易报错</p>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>举一个求和函数的例子</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">void</span> sum （ <span class="keyword">int</span> a,<span class="keyword">int</span> b )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> ( i = a;i &lt;= b; i++ )&#123;</span><br><span class="line">        sum += i;</span><br><span class="line">    &#125;</span><br><span class="line">    print (<span class="string">&quot;%d到&amp;d的和为%d\n&quot;</span>,a,b,sum);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sum(<span class="number">1</span>,<span class="number">10</span>);</span><br><span class="line">sum(<span class="number">20</span>,<span class="number">30</span>);</span><br><span class="line">sum(<span class="number">40</span>,<span class="number">50</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="函数头"><a href="#函数头" class="headerlink" title="函数头"></a>函数头</h2><p>其中第一行是函数头，void叫做返回类型，sum是起的函数名，括号内是参数表</p>
+<p>函数头的括号起到了表示函数调用的作用，里面没有参数也不能被删去，如果有参数要给出正确的数量和顺序</p>
+<p>函数可以<font color="red">简化</font>重复的程序,依次进行初始化和返回</p>
+<h2 id="函数体"><a href="#函数体" class="headerlink" title="函数体"></a>函数体</h2><p>最大的代码块内是函数体</p>
+<p>如果想把函数放在主函数下，要先把函数头作为<font color="red">声明</font>放在最前面，告诉编译器你创建了一个何类型，何函数名，何参数的函数，以免系统<font color="red">自上而下</font>识别到函数<font color="red">定义</font>时报错</p>
+<h2 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h2><p>return可以停止函数的执行，并送回一个值，返回的值可以赋给函数外的变量，函数内的变量与函数外的变量<font color="red">无关</font>，return可以单独使用，也可以接表达式</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">return</span>;</span><br><span class="line"><span class="keyword">return</span> a;</span><br></pre></td></tr></table></figure>
+
+<p><strong>int</strong>类型的函数返回值</p>
+<p>需要用return停止函数执行并返回结果</p>
+<p><strong>void</strong>类型的函数不返回值，也就是说调用时不能做返回值的赋值</p>
+<p>不能使用带值的return，也可以不用return</p>
+<h2 id="逗号运算符"><a href="#逗号运算符" class="headerlink" title="逗号运算符"></a>逗号运算符</h2><p>调用函数时的圆括号里的逗号是标点符号，不是运算符</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">i(a,b);</span><br><span class="line">i((a,b));</span><br></pre></td></tr></table></figure>
+
+<h2 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h2><p>循环语句，判断语句可以嵌套，函数则不能嵌套</p>
+<h1 id="本地变量"><a href="#本地变量" class="headerlink" title="本地变量"></a>本地变量</h1><p>定义在函数内部的变量都时本地变量（目前学过的都是）</p>
+<h2 id="生存期"><a href="#生存期" class="headerlink" title="生存期"></a>生存期</h2><p>变量从出现到消失的时期</p>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>变量起作用的代码范围</p>
+<p>对于本地变量，它的生存期和作用域就是大括号（块）</p>
+<h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><p>本地变量定义在块内，可以是函数的块，也可以是语句的块内，也可以定义在语句的块内，甚至可以随便拉一对大括号来定义变量</p>
+<p>块外定义的变量在块内仍有效</p>
 ]]></content>
       <tags>
         <tag>C</tag>
@@ -452,54 +500,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C语言入门笔记（3）</title>
-    <url>/2021/08/18/seventh/</url>
-    <content><![CDATA[<h1 id="多重循环"><a href="#多重循环" class="headerlink" title="多重循环"></a>多重循环</h1><p>goto的使用</p>
-<p>使用goto可以跳出多重循环，不建议在其他时候使用</p>
-<span id="more"></span>
-
-<img src="/2021/08/18/seventh/1.jpg" class title="blog">
-
-<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>&lt;类型&gt;变量名称[下标，即元素数量]</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a [<span class="number">100</span>]</span><br></pre></td></tr></table></figure>
-
-<p>数组是一种容器</p>
-<p>其中所有的元素具有相同的数据类型</p>
-<p>一旦创建无法改变大小</p>
-<p>数组各元素在内存中连续依次排列</p>
-<p>可出现在赋值的左边或右边，叫做左值或右值</p>
-<p>下标范围为[0，数组大小-1]，超出界限则视为<font color="red">越界</font>，容易出错却不容易报错</p>
-<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>举一个求和函数的例子</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">void</span> sum （ <span class="keyword">int</span> a,<span class="keyword">int</span> b )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> ( i = a;i &lt;= b; i++ )&#123;</span><br><span class="line">        sum += i;</span><br><span class="line">    &#125;</span><br><span class="line">    print (<span class="string">&quot;%d到&amp;d的和为%d\n&quot;</span>,a,b,sum);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sum(<span class="number">1</span>,<span class="number">10</span>);</span><br><span class="line">sum(<span class="number">20</span>,<span class="number">30</span>);</span><br><span class="line">sum(<span class="number">40</span>,<span class="number">50</span>);</span><br></pre></td></tr></table></figure>
-
-<h2 id="函数头"><a href="#函数头" class="headerlink" title="函数头"></a>函数头</h2><p>其中第一行是函数头，void叫做返回类型，sum是起的函数名，括号内是参数表</p>
-<p>函数头的括号起到了表示函数调用的作用，里面没有参数也不能被删去，如果有参数要给出正确的数量和顺序</p>
-<p>函数可以<font color="red">简化</font>重复的程序,依次进行初始化和返回</p>
-<h2 id="函数体"><a href="#函数体" class="headerlink" title="函数体"></a>函数体</h2><p>最大的代码块内是函数体</p>
-<p>如果想把函数放在主函数下，要先把函数头作为<font color="red">声明</font>放在最前面，告诉编译器你创建了一个何类型，何函数名，何参数的函数，以免系统<font color="red">自上而下</font>识别到函数<font color="red">定义</font>时报错</p>
-<h2 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h2><p>return可以停止函数的执行，并送回一个值，返回的值可以赋给函数外的变量，函数内的变量与函数外的变量<font color="red">无关</font>，return可以单独使用，也可以接表达式</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">return</span>;</span><br><span class="line"><span class="keyword">return</span> a;</span><br></pre></td></tr></table></figure>
-
-<p><strong>int</strong>类型的函数返回值</p>
-<p>需要用return停止函数执行并返回结果</p>
-<p><strong>void</strong>类型的函数不返回值，也就是说调用时不能做返回值的赋值</p>
-<p>不能使用带值的return，也可以不用return</p>
-<h2 id="逗号运算符"><a href="#逗号运算符" class="headerlink" title="逗号运算符"></a>逗号运算符</h2><p>调用函数时的圆括号里的逗号是标点符号，不是运算符</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">i(a,b);</span><br><span class="line">i((a,b));</span><br></pre></td></tr></table></figure>
-
-<h2 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h2><p>循环语句，判断语句可以嵌套，函数则不能嵌套</p>
-<h1 id="本地变量"><a href="#本地变量" class="headerlink" title="本地变量"></a>本地变量</h1><p>定义在函数内部的变量都时本地变量（目前学过的都是）</p>
-<h2 id="生存期"><a href="#生存期" class="headerlink" title="生存期"></a>生存期</h2><p>变量从出现到消失的时期</p>
-<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>变量起作用的代码范围</p>
-<p>对于本地变量，它的生存期和作用域就是大括号（块）</p>
-<h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><p>本地变量定义在块内，可以是函数的块，也可以是语句的块内，也可以定义在语句的块内，甚至可以随便拉一对大括号来定义变量</p>
-<p>块外定义的变量在块内仍有效</p>
-]]></content>
-      <tags>
-        <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>计算机入门图书分享</title>
     <url>/2021/08/21/tenth/</url>
     <content><![CDATA[<h1 id="3本入门图书"><a href="#3本入门图书" class="headerlink" title="3本入门图书"></a>3本入门图书</h1><p><a href="https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg">https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg</a><br>0000</p>
@@ -535,6 +535,24 @@
 <p>话说回来，这是一个<strong>静态</strong>博客，我可以个性化布局，可以在本地写文章，网络成本低，完全<strong>免费</strong>，更适合我这种一无所知的小白。我用的是近年流行的方法，hexo部署到github,我没有期望太多访问量，所以关于链接无法被百度收录的问题也不必在乎（github禁止百度爬虫，当然有大佬也能解决）。我用的是热门的nexT主题，出问题了容易得到网络<strong>帮助</strong>。</p>
 <p>经验都是<strong>坑</strong>出来的，我搭建hexo时用cmd安装不了git，又在git bash重试了一遍。</p>
 <p>搭建成功的那份喜悦，让我觉得一切都值得。</p>
+]]></content>
+      <tags>
+        <tag>message</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo d发布经常出错的解决方式</title>
+    <url>/2021/09/11/thirteenth/</url>
+    <content><![CDATA[<h1 id="详情-https-blog-csdn-net-qq-32454537-article-details-81338807"><a href="#详情-https-blog-csdn-net-qq-32454537-article-details-81338807" class="headerlink" title="[详情](https://blog.csdn.net/qq_32454537/article/details/81338807"></a>[详情](<a href="https://blog.csdn.net/qq_32454537/article/details/81338807">https://blog.csdn.net/qq_32454537/article/details/81338807</a></h1><p>)</p>
+<p>我以前在本地写好博客，想要push到git上，通常由于网络的问题发布失败，会出现如下字样，很恶心。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">unable to access <span class="string">&#x27;https://github.com/yujingsea/yujingsea.github.io.git/&#x27;</span>: OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:<span class="number">443</span></span><br></pre></td></tr></table></figure>
+
+<p>网上流传（我今天才在csdn找到方法）的解决方式是取消http代理</p>
+<p>如果还解决不了，就要往host里添加代理了</p>
+<p>打开Git Bash输入以下指令：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br></pre></td></tr></table></figure>
+
+<p>然后发布博文就没问题了</p>
 ]]></content>
       <tags>
         <tag>message</tag>
