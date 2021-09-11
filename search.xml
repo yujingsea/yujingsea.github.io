@@ -543,8 +543,7 @@
   <entry>
     <title>hexo d发布经常出错的解决方式</title>
     <url>/2021/09/11/thirteenth/</url>
-    <content><![CDATA[<h1 id="详情-https-blog-csdn-net-qq-32454537-article-details-81338807"><a href="#详情-https-blog-csdn-net-qq-32454537-article-details-81338807" class="headerlink" title="[详情](https://blog.csdn.net/qq_32454537/article/details/81338807"></a>[详情](<a href="https://blog.csdn.net/qq_32454537/article/details/81338807">https://blog.csdn.net/qq_32454537/article/details/81338807</a></h1><p>)</p>
-<p>我以前在本地写好博客，想要push到git上，通常由于网络的问题发布失败，会出现如下字样，很恶心。</p>
+    <content><![CDATA[<h1 id="详情"><a href="#详情" class="headerlink" title="详情"></a><a href="https://blog.csdn.net/qq_32454537/article/details/81338807">详情</a></h1><p>我以前在本地写好博客，想要push到git上，通常由于网络的问题发布失败，会出现如下字样，很恶心。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">unable to access <span class="string">&#x27;https://github.com/yujingsea/yujingsea.github.io.git/&#x27;</span>: OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:<span class="number">443</span></span><br></pre></td></tr></table></figure>
 
 <p>网上流传（我今天才在csdn找到方法）的解决方式是取消http代理</p>
