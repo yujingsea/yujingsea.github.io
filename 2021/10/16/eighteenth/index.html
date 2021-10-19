@@ -26,28 +26,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yujingsea.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="一级标题 #+空格+内容 回车执行&#x2F;ctrl+1，ctrl+0复原">
+<meta name="description" content="链表why链表如果创建一个结构，用malloc直接向内存申请一大片空间，那么为了实现数组的“扩大”，我们只能创建新的结构（一个更大的，加上增加空间的结构），如果内存不够上一次申请的内存的两倍，就会报错，很明显，这样的方法的空间利用率还不够高，因此，我们可以单独存储每一个数据以及数据间的关系（指针），也就可以使用链式存储，即链表 用链表实现可变数组下面是原课件的程序： 123456789101112">
 <meta property="og:type" content="article">
-<meta property="og:title" content="markdown语法笔记（Typora)">
-<meta property="og:url" content="https://yujingsea.github.io/2021/08/13/first/index.html">
+<meta property="og:title" content="C语言程序设计进阶(3)">
+<meta property="og:url" content="https://yujingsea.github.io/2021/10/16/eighteenth/index.html">
 <meta property="og:site_name" content="瑜璟博客">
-<meta property="og:description" content="一级标题 #+空格+内容 回车执行&#x2F;ctrl+1，ctrl+0复原">
+<meta property="og:description" content="链表why链表如果创建一个结构，用malloc直接向内存申请一大片空间，那么为了实现数组的“扩大”，我们只能创建新的结构（一个更大的，加上增加空间的结构），如果内存不够上一次申请的内存的两倍，就会报错，很明显，这样的方法的空间利用率还不够高，因此，我们可以单独存储每一个数据以及数据间的关系（指针），也就可以使用链式存储，即链表 用链表实现可变数组下面是原课件的程序： 123456789101112">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-08-13T15:41:53.337Z">
-<meta property="article:modified_time" content="2021-10-09T01:50:31.239Z">
+<meta property="article:published_time" content="2021-10-16T05:00:38.000Z">
+<meta property="article:modified_time" content="2021-10-19T15:02:40.653Z">
 <meta property="article:author" content="瑜璟">
-<meta property="article:tag" content="这就是关键词么">
+<meta property="article:tag" content="C">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://yujingsea.github.io/2021/08/13/first/">
+<link rel="canonical" href="https://yujingsea.github.io/2021/10/16/eighteenth/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yujingsea.github.io/2021/08/13/first/","path":"2021/08/13/first/","title":"markdown语法笔记（Typora)"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yujingsea.github.io/2021/10/16/eighteenth/","path":"2021/10/16/eighteenth/","title":"C语言程序设计进阶(3)"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>markdown语法笔记（Typora) | 瑜璟博客</title>
+<title>C语言程序设计进阶(3) | 瑜璟博客</title>
   
 
 
@@ -153,7 +153,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">一级标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">二级标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">三级标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">4.</span> <span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">5.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8"><span class="nav-number">6.</span> <span class="nav-text">任务列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC"><span class="nav-number">7.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E4%BB%A3%E7%A0%81"><span class="nav-number">8.</span> <span class="nav-text">行内代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">9.</span> <span class="nav-text">代码块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%89%87"><span class="nav-number">10.</span> <span class="nav-text">图片</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8"><span class="nav-number">1.</span> <span class="nav-text">链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#why%E9%93%BE%E8%A1%A8"><span class="nav-number">1.1.</span> <span class="nav-text">why链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E9%93%BE%E8%A1%A8%E5%AE%9E%E7%8E%B0%E5%8F%AF%E5%8F%98%E6%95%B0%E7%BB%84"><span class="nav-number">1.2.</span> <span class="nav-text">用链表实现可变数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">链表的函数</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -230,7 +230,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yujingsea.github.io/2021/08/13/first/">
+    <link itemprop="mainEntityOfPage" href="https://yujingsea.github.io/2021/10/16/eighteenth/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -243,7 +243,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          markdown语法笔记（Typora)
+          C语言程序设计进阶(3)
         </h1>
 
         <div class="post-meta-container">
@@ -254,14 +254,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-08-13 23:41:53" itemprop="dateCreated datePublished" datetime="2021-08-13T23:41:53+08:00">2021-08-13</time>
+      <time title="创建时间：2021-10-16 13:00:38" itemprop="dateCreated datePublished" datetime="2021-10-16T13:00:38+08:00">2021-10-16</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-10-09 09:50:31" itemprop="dateModified" datetime="2021-10-09T09:50:31+08:00">2021-10-09</time>
+        <time title="修改时间：2021-10-19 23:02:40" itemprop="dateModified" datetime="2021-10-19T23:02:40+08:00">2021-10-19</time>
       </span>
 
   
@@ -278,14 +278,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>481</span>
+      <span>762</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -296,83 +296,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h2><p> #+空格+内容 回车执行/ctrl+1，ctrl+0复原</p>
-<span id="more"></span>
+        <h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><h3 id="why链表"><a href="#why链表" class="headerlink" title="why链表"></a>why链表</h3><p>如果创建一个结构，用malloc直接向内存申请<strong>一大片空间</strong>，那么为了实现数组的<strong>“扩大”</strong>，我们只能创建新的结构（一个更大的，加上增加空间的结构），如果内存不够上一次申请的内存的两倍，就会报错，很明显，这样的方法的<strong>空间利用率还不够高</strong>，因此，我们可以单独存储每一个数据以及数据间的关系（指针），也就可以使用链式存储，即<strong>链表</strong></p>
+<h3 id="用链表实现可变数组"><a href="#用链表实现可变数组" class="headerlink" title="用链表实现可变数组"></a>用链表实现可变数组</h3><p>下面是原课件的程序：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;node.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Node* head=<span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">int</span> number;</span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;number);</span><br><span class="line">        <span class="keyword">if</span>(number!=<span class="number">-1</span>)&#123;</span><br><span class="line">            Node *p=(Node*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node));</span><br><span class="line">            p-&gt;value=number;</span><br><span class="line">            p-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">            Node *last=head;</span><br><span class="line">            <span class="keyword">if</span>(last)&#123;</span><br><span class="line">				<span class="keyword">while</span>(last-&gt;next)&#123;</span><br><span class="line">                last=last-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">              last-&gt;next=p;</span><br><span class="line">           &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                head=p;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">while</span>(number!=<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p>##+同上/ctrl+2</p>
-<h2 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h2><p>###+同上/ctrl+3</p>
-<p>……</p>
-<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>编号标点后有空格，回车自动添加序号,添加/删除序号，会自动补序号，两次回车或下键取消序号</p>
-<p>tab降级</p>
-<p>shift+tab升级</p>
-<p>快捷键：ctrl+shift+[</p>
-<ol>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ol>
-<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>*/-+空格+内容，升降级同有序列表</p>
-<p>快捷键：ctrl+shift+]</p>
-<ul>
-<li>立秋<ul>
-<li>网课？</li>
-</ul>
-</li>
-</ul>
-<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><p>-空格[空格]空格</p>
-<ul>
-<li><input disabled type="checkbox"> <ul>
-<li><input checked disabled type="checkbox"> </li>
-</ul>
-</li>
-</ul>
-<p>不如段落中添加快</p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
-<thead>
-<tr>
-<th align="left">345</th>
-<th align="center">678</th>
-<th align="right">91011</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"></td>
-<td align="center"></td>
-<td align="right"></td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="center"></td>
-<td align="right"></td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="center"></td>
-<td align="right"></td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="center"></td>
-<td align="right"></td>
-</tr>
-</tbody></table>
-<p>段落中插入</p>
-<p>crtl+回车加行</p>
-<p>|内容|内容|内容|    回车执行</p>
-<h2 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><p>反引号+内容+反引号</p>
-<p><code>java</code></p>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C: <span class="built_in">printf</span> (<span class="string">&quot;hello,world&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p>node. h :</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _NODE_H_</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _NODE_H_</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">node</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> value;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> _<span class="title">node</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;Node;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python: <span class="built_in">print</span> (<span class="string">&quot;hello,world&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java: System.out.println(<span class="string">&quot;hello,world!&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>ctrl+shift+i</p>
-<p><code>![1]</code>(C:\Users\Acer\Pictures\1.jpg省略了一个圆括号</p>
-<p>就这吧，Typora软件很方便</p>
-<p>快捷键应该用于频繁使用的语法</p>
+<h3 id="链表的函数"><a href="#链表的函数" class="headerlink" title="链表的函数"></a>链表的函数</h3><p>待更新。。。</p>
 
     </div>
 
@@ -395,16 +326,19 @@
   </div>
 </div>
 
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2021/10/10/seventeenth/" rel="prev" title="C语言程序设计进阶（2）">
+                  <i class="fa fa-chevron-left"></i> C语言程序设计进阶（2）
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/08/14/second/" rel="next" title="也许今天是个不错的开始">
-                  也许今天是个不错的开始 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -492,7 +426,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"yujingsea","repo":"blogtalk","client_id":"b8fe95277dc187c0bbc3","client_secret":"25133a5ace7a6c270a39c52b6331fdf5021a4396","admin_user":"yujingsea","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"007f3ca02d7f31c02fe50bd02ae0c090"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"yujingsea","repo":"blogtalk","client_id":"b8fe95277dc187c0bbc3","client_secret":"25133a5ace7a6c270a39c52b6331fdf5021a4396","admin_user":"yujingsea","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"0f39ceecbd9224224ddff40347a39403"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
