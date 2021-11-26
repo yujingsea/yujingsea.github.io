@@ -213,6 +213,61 @@
       </tags>
   </entry>
   <entry>
+    <title>C语言入门笔记（1）</title>
+    <url>/2021/08/17/fifth/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我觉得目前比较好的c语言入门网课有b站的失乐-try上传的C语言入门视频，以及中国大学mooc中浙大翁恺老师的<a href="https://www.icourse163.org/course/ZJU-199001">C语言程序设计入门视频</a>。都对新手友好到了极点。我这里选的是翁恺老师的课，比较系统，也比较专业。我会着重指出易错易忘的知识，以便复习，其他不再赘述。</p>
+<span id="more"></span>
+
+<p>关于对计算机知识的深入理解，我推荐b站搬运的YouTube的<a href="https://b23.tv/J0ghf3">计算机科学速成课</a>，里面把计算机的历史，发展，进化讲的<strong>相对容易</strong>理解些，虽然有些知识我听不懂，但我大为震撼。</p>
+<h2 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h2><p>Windows系统推荐dev-C++，当然也可以线上编译，不过不能保存</p>
+<h2 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span> ( <span class="string">&quot;hello world\n&quot;</span> );</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>除了printf函数，剩下的是c语言的基本框架</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>a = 0;</p>
+<p>把0赋值给a，a作为变量保存了数据0，a之后还可变为其它值。</p>
+<p>a是一种标识符，<font color="red">只能有字母，数字，下划线组成，数字不能位于头部，关键字不能做标识符</font>。</p>
+<p>关键字用多了就记住了，例如char,do,while,if,sizeof….</p>
+<h2 id="赋值与初始化"><a href="#赋值与初始化" class="headerlink" title="赋值与初始化"></a>赋值与初始化</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>这里定义了一个变量a,但你不知道a是几，系统保存的可能是一个任意的数；</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a =<span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+<p>在定义变量时，建议<font color="red">在代码开头的地方定义变量</font>，因为ansi c标准只能在代码开头的地方定义变量，c99标准则无此要求。</p>
+<p>a被初始化为0，系统保存的a的值是0。</p>
+<p><font color="red">初始化是一个好习惯</font>，不这样做可能会莫名报错，尤其到指针那一块。</p>
+<h2 id="scanf函数"><a href="#scanf函数" class="headerlink" title="scanf函数"></a>scanf函数</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">a=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a);</span><br></pre></td></tr></table></figure>
+
+<p>%d意为取整数a，&amp;取地址，让我输入a</p>
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">b = <span class="number">1</span></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">1</span> + b</span><br></pre></td></tr></table></figure>
+
+<p>直接写在程序里的1是直接量，是常量的一种。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> a = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>const作为修饰符加在int的前面，使a成为一个具有常属性的变量，即常变量a不能再被修改，否则会报错。</p>
+<h2 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h2><p>分为单精度浮点数和双精度浮点数，双精度浮点数能保留更多位小数，更精确,%f是取小数。</p>
+<p>我们试一下下面的运算</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">&quot;%d %d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;结果为%d。\n&quot;</span>,((a+b)/<span class="number">3</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里输入5，5，结果为3，没有小数</p>
+<p>如果输入10 ，10，结果不是6.666…而是6，这里说明4舍5入不符合</p>
+<p>这里需要知道%f是取单精度，%lf是双精度</p>
+<p>我们再试一下输出小数结果</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">&quot;%d %d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;结果为%f。\n&quot;</span>,((a+b)/<span class="number">3</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里输入5，5，结果为0.000000，又出错了</p>
+<p>到这里要指出：</p>
+<p>在c语言中<font color="red">两个整数的运算结果只能是整数</font>，用%d得到的是整数，用%f得不到正确结果，如果把3换成3.0，系统在计算时会把a+b的结果化为浮点数，<font color="red">浮点数间的运算就是浮点数</font>。我们再试一下</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">&quot;%d %d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;结果为%f。\n&quot;</span>,((a+b)/<span class="number">3.0</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里输入5，5，结果正确，为3.333333</p>
+]]></content>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>markdown语法笔记（Typora)</title>
     <url>/2021/08/13/first/</url>
     <content><![CDATA[<h2 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h2><p> #+空格+内容 回车执行/ctrl+1，ctrl+0复原</p>
@@ -295,58 +350,12 @@
 ]]></content>
   </entry>
   <entry>
-    <title>C语言入门笔记（1）</title>
-    <url>/2021/08/17/fifth/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我觉得目前比较好的c语言入门网课有b站的失乐-try上传的C语言入门视频，以及中国大学mooc中浙大翁恺老师的<a href="https://www.icourse163.org/course/ZJU-199001">C语言程序设计入门视频</a>。都对新手友好到了极点。我这里选的是翁恺老师的课，比较系统，也比较专业。我会着重指出易错易忘的知识，以便复习，其他不再赘述。</p>
-<span id="more"></span>
-
-<p>关于对计算机知识的深入理解，我推荐b站搬运的YouTube的<a href="https://b23.tv/J0ghf3">计算机科学速成课</a>，里面把计算机的历史，发展，进化讲的<strong>相对容易</strong>理解些，虽然有些知识我听不懂，但我大为震撼。</p>
-<h2 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h2><p>Windows系统推荐dev-C++，当然也可以线上编译，不过不能保存</p>
-<h2 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span> ( <span class="string">&quot;hello world\n&quot;</span> );</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>除了printf函数，剩下的是c语言的基本框架</p>
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>a = 0;</p>
-<p>把0赋值给a，a作为变量保存了数据0，a之后还可变为其它值。</p>
-<p>a是一种标识符，<font color="red">只能有字母，数字，下划线组成，数字不能位于头部，关键字不能做标识符</font>。</p>
-<p>关键字用多了就记住了，例如char,do,while,if,sizeof….</p>
-<h2 id="赋值与初始化"><a href="#赋值与初始化" class="headerlink" title="赋值与初始化"></a>赋值与初始化</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>这里定义了一个变量a,但你不知道a是几，系统保存的可能是一个任意的数；</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a =<span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-
-<p>在定义变量时，建议<font color="red">在代码开头的地方定义变量</font>，因为ansi c标准只能在代码开头的地方定义变量，c99标准则无此要求。</p>
-<p>a被初始化为0，系统保存的a的值是0。</p>
-<p><font color="red">初始化是一个好习惯</font>，不这样做可能会莫名报错，尤其到指针那一块。</p>
-<h2 id="scanf函数"><a href="#scanf函数" class="headerlink" title="scanf函数"></a>scanf函数</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">a=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a);</span><br></pre></td></tr></table></figure>
-
-<p>%d意为取整数a，&amp;取地址，让我输入a</p>
-<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">b = <span class="number">1</span></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">1</span> + b</span><br></pre></td></tr></table></figure>
-
-<p>直接写在程序里的1是直接量，是常量的一种。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> a = <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<p>const作为修饰符加在int的前面，使a成为一个具有常属性的变量，即常变量a不能再被修改，否则会报错。</p>
-<h2 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h2><p>分为单精度浮点数和双精度浮点数，双精度浮点数能保留更多位小数，更精确,%f是取小数。</p>
-<p>我们试一下下面的运算</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">&quot;%d %d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;结果为%d。\n&quot;</span>,((a+b)/<span class="number">3</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里输入5，5，结果为3，没有小数</p>
-<p>如果输入10 ，10，结果不是6.666…而是6，这里说明4舍5入不符合</p>
-<p>这里需要知道%f是取单精度，%lf是双精度</p>
-<p>我们再试一下输出小数结果</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">&quot;%d %d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;结果为%f。\n&quot;</span>,((a+b)/<span class="number">3</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里输入5，5，结果为0.000000，又出错了</p>
-<p>到这里要指出：</p>
-<p>在c语言中<font color="red">两个整数的运算结果只能是整数</font>，用%d得到的是整数，用%f得不到正确结果，如果把3换成3.0，系统在计算时会把a+b的结果化为浮点数，<font color="red">浮点数间的运算就是浮点数</font>。我们再试一下</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">&quot;%d %d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;结果为%f。\n&quot;</span>,((a+b)/<span class="number">3.0</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里输入5，5，结果正确，为3.333333</p>
+    <title>评论区开放！</title>
+    <url>/2021/08/15/fourth/</url>
+    <content><![CDATA[<h1 id="gitalk已启用"><a href="#gitalk已启用" class="headerlink" title="gitalk已启用"></a>gitalk已启用</h1><p>nexT支持gitalk,评论者只需有GitHub账号即可，账号可在github官网免费注册，注册真不麻烦，github是一个共享源码的网站，不会有安全隐患，欢迎注册/登录github留言！又白嫖了一次嘿嘿</p>
 ]]></content>
       <tags>
-        <tag>C</tag>
+        <tag>message</tag>
       </tags>
   </entry>
   <entry>
@@ -414,15 +423,6 @@
       </tags>
   </entry>
   <entry>
-    <title>评论区开放！</title>
-    <url>/2021/08/15/fourth/</url>
-    <content><![CDATA[<h1 id="gitalk已启用"><a href="#gitalk已启用" class="headerlink" title="gitalk已启用"></a>gitalk已启用</h1><p>nexT支持gitalk,评论者只需有GitHub账号即可，账号可在github官网免费注册，注册真不麻烦，github是一个共享源码的网站，不会有安全隐患，欢迎注册/登录github留言！又白嫖了一次嘿嘿</p>
-]]></content>
-      <tags>
-        <tag>message</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>欲鸽又止。。。</title>
     <url>/2021/10/25/ninteenth/</url>
     <content><![CDATA[<h2 id="琐事"><a href="#琐事" class="headerlink" title="琐事"></a>琐事</h2><span id="more"></span>
@@ -438,6 +438,28 @@
 <p>“相信不屈不挠的努力，</p>
 <p>相信战胜死亡的年轻……”</p>
 <p>道阻且长，且行且歌</p>
+]]></content>
+      <tags>
+        <tag>daily life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>也许今天是个不错的开始</title>
+    <url>/2021/08/14/second/</url>
+    <content><![CDATA[<p> 很多时候我都难以做到真正的自律，更多的时候是<strong>他律</strong>。可谁会有时间监督我呢，我无可否认我的缺陷，但我的<strong>弱点</strong>有时却可以弥补缺陷，我举几个可行度高的例子。</p>
+<span id="more"></span>
+
+<h2 id="图书馆"><a href="#图书馆" class="headerlink" title="图书馆"></a>图书馆</h2><p>对于我来说，去图书馆是寻找压力的方式之一。我会先略显仓促地选择好合适的座位，等到安静下来，焦虑的心已然平复，我会完全融入群体当中，这时我会把读书和学习当作理所应当的事。那些来来往往，装模做样，假装学习的人也只能凸显我的安静。我不时给自己积极的心理暗示，尽管我本来就难以呆在人多的地方，我还是努力去利用好这样宁静而又略带紧张的氛围。</p>
+<p><img src="https://mz.eastday.com/22584710.jpg" alt="查看源图像"></p>
+<p>当然还有<strong>线上</strong>的自习室，不过效果会差很多，最好提前约好同学结伴上线。qq自带的自习室我也曾用过，有一次学了一上午，效果还不错。</p>
+<h2 id="强制锁机"><a href="#强制锁机" class="headerlink" title="强制锁机"></a>强制锁机</h2><p>这属实是无奈之举，我也曾在假期使用过，有一些app支持强制锁机，是你反悔也没有退出键的那种，不过可能会对手机正常使用，信息接受造成不可预估的影响。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-65e826e4d58bd6149962061acbd4608e_720w.jpg?source=1940ef5c" alt="img"></p>
+<h2 id="女朋友？"><a href="#女朋友？" class="headerlink" title="女朋友？"></a>女朋友？</h2><p>没错，好吧，这个我还没体验过。。。</p>
+<p>不过两人共勉确实是不错的设想，也许你们有一天会明白程序员的浪漫，我暂且把dev-c++当成女友吧，今晚<strong>码</strong>上见。</p>
+<p>话说今天我被强喂了不少狗粮呢[哭笑]</p>
+<p><img src="https://tse1-mm.cn.bing.net/th/id/R-C.cbb4c3c2058543dcba1c9cc15f0f62a1?rik=k9pGZKFw6C8zNA&riu=http://www.wsm.cn/uploads/allimg/161104/26-161104091331.jpg&ehk=lmqLW5yF0bTbg/Kh1EQEn5FanN8wAyOrqGQNa9VLgzY=&risl=&pid=ImgRaw&r=0" alt="查看源图像"></p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>也许明天也是个不错的开始，哦不，就今天！</p>
+<p><img src="https://pic4.zhimg.com/v2-b10e616220e087e44ec7766d55b3cd1d_r.jpg" alt="查看源图像"></p>
 ]]></content>
       <tags>
         <tag>daily life</tag>
@@ -502,28 +524,6 @@
       </tags>
   </entry>
   <entry>
-    <title>也许今天是个不错的开始</title>
-    <url>/2021/08/14/second/</url>
-    <content><![CDATA[<p> 很多时候我都难以做到真正的自律，更多的时候是<strong>他律</strong>。可谁会有时间监督我呢，我无可否认我的缺陷，但我的<strong>弱点</strong>有时却可以弥补缺陷，我举几个可行度高的例子。</p>
-<span id="more"></span>
-
-<h2 id="图书馆"><a href="#图书馆" class="headerlink" title="图书馆"></a>图书馆</h2><p>对于我来说，去图书馆是寻找压力的方式之一。我会先略显仓促地选择好合适的座位，等到安静下来，焦虑的心已然平复，我会完全融入群体当中，这时我会把读书和学习当作理所应当的事。那些来来往往，装模做样，假装学习的人也只能凸显我的安静。我不时给自己积极的心理暗示，尽管我本来就难以呆在人多的地方，我还是努力去利用好这样宁静而又略带紧张的氛围。</p>
-<p><img src="https://mz.eastday.com/22584710.jpg" alt="查看源图像"></p>
-<p>当然还有<strong>线上</strong>的自习室，不过效果会差很多，最好提前约好同学结伴上线。qq自带的自习室我也曾用过，有一次学了一上午，效果还不错。</p>
-<h2 id="强制锁机"><a href="#强制锁机" class="headerlink" title="强制锁机"></a>强制锁机</h2><p>这属实是无奈之举，我也曾在假期使用过，有一些app支持强制锁机，是你反悔也没有退出键的那种，不过可能会对手机正常使用，信息接受造成不可预估的影响。</p>
-<p><img src="https://pic1.zhimg.com/80/v2-65e826e4d58bd6149962061acbd4608e_720w.jpg?source=1940ef5c" alt="img"></p>
-<h2 id="女朋友？"><a href="#女朋友？" class="headerlink" title="女朋友？"></a>女朋友？</h2><p>没错，好吧，这个我还没体验过。。。</p>
-<p>不过两人共勉确实是不错的设想，也许你们有一天会明白程序员的浪漫，我暂且把dev-c++当成女友吧，今晚<strong>码</strong>上见。</p>
-<p>话说今天我被强喂了不少狗粮呢[哭笑]</p>
-<p><img src="https://tse1-mm.cn.bing.net/th/id/R-C.cbb4c3c2058543dcba1c9cc15f0f62a1?rik=k9pGZKFw6C8zNA&riu=http://www.wsm.cn/uploads/allimg/161104/26-161104091331.jpg&ehk=lmqLW5yF0bTbg/Kh1EQEn5FanN8wAyOrqGQNa9VLgzY=&risl=&pid=ImgRaw&r=0" alt="查看源图像"></p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>也许明天也是个不错的开始，哦不，就今天！</p>
-<p><img src="https://pic4.zhimg.com/v2-b10e616220e087e44ec7766d55b3cd1d_r.jpg" alt="查看源图像"></p>
-]]></content>
-      <tags>
-        <tag>daily life</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C语言程序设计进阶（2）</title>
     <url>/2021/10/10/seventeenth/</url>
     <content><![CDATA[<h2 id="结构类型"><a href="#结构类型" class="headerlink" title="结构类型"></a>结构类型</h2><h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><p>枚举是一种用户定义的数据类型，用关键字enum以如下语法声明：</p>
@@ -585,6 +585,50 @@
       </tags>
   </entry>
   <entry>
+    <title>zzuli OJ 1077：空心菱形及其延伸</title>
+    <url>/2021/09/24/sixteenth/</url>
+    <content><![CDATA[<h1 id="zzuli-OJ-1077：空心菱形"><a href="#zzuli-OJ-1077：空心菱形" class="headerlink" title="zzuli OJ 1077：空心菱形"></a><a href="http://acm.zzuli.edu.cn/problem.php?id=1077">zzuli OJ 1077：空心菱形</a></h1><span id="more"></span>
+
+<p>题目描述</p>
+<p>输入一个整数n，（1&lt;=n&lt;=20）,输出一个空心菱形，其中每个边由n个’*’组成</p>
+<p>输入：</p>
+<p>输入包含一个整数,n（1&lt;=n&lt;=20）</p>
+<p>输出：</p>
+<p>输出一个空心菱形，每个边由n个’*’组成</p>
+<p>样例输入</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<p>样例输出</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">    *</span><br><span class="line">   * *</span><br><span class="line">  *   *</span><br><span class="line"> *     *</span><br><span class="line">*       *</span><br><span class="line"> *     *</span><br><span class="line">  *   *</span><br><span class="line">   * *</span><br><span class="line">    *</span><br></pre></td></tr></table></figure>
+
+<p>我的解法（题目没要求多组输入）：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n)!=EOF)&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">2</span>*n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;<span class="number">2</span>*n<span class="number">-1</span>;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(j-i==n<span class="number">-1</span>||i+j==n<span class="number">-1</span>||i-j==n<span class="number">-1</span>||i+j==<span class="number">3</span>*n<span class="number">-3</span>)&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>首先我们会发现填*的i和j满足某种函数关系,如果输入为n,我们可用以下框架建立一个空白棋盘，然后我们只需要找到i和j在矩阵中的一种或多种关系，以及棋盘的大小范围，就能随心所欲，画出想要的图案</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n)!=EOF)&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;行的范围;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;列的范围;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i和j在矩阵中的一种或多种关系)&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="再举一个X形图案例子（牛客网bc68）"><a href="#再举一个X形图案例子（牛客网bc68）" class="headerlink" title="再举一个X形图案例子（牛客网bc68）"></a><a href="https://www.nowcoder.com/practice/83d6afe3018e44539c51265165806ee4?tpId=107&&tqId=33349&rp=1&ru=/ta/beginner-programmers&qru=/ta/beginner-programmers/question-ranking">再举一个X形图案例子（牛客网bc68）</a></h2><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>KiKi学习了循环，BoBo老师给他出了一系列打印图案的练习，该任务是打印用“*”组成的X形图案。</p>
+<h3 id="输入描述："><a href="#输入描述：" class="headerlink" title="输入描述："></a>输入描述：</h3><p>多组输入，一个整数（2~20），表示输出的行数，也表示组成“X”的反斜线和正斜线的长度。</p>
+<h3 id="输出描述："><a href="#输出描述：" class="headerlink" title="输出描述："></a>输出描述：</h3><p>针对每行输入，输出用“*”组成的X形图案。</p>
+<h2 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h2><p>输入：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">*   *</span><br><span class="line"> * * </span><br><span class="line">  *  </span><br><span class="line"> * * </span><br><span class="line">*   *</span><br></pre></td></tr></table></figure>
+
+<p>可以用刚刚提到的框架写：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n)!=EOF)&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i==j||i+j==n<span class="number">-1</span>)&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>你学废了吗，嘿嘿</p>
+<p>可能对你来说太简单了</p>
+<p>其实我们还可以用&lt; &gt;号来填充图形或镂空图形，总之，这不比嵌套的if语句简单？</p>
+<p>感谢大佬的光临让本站蓬荜生辉 : )</p>
+]]></content>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C语言入门笔记（3）</title>
     <url>/2021/08/18/seventh/</url>
     <content><![CDATA[<h2 id="多重循环"><a href="#多重循环" class="headerlink" title="多重循环"></a>多重循环</h2><p>goto的使用</p>
@@ -633,47 +677,23 @@
       </tags>
   </entry>
   <entry>
-    <title>zzuli OJ 1077：空心菱形及其延伸</title>
-    <url>/2021/09/24/sixteenth/</url>
-    <content><![CDATA[<h1 id="zzuli-OJ-1077：空心菱形"><a href="#zzuli-OJ-1077：空心菱形" class="headerlink" title="zzuli OJ 1077：空心菱形"></a><a href="http://acm.zzuli.edu.cn/problem.php?id=1077">zzuli OJ 1077：空心菱形</a></h1><span id="more"></span>
+    <title>计算机入门图书分享</title>
+    <url>/2021/08/21/tenth/</url>
+    <content><![CDATA[<h1 id="3本入门图书"><a href="#3本入门图书" class="headerlink" title="3本入门图书"></a>3本入门图书</h1><p><a href="https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg">https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg</a><br>0000</p>
+<span id="more"></span>
 
-<p>题目描述</p>
-<p>输入一个整数n，（1&lt;=n&lt;=20）,输出一个空心菱形，其中每个边由n个’*’组成</p>
-<p>输入：</p>
-<p>输入包含一个整数,n（1&lt;=n&lt;=20）</p>
-<p>输出：</p>
-<p>输出一个空心菱形，每个边由n个’*’组成</p>
-<p>样例输入</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
+<p>包含3本</p>
+<p>1.c++primerplus6</p>
+<img src="/2021/08/21/tenth/1.jpg" class title="blog">
 
-<p>样例输出</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">    *</span><br><span class="line">   * *</span><br><span class="line">  *   *</span><br><span class="line"> *     *</span><br><span class="line">*       *</span><br><span class="line"> *     *</span><br><span class="line">  *   *</span><br><span class="line">   * *</span><br><span class="line">    *</span><br></pre></td></tr></table></figure>
+<p>2.算法竞赛入门经典 紫书</p>
+<img src="/2021/08/21/tenth/2.jpg" class title="blog">
 
-<p>我的解法（题目没要求多组输入）：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n)!=EOF)&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">2</span>*n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;<span class="number">2</span>*n<span class="number">-1</span>;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(j-i==n<span class="number">-1</span>||i+j==n<span class="number">-1</span>||i-j==n<span class="number">-1</span>||i+j==<span class="number">3</span>*n<span class="number">-3</span>)&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>首先我们会发现填*的i和j满足某种函数关系,如果输入为n,我们可用以下框架建立一个空白棋盘，然后我们只需要找到i和j在矩阵中的一种或多种关系，以及棋盘的大小范围，就能随心所欲，画出想要的图案</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n)!=EOF)&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;行的范围;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;列的范围;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i和j在矩阵中的一种或多种关系)&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="再举一个X形图案例子（牛客网bc68）"><a href="#再举一个X形图案例子（牛客网bc68）" class="headerlink" title="再举一个X形图案例子（牛客网bc68）"></a><a href="https://www.nowcoder.com/practice/83d6afe3018e44539c51265165806ee4?tpId=107&&tqId=33349&rp=1&ru=/ta/beginner-programmers&qru=/ta/beginner-programmers/question-ranking">再举一个X形图案例子（牛客网bc68）</a></h2><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>KiKi学习了循环，BoBo老师给他出了一系列打印图案的练习，该任务是打印用“*”组成的X形图案。</p>
-<h3 id="输入描述："><a href="#输入描述：" class="headerlink" title="输入描述："></a>输入描述：</h3><p>多组输入，一个整数（2~20），表示输出的行数，也表示组成“X”的反斜线和正斜线的长度。</p>
-<h3 id="输出描述："><a href="#输出描述：" class="headerlink" title="输出描述："></a>输出描述：</h3><p>针对每行输入，输出用“*”组成的X形图案。</p>
-<h2 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h2><p>输入：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">*   *</span><br><span class="line"> * * </span><br><span class="line">  *  </span><br><span class="line"> * * </span><br><span class="line">*   *</span><br></pre></td></tr></table></figure>
-
-<p>可以用刚刚提到的框架写：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n)!=EOF)&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i==j||i+j==n<span class="number">-1</span>)&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>你学废了吗，嘿嘿</p>
-<p>可能对你来说太简单了</p>
-<p>其实我们还可以用&lt; &gt;号来填充图形或镂空图形，总之，这不比嵌套的if语句简单？</p>
-<p>感谢大佬的光临让本站蓬荜生辉 : )</p>
+<p>3.算法竞赛入门经典训练指南</p>
+<img src="/2021/08/21/tenth/3.jpg" class title="blog">
 ]]></content>
       <tags>
-        <tag>C</tag>
+        <tag>share</tag>
       </tags>
   </entry>
   <entry>
@@ -730,26 +750,6 @@
 ]]></content>
       <tags>
         <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机入门图书分享</title>
-    <url>/2021/08/21/tenth/</url>
-    <content><![CDATA[<h1 id="3本入门图书"><a href="#3本入门图书" class="headerlink" title="3本入门图书"></a>3本入门图书</h1><p><a href="https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg">https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg</a><br>0000</p>
-<span id="more"></span>
-
-<p>包含3本</p>
-<p>1.c++primerplus6</p>
-<img src="/2021/08/21/tenth/1.jpg" class title="blog">
-
-<p>2.算法竞赛入门经典 紫书</p>
-<img src="/2021/08/21/tenth/2.jpg" class title="blog">
-
-<p>3.算法竞赛入门经典训练指南</p>
-<img src="/2021/08/21/tenth/3.jpg" class title="blog">
-]]></content>
-      <tags>
-        <tag>share</tag>
       </tags>
   </entry>
   <entry>
@@ -907,6 +907,38 @@
 
 <p>当然，数组记录了多个结果，我们可以用迭代(就是可以不断地用旧的值得到新的值，直到我们想要的得到的结果)，只记三个结果：</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> c = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        c=a+b;</span><br><span class="line">        a=b;</span><br><span class="line">        b=c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,c);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>电脑120oj答疑课学到的小知识</title>
+    <url>/2021/11/23/twentieth/</url>
+    <content><![CDATA[<h2 id="small-tips"><a href="#small-tips" class="headerlink" title="small tips"></a>small tips</h2><p>1.万能头(竞赛常用，省事)，包含所有C和C++的头文件,还有常用的max,min,sort(有sort还用什么冒泡)等函数可供直接调用</p>
+<span id="more"></span>
+
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&lt;bits/stdc++.h&gt; </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br></pre></td></tr></table></figure>
+
+<p>2.在main函数外定义变量(全局变量)会被初始化为0，而定在main函数内的局部变量空间小，容易溢出 </p>
+<p>3.在main函数外用typedef可以给数据类型起名，比如</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll</span><br></pre></td></tr></table></figure>
+
+<p>定义变量时会少些很多，在学结构体时可省事</p>
+<p>4.const a=3.14; 意思是常变量a不能再被修改 </p>
+<p>5.在c++代码中cin是输入，cout是输出 cin&gt;&gt;a&gt;&gt;b意思是先读入a,后读入b cout&lt;&lt;a&lt;&lt;b&lt;&lt;endl同理 遇到endl会打印换行 </p>
+<p>6.devc++的debug(一定要学会)，设置断点，添加变量，通过查看每一步变量值的改变来找出错误 </p>
+<p>7.getchar()与putchar(…)，gets()与puts(…)</p>
+<p>pta实验里好几道题的解题方法要把回车滤掉，输入某变量后，要按回车，但不要让下面的%c把回车读进去了。ch=getchar()吃掉回车</p>
+<p>getchar()可以读入一个字符，putchar(ch)可以输出一个字符ch，gets与puts则是对字符串处理的函数，不遇到回车不结束，最好用下面的读入方式替换gets，因为gets并不安全</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%[^\n],str&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>另外memset函数可以清空缓冲区（string.h）</p>
+<p>8._gcd可以求a,b的最大公约数</p>
+<p>在algorithm头文件中（c++）</p>
+<p>9.差分与前缀和</p>
+<p>这两种算法属于算法的优化，可以减少时间复杂度</p>
+<p>详情见<a href="https://blog.csdn.net/qq_43716778/article/details/110923411">这里</a>（滑稽）</p>
 ]]></content>
       <tags>
         <tag>C</tag>
