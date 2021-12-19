@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://yujingsea.github.io/2021/12/19/22/1.jpg">
 <meta property="og:image" content="https://yujingsea.github.io/2021/12/19/22/2.jpg">
 <meta property="article:published_time" content="2021-12-19T04:52:18.000Z">
-<meta property="article:modified_time" content="2021-12-19T05:35:35.190Z">
+<meta property="article:modified_time" content="2021-12-19T05:48:17.933Z">
 <meta property="article:author" content="瑜璟">
 <meta property="article:tag" content="Data Structure">
 <meta name="twitter:card" content="summary">
@@ -258,7 +258,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-12-19 12:52:18 / 修改时间：13:35:35" itemprop="dateCreated datePublished" datetime="2021-12-19T12:52:18+08:00">2021-12-19</time>
+      <time title="创建时间：2021-12-19 12:52:18 / 修改时间：13:48:17" itemprop="dateCreated datePublished" datetime="2021-12-19T12:52:18+08:00">2021-12-19</time>
     </span>
 
   
@@ -275,7 +275,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.6k</span>
+      <span>3.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -298,11 +298,12 @@
 <p>数据结构可以说是学习算法的前提，我将在寒假前后更新完数据结构相关的内容，同时会更新一些简单的算法，我学习的是mooc上浙大的<a target="_blank" rel="noopener" href="https://www.icourse163.org/learn/ZJU-93001?tid=1465570445#/learn/announce">数据结构</a>，刚学完C语言就学数据结构是不太理想的，还需要大量练习，能够熟练运用指针和结构体，并且真正搞懂了指针的含义及用途，不会就多练习(doge)</p>
 <h1 id="线性表及其实现"><a href="#线性表及其实现" class="headerlink" title="线性表及其实现"></a>线性表及其实现</h1><h2 id="线性表定义"><a href="#线性表定义" class="headerlink" title="线性表定义"></a>线性表定义</h2><p><strong>“线性表(Linear List)”</strong>：由同类型<strong>数据元素</strong>构成<strong>有序序列</strong>的线性结构</p>
 <p> 表中元素个数称为线性表的<strong>长度</strong>；线性表没有元素时，称为<strong>空表</strong>；表起始位置称<strong>表头</strong>，表结束位置称<strong>表尾</strong></p>
-<h2 id="对线性表的操作"><a href="#对线性表的操作" class="headerlink" title="对线性表的操作"></a>对线性表的操作</h2><p>1、**List MakeEmpty()**：初始化一个空线性表L； </p>
-<p>2、**ElementType FindKth( int K, List L )**：根据位序K，返回相应元素 ； </p>
-<p>3、**int Find( ElementType X, List L )**：在线性表L中查找X的第一次出现位置； </p>
-<p>4、**void Insert( ElementType X, int i, List L)**：在位序i前插入一个新元素X；</p>
-<p>5、**void Delete( int i, List L )**：删除指定位序i的元素； 6、int Length( List L )：返回线性表L的长度n</p>
+<h2 id="对线性表的操作"><a href="#对线性表的操作" class="headerlink" title="对线性表的操作"></a>对线性表的操作</h2><p>1、<strong>List MakeEmpty()</strong> 初始化一个空线性表L</p>
+<p>2、<strong>ElementType FindKth( int K, List L )</strong> 根据位序K，返回相应元素 </p>
+<p>3、<strong>int Find( ElementType X, List L )</strong> 在线性表L中查找X的第一次出现位置</p>
+<p>4、<strong>void Insert( ElementType X, int i, List L)</strong> 在位序i前插入一个新元素X</p>
+<p>5、<strong>void Delete( int i, List L )</strong> 删除指定位序i的元素；</p>
+<p>6、<strong>int Length( List L )</strong> 返回线性表L的长度n</p>
 <h2 id="线性表的顺序存储实现"><a href="#线性表的顺序存储实现" class="headerlink" title="线性表的顺序存储实现"></a>线性表的顺序存储实现</h2><h3 id="建立空的顺序表"><a href="#建立空的顺序表" class="headerlink" title="建立空的顺序表"></a>建立空的顺序表</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">List <span class="title">MakeEmpty</span><span class="params">( )</span></span>&#123;</span><br><span class="line">    List PtrL;</span><br><span class="line">	PtrL = (List )<span class="built_in">malloc</span>( <span class="built_in"><span class="keyword">sizeof</span></span>(struct LNode) );</span><br><span class="line"> 	PtrL-&gt;Last = <span class="number">-1</span>; </span><br><span class="line">	<span class="keyword">return</span> PtrL;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Find</span><span class="params">( ElementType X, List PtrL )</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"> 	<span class="keyword">while</span>( i &lt;= PtrL-&gt;Last &amp;&amp; PtrL-&gt;Data[i]!= X )</span><br><span class="line"> 	i++;</span><br><span class="line"> 	<span class="keyword">if</span> (i &gt; PtrL-&gt;Last) <span class="keyword">return</span> <span class="number">-1</span>; <span class="comment">/* 如果没找到，返回-1 */</span></span><br><span class="line"> 	<span class="keyword">else</span> <span class="keyword">return</span> i; <span class="comment">/* 找到后返回的是存储位置 */</span> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -334,10 +335,10 @@
 <h2 id="广义表"><a href="#广义表" class="headerlink" title="广义表"></a>广义表</h2><p> 广义表是线性表的推广；对于线性表而言， n个元素都是基本的单元素；广义表中，这些元素不仅可以是单元素也可以是<strong>另一个广义表</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">GNode</span> *<span class="title">GList</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">GNode</span>&#123;</span></span><br><span class="line"> <span class="keyword">int</span> Tag; <span class="comment">/*标志域：0表示结点是单元素，1表示结点是广义表 */</span></span><br><span class="line"> <span class="class"><span class="keyword">union</span> &#123;</span> <span class="comment">/*子表指针域Sublist与单元素数据域Data复用（union类型），即共用存储空间*/</span></span><br><span class="line"> ElementType Data;</span><br><span class="line"> GList SubList; </span><br><span class="line"> &#125; URegion;</span><br><span class="line"> GList Next; <span class="comment">/* 指向后继结点 */</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h2 id="多重链表"><a href="#多重链表" class="headerlink" title="多重链表"></a>多重链表</h2><p>广义表就是多重链表的一种，</p>
-<p>多重链表中结点的指针域会有多个，如前面例子包含了Next和 SubList两个指针域；</p>
-<p>但包含两个指针域的链表并不一定是多重链表，比如在双向链表 不是多重链表。</p>
-<p>多重链表有广泛的用途： 基本上如树、图这样相对 复杂的数据结构都可以采 用多重链表方式实现存储。</p>
+<h2 id="多重链表"><a href="#多重链表" class="headerlink" title="多重链表"></a>多重链表</h2><p>广义表就是多重链表的一种</p>
+<p>多重链表中结点的指针域会有多个，如前面例子包含了Next和SubList两个指针域</p>
+<p>但包含两个指针域的链表并不一定是多重链表，比如在双向链表不是多重链表</p>
+<p>多重链表有广泛的用途： 基本上如树、图这样相对复杂的数据结构都可以采 用多重链表方式实现存储</p>
 
     </div>
 
