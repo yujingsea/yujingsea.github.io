@@ -260,6 +260,24 @@
       </tags>
   </entry>
   <entry>
+    <title>C语言程序设计进阶（3）</title>
+    <url>/2021/10/16/eighteenth/</url>
+    <content><![CDATA[<h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><h3 id="why链表"><a href="#why链表" class="headerlink" title="why链表"></a>why链表</h3><span id="more"></span>
+
+<p>如果创建一个结构，用malloc直接向内存申请<strong>一大片空间</strong>，那么为了实现数组的<strong>“扩大”</strong>，我们只能创建新的结构（一个更大的，加上增加空间的结构），如果内存不够上一次申请的内存的两倍，就会报错，很明显，这样的方法的<strong>空间利用率还不够高</strong>，因此，我们可以单独存储每一个数据以及数据间的关系（指针），也就可以使用链式存储，即<strong>链表</strong></p>
+<h3 id="用链表实现可变数组"><a href="#用链表实现可变数组" class="headerlink" title="用链表实现可变数组"></a>用链表实现可变数组</h3><p>下面是原课件的程序：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;node.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Node* head=<span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">int</span> number;</span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;number);</span><br><span class="line">        <span class="keyword">if</span>(number!=<span class="number">-1</span>)&#123;</span><br><span class="line">            Node *p=(Node*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node));</span><br><span class="line">            p-&gt;value=number;</span><br><span class="line">            p-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">            Node *last=head;</span><br><span class="line">            <span class="keyword">if</span>(last)&#123;</span><br><span class="line">				<span class="keyword">while</span>(last-&gt;next)&#123;</span><br><span class="line">                last=last-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">              last-&gt;next=p;</span><br><span class="line">           &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                head=p;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">while</span>(number!=<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>node. h :</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _NODE_H_</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _NODE_H_</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">node</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> value;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> _<span class="title">node</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;Node;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="链表的函数"><a href="#链表的函数" class="headerlink" title="链表的函数"></a>链表的函数</h3><p>待更新。。。</p>
+]]></content>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>那些年追过的神游</title>
     <url>/2021/09/01/eleventh/</url>
     <content><![CDATA[<p>以前总觉得游戏是个贬义词，它带给我的负面影响远多于正面，现在回头看去，我反倒不后悔。我现在越发喜欢一些独立游戏，我想你只有体验过才会懂得，你能从中得到的不仅仅是成就感，更有感悟与感动，反思与成长</p>
@@ -288,24 +306,6 @@
 ]]></content>
       <tags>
         <tag>game</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C语言程序设计进阶（3）</title>
-    <url>/2021/10/16/eighteenth/</url>
-    <content><![CDATA[<h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><h3 id="why链表"><a href="#why链表" class="headerlink" title="why链表"></a>why链表</h3><span id="more"></span>
-
-<p>如果创建一个结构，用malloc直接向内存申请<strong>一大片空间</strong>，那么为了实现数组的<strong>“扩大”</strong>，我们只能创建新的结构（一个更大的，加上增加空间的结构），如果内存不够上一次申请的内存的两倍，就会报错，很明显，这样的方法的<strong>空间利用率还不够高</strong>，因此，我们可以单独存储每一个数据以及数据间的关系（指针），也就可以使用链式存储，即<strong>链表</strong></p>
-<h3 id="用链表实现可变数组"><a href="#用链表实现可变数组" class="headerlink" title="用链表实现可变数组"></a>用链表实现可变数组</h3><p>下面是原课件的程序：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;node.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Node* head=<span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">int</span> number;</span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;number);</span><br><span class="line">        <span class="keyword">if</span>(number!=<span class="number">-1</span>)&#123;</span><br><span class="line">            Node *p=(Node*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node));</span><br><span class="line">            p-&gt;value=number;</span><br><span class="line">            p-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">            Node *last=head;</span><br><span class="line">            <span class="keyword">if</span>(last)&#123;</span><br><span class="line">				<span class="keyword">while</span>(last-&gt;next)&#123;</span><br><span class="line">                last=last-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">              last-&gt;next=p;</span><br><span class="line">           &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                head=p;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">while</span>(number!=<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>node. h :</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _NODE_H_</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _NODE_H_</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">node</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> value;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> _<span class="title">node</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;Node;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-
-<h3 id="链表的函数"><a href="#链表的函数" class="headerlink" title="链表的函数"></a>链表的函数</h3><p>待更新。。。</p>
-]]></content>
-      <tags>
-        <tag>C</tag>
       </tags>
   </entry>
   <entry>
@@ -854,6 +854,26 @@
       </tags>
   </entry>
   <entry>
+    <title>计算机入门图书分享</title>
+    <url>/2021/08/21/tenth/</url>
+    <content><![CDATA[<h1 id="3本入门图书"><a href="#3本入门图书" class="headerlink" title="3本入门图书"></a>3本入门图书</h1><p><a href="https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg">https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg</a><br>0000</p>
+<span id="more"></span>
+
+<p>包含3本</p>
+<p>1.c++primerplus6</p>
+<img src="/2021/08/21/tenth/1.jpg" class title="blog">
+
+<p>2.算法竞赛入门经典 紫书</p>
+<img src="/2021/08/21/tenth/2.jpg" class title="blog">
+
+<p>3.算法竞赛入门经典训练指南</p>
+<img src="/2021/08/21/tenth/3.jpg" class title="blog">
+]]></content>
+      <tags>
+        <tag>share</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>搭建博客的原因</title>
     <url>/2021/08/15/third/</url>
     <content><![CDATA[<h1 id="搭建博客的原因"><a href="#搭建博客的原因" class="headerlink" title="搭建博客的原因"></a>搭建博客的原因</h1><p>也许是心血来潮，看到别人的博客满满都是学习编程的<strong>笔记</strong>，忍不住要试一下。也许这也算是<strong>他律</strong>了，尽管访问量不见上涨，我依旧有发博客的动力，也许只是刚开始有新鲜感（都这么说），但这东西确实上瘾。我觉得程序员的快乐来源中，成功运行程序的<strong>成就感，满足感</strong>应该是占比不少的。</p>
@@ -872,26 +892,6 @@
 ]]></content>
       <tags>
         <tag>message</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机入门图书分享</title>
-    <url>/2021/08/21/tenth/</url>
-    <content><![CDATA[<h1 id="3本入门图书"><a href="#3本入门图书" class="headerlink" title="3本入门图书"></a>3本入门图书</h1><p><a href="https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg">https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg</a><br>0000</p>
-<span id="more"></span>
-
-<p>包含3本</p>
-<p>1.c++primerplus6</p>
-<img src="/2021/08/21/tenth/1.jpg" class title="blog">
-
-<p>2.算法竞赛入门经典 紫书</p>
-<img src="/2021/08/21/tenth/2.jpg" class title="blog">
-
-<p>3.算法竞赛入门经典训练指南</p>
-<img src="/2021/08/21/tenth/3.jpg" class title="blog">
-]]></content>
-      <tags>
-        <tag>share</tag>
       </tags>
   </entry>
   <entry>
