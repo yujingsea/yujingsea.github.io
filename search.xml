@@ -326,88 +326,6 @@
       </tags>
   </entry>
   <entry>
-    <title>markdown语法笔记（Typora)</title>
-    <url>/2021/08/13/first/</url>
-    <content><![CDATA[<h2 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h2><p> #+空格+内容 回车执行/ctrl+1，ctrl+0复原</p>
-<span id="more"></span>
-
-<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p>##+同上/ctrl+2</p>
-<h2 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h2><p>###+同上/ctrl+3</p>
-<p>……</p>
-<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>编号标点后有空格，回车自动添加序号,添加/删除序号，会自动补序号，两次回车或下键取消序号</p>
-<p>tab降级</p>
-<p>shift+tab升级</p>
-<p>快捷键：ctrl+shift+[</p>
-<ol>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ol>
-<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>*/-+空格+内容，升降级同有序列表</p>
-<p>快捷键：ctrl+shift+]</p>
-<ul>
-<li>立秋<ul>
-<li>网课？</li>
-</ul>
-</li>
-</ul>
-<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><p>-空格[空格]空格</p>
-<ul>
-<li><input disabled type="checkbox"> <ul>
-<li><input checked disabled type="checkbox"> </li>
-</ul>
-</li>
-</ul>
-<p>不如段落中添加快</p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
-<thead>
-<tr>
-<th align="left">345</th>
-<th align="center">678</th>
-<th align="right">91011</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"></td>
-<td align="center"></td>
-<td align="right"></td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="center"></td>
-<td align="right"></td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="center"></td>
-<td align="right"></td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="center"></td>
-<td align="right"></td>
-</tr>
-</tbody></table>
-<p>段落中插入</p>
-<p>crtl+回车加行</p>
-<p>|内容|内容|内容|    回车执行</p>
-<h2 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><p>反引号+内容+反引号</p>
-<p><code>java</code></p>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">C: <span class="built_in">printf</span> (<span class="string">&quot;hello,world&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python: <span class="built_in">print</span> (<span class="string">&quot;hello,world&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">java: System.out.println(<span class="string">&quot;hello,world!&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>ctrl+shift+i</p>
-<p><code>![1]</code>(C:\Users\Acer\Pictures\1.jpg省略了一个圆括号</p>
-<p>就这吧，Typora软件很方便</p>
-<p>快捷键应该用于频繁使用的语法</p>
-]]></content>
-  </entry>
-  <entry>
     <title>C语言入门笔记（1）</title>
     <url>/2021/08/17/fifth/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我觉得目前比较好的c语言入门网课有b站的失乐-try上传的C语言入门视频，以及中国大学mooc中浙大翁恺老师的<a href="https://www.icourse163.org/course/ZJU-199001">C语言程序设计入门视频</a>。都对新手友好到了极点。我这里选的是翁恺老师的课，比较系统，也比较专业。我会着重指出易错易忘的知识，以便复习，其他不再赘述。</p>
@@ -525,6 +443,88 @@
       <tags>
         <tag>C</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>markdown语法笔记（Typora)</title>
+    <url>/2021/08/13/first/</url>
+    <content><![CDATA[<h2 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h2><p> #+空格+内容 回车执行/ctrl+1，ctrl+0复原</p>
+<span id="more"></span>
+
+<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p>##+同上/ctrl+2</p>
+<h2 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h2><p>###+同上/ctrl+3</p>
+<p>……</p>
+<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>编号标点后有空格，回车自动添加序号,添加/删除序号，会自动补序号，两次回车或下键取消序号</p>
+<p>tab降级</p>
+<p>shift+tab升级</p>
+<p>快捷键：ctrl+shift+[</p>
+<ol>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>*/-+空格+内容，升降级同有序列表</p>
+<p>快捷键：ctrl+shift+]</p>
+<ul>
+<li>立秋<ul>
+<li>网课？</li>
+</ul>
+</li>
+</ul>
+<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><p>-空格[空格]空格</p>
+<ul>
+<li><input disabled type="checkbox"> <ul>
+<li><input checked disabled type="checkbox"> </li>
+</ul>
+</li>
+</ul>
+<p>不如段落中添加快</p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
+<thead>
+<tr>
+<th align="left">345</th>
+<th align="center">678</th>
+<th align="right">91011</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"></td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+</tbody></table>
+<p>段落中插入</p>
+<p>crtl+回车加行</p>
+<p>|内容|内容|内容|    回车执行</p>
+<h2 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><p>反引号+内容+反引号</p>
+<p><code>java</code></p>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">C: <span class="built_in">printf</span> (<span class="string">&quot;hello,world&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python: <span class="built_in">print</span> (<span class="string">&quot;hello,world&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">java: System.out.println(<span class="string">&quot;hello,world!&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>ctrl+shift+i</p>
+<p><code>![1]</code>(C:\Users\Acer\Pictures\1.jpg省略了一个圆括号</p>
+<p>就这吧，Typora软件很方便</p>
+<p>快捷键应该用于频繁使用的语法</p>
+]]></content>
   </entry>
   <entry>
     <title>评论区开放！</title>
@@ -846,26 +846,6 @@
       </tags>
   </entry>
   <entry>
-    <title>计算机入门图书分享</title>
-    <url>/2021/08/21/tenth/</url>
-    <content><![CDATA[<h1 id="3本入门图书"><a href="#3本入门图书" class="headerlink" title="3本入门图书"></a>3本入门图书</h1><p><a href="https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg">https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg</a><br>0000</p>
-<span id="more"></span>
-
-<p>包含3本</p>
-<p>1.c++primerplus6</p>
-<img src="/2021/08/21/tenth/1.jpg" class title="blog">
-
-<p>2.算法竞赛入门经典 紫书</p>
-<img src="/2021/08/21/tenth/2.jpg" class title="blog">
-
-<p>3.算法竞赛入门经典训练指南</p>
-<img src="/2021/08/21/tenth/3.jpg" class title="blog">
-]]></content>
-      <tags>
-        <tag>share</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>搭建博客的原因</title>
     <url>/2021/08/15/third/</url>
     <content><![CDATA[<h1 id="搭建博客的原因"><a href="#搭建博客的原因" class="headerlink" title="搭建博客的原因"></a>搭建博客的原因</h1><p>也许是心血来潮，看到别人的博客满满都是学习编程的<strong>笔记</strong>，忍不住要试一下。也许这也算是<strong>他律</strong>了，尽管访问量不见上涨，我依旧有发博客的动力，也许只是刚开始有新鲜感（都这么说），但这东西确实上瘾。我觉得程序员的快乐来源中，成功运行程序的<strong>成就感，满足感</strong>应该是占比不少的。</p>
@@ -884,6 +864,26 @@
 ]]></content>
       <tags>
         <tag>message</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机入门图书分享</title>
+    <url>/2021/08/21/tenth/</url>
+    <content><![CDATA[<h1 id="3本入门图书"><a href="#3本入门图书" class="headerlink" title="3本入门图书"></a>3本入门图书</h1><p><a href="https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg">https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg</a><br>0000</p>
+<span id="more"></span>
+
+<p>包含3本</p>
+<p>1.c++primerplus6</p>
+<img src="/2021/08/21/tenth/1.jpg" class title="blog">
+
+<p>2.算法竞赛入门经典 紫书</p>
+<img src="/2021/08/21/tenth/2.jpg" class title="blog">
+
+<p>3.算法竞赛入门经典训练指南</p>
+<img src="/2021/08/21/tenth/3.jpg" class title="blog">
+]]></content>
+      <tags>
+        <tag>share</tag>
       </tags>
   </entry>
   <entry>
