@@ -109,11 +109,6 @@
       </tags>
   </entry>
   <entry>
-    <title>23</title>
-    <url>/2021/12/27/23/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>C语言入门笔记（4）</title>
     <url>/2021/08/20/eight/</url>
     <content><![CDATA[<h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a [<span class="number">3</span>] [<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
