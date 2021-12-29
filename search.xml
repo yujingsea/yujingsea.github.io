@@ -114,6 +114,24 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>C语言程序设计进阶（3）</title>
+    <url>/2021/10/16/eighteenth/</url>
+    <content><![CDATA[<h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><h3 id="why链表"><a href="#why链表" class="headerlink" title="why链表"></a>why链表</h3><span id="more"></span>
+
+<p>如果创建一个结构，用malloc直接向内存申请<strong>一大片空间</strong>，那么为了实现数组的<strong>“扩大”</strong>，我们只能创建新的结构（一个更大的，加上增加空间的结构），如果内存不够上一次申请的内存的两倍，就会报错，很明显，这样的方法的<strong>空间利用率还不够高</strong>，因此，我们可以单独存储每一个数据以及数据间的关系（指针），也就可以使用链式存储，即<strong>链表</strong></p>
+<h3 id="用链表实现可变数组"><a href="#用链表实现可变数组" class="headerlink" title="用链表实现可变数组"></a>用链表实现可变数组</h3><p>下面是原课件的程序：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;node.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Node* head=<span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">int</span> number;</span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;number);</span><br><span class="line">        <span class="keyword">if</span>(number!=<span class="number">-1</span>)&#123;</span><br><span class="line">            Node *p=(Node*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node));</span><br><span class="line">            p-&gt;value=number;</span><br><span class="line">            p-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">            Node *last=head;</span><br><span class="line">            <span class="keyword">if</span>(last)&#123;</span><br><span class="line">				<span class="keyword">while</span>(last-&gt;next)&#123;</span><br><span class="line">                last=last-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">              last-&gt;next=p;</span><br><span class="line">           &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                head=p;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">while</span>(number!=<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>node. h :</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _NODE_H_</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _NODE_H_</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">node</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> value;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> _<span class="title">node</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;Node;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="链表的函数"><a href="#链表的函数" class="headerlink" title="链表的函数"></a>链表的函数</h3><p>待更新。。。</p>
+]]></content>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C语言入门笔记（4）</title>
     <url>/2021/08/20/eight/</url>
     <content><![CDATA[<h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a [<span class="number">3</span>] [<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
@@ -246,24 +264,6 @@
 <h3 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h3><p>char*a不能直接用，要先对a初始化，否则出不出错就靠运气了</p>
 <p>终于码完了。。。</p>
 <p><font color="cornflowerblue">C语言入门篇完结！！！</font></p>
-]]></content>
-      <tags>
-        <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C语言程序设计进阶（3）</title>
-    <url>/2021/10/16/eighteenth/</url>
-    <content><![CDATA[<h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><h3 id="why链表"><a href="#why链表" class="headerlink" title="why链表"></a>why链表</h3><span id="more"></span>
-
-<p>如果创建一个结构，用malloc直接向内存申请<strong>一大片空间</strong>，那么为了实现数组的<strong>“扩大”</strong>，我们只能创建新的结构（一个更大的，加上增加空间的结构），如果内存不够上一次申请的内存的两倍，就会报错，很明显，这样的方法的<strong>空间利用率还不够高</strong>，因此，我们可以单独存储每一个数据以及数据间的关系（指针），也就可以使用链式存储，即<strong>链表</strong></p>
-<h3 id="用链表实现可变数组"><a href="#用链表实现可变数组" class="headerlink" title="用链表实现可变数组"></a>用链表实现可变数组</h3><p>下面是原课件的程序：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;node.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Node* head=<span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">int</span> number;</span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;number);</span><br><span class="line">        <span class="keyword">if</span>(number!=<span class="number">-1</span>)&#123;</span><br><span class="line">            Node *p=(Node*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node));</span><br><span class="line">            p-&gt;value=number;</span><br><span class="line">            p-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">            Node *last=head;</span><br><span class="line">            <span class="keyword">if</span>(last)&#123;</span><br><span class="line">				<span class="keyword">while</span>(last-&gt;next)&#123;</span><br><span class="line">                last=last-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">              last-&gt;next=p;</span><br><span class="line">           &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                head=p;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">while</span>(number!=<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>node. h :</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _NODE_H_</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _NODE_H_</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">node</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> value;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> _<span class="title">node</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;Node;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-
-<h3 id="链表的函数"><a href="#链表的函数" class="headerlink" title="链表的函数"></a>链表的函数</h3><p>待更新。。。</p>
 ]]></content>
       <tags>
         <tag>C</tag>
@@ -463,6 +463,15 @@
 ]]></content>
   </entry>
   <entry>
+    <title>评论区开放！</title>
+    <url>/2021/08/15/fourth/</url>
+    <content><![CDATA[<h1 id="gitalk已启用"><a href="#gitalk已启用" class="headerlink" title="gitalk已启用"></a>gitalk已启用</h1><p>nexT支持gitalk,评论者只需有GitHub账号即可，账号可在github官网免费注册，注册真不麻烦，github是一个共享源码的网站，不会有安全隐患，欢迎注册/登录github留言！又白嫖了一次嘿嘿</p>
+]]></content>
+      <tags>
+        <tag>message</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C语言程序设计进阶（1）</title>
     <url>/2021/09/14/fourteenth/</url>
     <content><![CDATA[<h1 id="数组和字符串"><a href="#数组和字符串" class="headerlink" title="数组和字符串"></a>数组和字符串</h1><h2 id="指针的使用"><a href="#指针的使用" class="headerlink" title="指针的使用"></a>指针的使用</h2><span id="more"></span>
@@ -524,15 +533,6 @@
 ]]></content>
       <tags>
         <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>评论区开放！</title>
-    <url>/2021/08/15/fourth/</url>
-    <content><![CDATA[<h1 id="gitalk已启用"><a href="#gitalk已启用" class="headerlink" title="gitalk已启用"></a>gitalk已启用</h1><p>nexT支持gitalk,评论者只需有GitHub账号即可，账号可在github官网免费注册，注册真不麻烦，github是一个共享源码的网站，不会有安全隐患，欢迎注册/登录github留言！又白嫖了一次嘿嘿</p>
-]]></content>
-      <tags>
-        <tag>message</tag>
       </tags>
   </entry>
   <entry>
@@ -698,50 +698,6 @@
       </tags>
   </entry>
   <entry>
-    <title>zzuli OJ 1077：空心菱形及其延伸</title>
-    <url>/2021/09/24/sixteenth/</url>
-    <content><![CDATA[<h1 id="zzuli-OJ-1077：空心菱形"><a href="#zzuli-OJ-1077：空心菱形" class="headerlink" title="zzuli OJ 1077：空心菱形"></a><a href="http://acm.zzuli.edu.cn/problem.php?id=1077">zzuli OJ 1077：空心菱形</a></h1><span id="more"></span>
-
-<p>题目描述</p>
-<p>输入一个整数n，（1&lt;=n&lt;=20）,输出一个空心菱形，其中每个边由n个’*’组成</p>
-<p>输入：</p>
-<p>输入包含一个整数,n（1&lt;=n&lt;=20）</p>
-<p>输出：</p>
-<p>输出一个空心菱形，每个边由n个’*’组成</p>
-<p>样例输入</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
-
-<p>样例输出</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">    *</span><br><span class="line">   * *</span><br><span class="line">  *   *</span><br><span class="line"> *     *</span><br><span class="line">*       *</span><br><span class="line"> *     *</span><br><span class="line">  *   *</span><br><span class="line">   * *</span><br><span class="line">    *</span><br></pre></td></tr></table></figure>
-
-<p>我的解法（题目没要求多组输入）：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n)!=EOF)&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">2</span>*n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;<span class="number">2</span>*n<span class="number">-1</span>;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(j-i==n<span class="number">-1</span>||i+j==n<span class="number">-1</span>||i-j==n<span class="number">-1</span>||i+j==<span class="number">3</span>*n<span class="number">-3</span>)&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>首先我们会发现填*的i和j满足某种函数关系,如果输入为n,我们可用以下框架建立一个空白棋盘，然后我们只需要找到i和j在矩阵中的一种或多种关系，以及棋盘的大小范围，就能随心所欲，画出想要的图案</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n)!=EOF)&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;行的范围;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;列的范围;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i和j在矩阵中的一种或多种关系)&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="再举一个X形图案例子（牛客网bc68）"><a href="#再举一个X形图案例子（牛客网bc68）" class="headerlink" title="再举一个X形图案例子（牛客网bc68）"></a><a href="https://www.nowcoder.com/practice/83d6afe3018e44539c51265165806ee4?tpId=107&&tqId=33349&rp=1&ru=/ta/beginner-programmers&qru=/ta/beginner-programmers/question-ranking">再举一个X形图案例子（牛客网bc68）</a></h2><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>KiKi学习了循环，BoBo老师给他出了一系列打印图案的练习，该任务是打印用“*”组成的X形图案。</p>
-<h3 id="输入描述："><a href="#输入描述：" class="headerlink" title="输入描述："></a>输入描述：</h3><p>多组输入，一个整数（2~20），表示输出的行数，也表示组成“X”的反斜线和正斜线的长度。</p>
-<h3 id="输出描述："><a href="#输出描述：" class="headerlink" title="输出描述："></a>输出描述：</h3><p>针对每行输入，输出用“*”组成的X形图案。</p>
-<h2 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h2><p>输入：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">*   *</span><br><span class="line"> * * </span><br><span class="line">  *  </span><br><span class="line"> * * </span><br><span class="line">*   *</span><br></pre></td></tr></table></figure>
-
-<p>可以用刚刚提到的框架写：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n)!=EOF)&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i==j||i+j==n<span class="number">-1</span>)&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>你学废了吗，嘿嘿</p>
-<p>可能对你来说太简单了</p>
-<p>其实我们还可以用&lt; &gt;号来填充图形或镂空图形，总之，这不比嵌套的if语句简单？</p>
-<p>感谢大佬的光临让本站蓬荜生辉 : )</p>
-]]></content>
-      <tags>
-        <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C语言入门笔记（3）</title>
     <url>/2021/08/18/seventh/</url>
     <content><![CDATA[<h2 id="多重循环"><a href="#多重循环" class="headerlink" title="多重循环"></a>多重循环</h2><p>goto的使用</p>
@@ -784,6 +740,50 @@
 <p>对于本地变量，它的生存期和作用域就是大括号（块）</p>
 <h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><p>本地变量定义在块内，可以是函数的块，也可以是语句的块内，也可以定义在语句的块内，甚至可以随便拉一对大括号来定义变量</p>
 <p>块外定义的变量在块内仍有效</p>
+]]></content>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>zzuli OJ 1077：空心菱形及其延伸</title>
+    <url>/2021/09/24/sixteenth/</url>
+    <content><![CDATA[<h1 id="zzuli-OJ-1077：空心菱形"><a href="#zzuli-OJ-1077：空心菱形" class="headerlink" title="zzuli OJ 1077：空心菱形"></a><a href="http://acm.zzuli.edu.cn/problem.php?id=1077">zzuli OJ 1077：空心菱形</a></h1><span id="more"></span>
+
+<p>题目描述</p>
+<p>输入一个整数n，（1&lt;=n&lt;=20）,输出一个空心菱形，其中每个边由n个’*’组成</p>
+<p>输入：</p>
+<p>输入包含一个整数,n（1&lt;=n&lt;=20）</p>
+<p>输出：</p>
+<p>输出一个空心菱形，每个边由n个’*’组成</p>
+<p>样例输入</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<p>样例输出</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">    *</span><br><span class="line">   * *</span><br><span class="line">  *   *</span><br><span class="line"> *     *</span><br><span class="line">*       *</span><br><span class="line"> *     *</span><br><span class="line">  *   *</span><br><span class="line">   * *</span><br><span class="line">    *</span><br></pre></td></tr></table></figure>
+
+<p>我的解法（题目没要求多组输入）：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n)!=EOF)&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">2</span>*n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;<span class="number">2</span>*n<span class="number">-1</span>;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(j-i==n<span class="number">-1</span>||i+j==n<span class="number">-1</span>||i-j==n<span class="number">-1</span>||i+j==<span class="number">3</span>*n<span class="number">-3</span>)&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>首先我们会发现填*的i和j满足某种函数关系,如果输入为n,我们可用以下框架建立一个空白棋盘，然后我们只需要找到i和j在矩阵中的一种或多种关系，以及棋盘的大小范围，就能随心所欲，画出想要的图案</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n)!=EOF)&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;行的范围;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;列的范围;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i和j在矩阵中的一种或多种关系)&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="再举一个X形图案例子（牛客网bc68）"><a href="#再举一个X形图案例子（牛客网bc68）" class="headerlink" title="再举一个X形图案例子（牛客网bc68）"></a><a href="https://www.nowcoder.com/practice/83d6afe3018e44539c51265165806ee4?tpId=107&&tqId=33349&rp=1&ru=/ta/beginner-programmers&qru=/ta/beginner-programmers/question-ranking">再举一个X形图案例子（牛客网bc68）</a></h2><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>KiKi学习了循环，BoBo老师给他出了一系列打印图案的练习，该任务是打印用“*”组成的X形图案。</p>
+<h3 id="输入描述："><a href="#输入描述：" class="headerlink" title="输入描述："></a>输入描述：</h3><p>多组输入，一个整数（2~20），表示输出的行数，也表示组成“X”的反斜线和正斜线的长度。</p>
+<h3 id="输出描述："><a href="#输出描述：" class="headerlink" title="输出描述："></a>输出描述：</h3><p>针对每行输入，输出用“*”组成的X形图案。</p>
+<h2 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h2><p>输入：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">*   *</span><br><span class="line"> * * </span><br><span class="line">  *  </span><br><span class="line"> * * </span><br><span class="line">*   *</span><br></pre></td></tr></table></figure>
+
+<p>可以用刚刚提到的框架写：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n)!=EOF)&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i==j||i+j==n<span class="number">-1</span>)&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>你学废了吗，嘿嘿</p>
+<p>可能对你来说太简单了</p>
+<p>其实我们还可以用&lt; &gt;号来填充图形或镂空图形，总之，这不比嵌套的if语句简单？</p>
+<p>感谢大佬的光临让本站蓬荜生辉 : )</p>
 ]]></content>
       <tags>
         <tag>C</tag>
@@ -866,6 +866,25 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo d发布经常出错的解决方式</title>
+    <url>/2021/09/11/thirteenth/</url>
+    <content><![CDATA[<h1 id="详情"><a href="#详情" class="headerlink" title="详情"></a><a href="https://blog.csdn.net/qq_32454537/article/details/81338807">详情</a></h1><p>我以前在本地写好博客，想要push到git上，通常由于网络的问题发布失败，会出现如下字样，很恶心。</p>
+<span id="more"></span>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">unable to access <span class="string">&#x27;https://github.com/yujingsea/yujingsea.github.io.git/&#x27;</span>: OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:<span class="number">443</span></span><br></pre></td></tr></table></figure>
+
+<p>网上流传（我今天才在csdn找到方法）的解决方式是取消http代理</p>
+<p>如果还解决不了，就要往host里添加代理了</p>
+<p>打开Git Bash输入以下指令：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br></pre></td></tr></table></figure>
+
+<p>然后发布博文就没问题了</p>
+]]></content>
+      <tags>
+        <tag>message</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>搭建博客的原因</title>
     <url>/2021/08/15/third/</url>
     <content><![CDATA[<h1 id="搭建博客的原因"><a href="#搭建博客的原因" class="headerlink" title="搭建博客的原因"></a>搭建博客的原因</h1><p>也许是心血来潮，看到别人的博客满满都是学习编程的<strong>笔记</strong>，忍不住要试一下。也许这也算是<strong>他律</strong>了，尽管访问量不见上涨，我依旧有发博客的动力，也许只是刚开始有新鲜感（都这么说），但这东西确实上瘾。我觉得程序员的快乐来源中，成功运行程序的<strong>成就感，满足感</strong>应该是占比不少的。</p>
@@ -881,25 +900,6 @@
 <p>话说回来，这是一个<strong>静态</strong>博客，我可以个性化布局，可以在本地写文章，网络成本低，完全<strong>免费</strong>，更适合我这种一无所知的小白。我用的是近年流行的方法，hexo部署到github,我没有期望太多访问量，所以关于链接无法被百度收录的问题也不必在乎（github禁止百度爬虫，当然有大佬也能解决）。我用的是热门的nexT主题，出问题了容易得到网络<strong>帮助</strong>。</p>
 <p>经验都是<strong>坑</strong>出来的，我搭建hexo时用cmd安装不了git，又在git bash重试了一遍。</p>
 <p>搭建成功的那份喜悦，让我觉得一切都值得。</p>
-]]></content>
-      <tags>
-        <tag>message</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo d发布经常出错的解决方式</title>
-    <url>/2021/09/11/thirteenth/</url>
-    <content><![CDATA[<h1 id="详情"><a href="#详情" class="headerlink" title="详情"></a><a href="https://blog.csdn.net/qq_32454537/article/details/81338807">详情</a></h1><p>我以前在本地写好博客，想要push到git上，通常由于网络的问题发布失败，会出现如下字样，很恶心。</p>
-<span id="more"></span>
-
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">unable to access <span class="string">&#x27;https://github.com/yujingsea/yujingsea.github.io.git/&#x27;</span>: OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:<span class="number">443</span></span><br></pre></td></tr></table></figure>
-
-<p>网上流传（我今天才在csdn找到方法）的解决方式是取消http代理</p>
-<p>如果还解决不了，就要往host里添加代理了</p>
-<p>打开Git Bash输入以下指令：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br></pre></td></tr></table></figure>
-
-<p>然后发布博文就没问题了</p>
 ]]></content>
       <tags>
         <tag>message</tag>
