@@ -488,10 +488,10 @@
     <title>算法学习（2）</title>
     <url>/2022/01/24/29/</url>
     <content><![CDATA[<h1 id="STL-初步"><a href="#STL-初步" class="headerlink" title="STL 初步"></a>STL 初步</h1><h2 id="sort用法"><a href="#sort用法" class="headerlink" title="sort用法"></a>sort用法</h2><p>sort排序区间为下标范围为[n1,n2)的元素</p>
-<p>从小到大排序</p>
+<p>从小到大排序：</p>
 <figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">sort</span>(数组名+n1,数组名+n2);</span><br></pre></td></tr></tbody></table></figure>
 
-<p>从大到小排序</p>
+<p>从大到小排序：</p>
 <figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">sort</span>(数组名+n1,数组名+n2,greater&lt;type&gt;());</span><br></pre></td></tr></tbody></table></figure>
 
 <p>自定义排序规则：</p>
