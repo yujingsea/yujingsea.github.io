@@ -148,10 +148,10 @@
 <p>使用goto可以跳出多重循环，不建议在其他时候使用</p>
 <span id="more"></span>
 
-<img src="/2021/08/18/seventh/1.jpg" class title="blog">
+<img src="/2021/08/18/seventh/1.jpg" class="" title="blog">
 
 <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>&lt;类型&gt;变量名称[下标，即元素数量]</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a [<span class="number">100</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a [<span class="number">100</span>]</span><br></pre></td></tr></tbody></table></figure>
 
 <p>数组是一种容器</p>
 <p>其中所有的元素具有相同的数据类型</p>
@@ -160,7 +160,7 @@
 <p>可出现在赋值的左边或右边，叫做左值或右值</p>
 <p>下标范围为[0，数组大小-1]，超出界限则视为<font color="red">越界</font>，容易出错却不容易报错</p>
 <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>举一个求和函数的例子</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> sum （ <span class="keyword">int</span> a,<span class="keyword">int</span> b )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> ( i = a;i &lt;= b; i++ )&#123;</span><br><span class="line">        sum += i;</span><br><span class="line">    &#125;</span><br><span class="line">    print (<span class="string">&quot;%d到&amp;d的和为%d\n&quot;</span>,a,b,sum);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sum(<span class="number">1</span>,<span class="number">10</span>);</span><br><span class="line">sum(<span class="number">20</span>,<span class="number">30</span>);</span><br><span class="line">sum(<span class="number">40</span>,<span class="number">50</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> sum （ <span class="keyword">int</span> a,<span class="keyword">int</span> b )</span><br><span class="line">{</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> ( i = a;i &lt;= b; i++ ){</span><br><span class="line">        sum += i;</span><br><span class="line">    }</span><br><span class="line">    print (<span class="string">"%d到&amp;d的和为%d\n"</span>,a,b,sum);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">sum(<span class="number">1</span>,<span class="number">10</span>);</span><br><span class="line">sum(<span class="number">20</span>,<span class="number">30</span>);</span><br><span class="line">sum(<span class="number">40</span>,<span class="number">50</span>);</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="函数头"><a href="#函数头" class="headerlink" title="函数头"></a>函数头</h3><p>其中第一行是函数头，void叫做返回类型，sum是起的函数名，括号内是参数表</p>
 <p>函数头的括号起到了表示函数调用的作用，里面没有参数也不能被删去，如果有参数要给出正确的数量和顺序</p>
@@ -168,14 +168,14 @@
 <h3 id="函数体"><a href="#函数体" class="headerlink" title="函数体"></a>函数体</h3><p>最大的代码块内是函数体</p>
 <p>如果想把函数放在主函数下，要先把函数头作为<font color="red">声明</font>放在最前面，告诉编译器你创建了一个何类型，何函数名，何参数的函数，以免系统<font color="red">自上而下</font>识别到函数<font color="red">定义</font>时报错</p>
 <h2 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h2><p>return可以停止函数的执行，并送回一个值，返回的值可以赋给函数外的变量，函数内的变量与函数外的变量<font color="red">无关</font>，return可以单独使用，也可以接表达式</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span>;</span><br><span class="line"><span class="keyword">return</span> a;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span>;</span><br><span class="line"><span class="keyword">return</span> a;</span><br></pre></td></tr></tbody></table></figure>
 
 <p><strong>int</strong>类型的函数返回值</p>
 <p>需要用return停止函数执行并返回结果</p>
 <p><strong>void</strong>类型的函数不返回值，也就是说调用时不能做返回值的赋值</p>
 <p>不能使用带值的return，也可以不用return</p>
 <h2 id="逗号运算符"><a href="#逗号运算符" class="headerlink" title="逗号运算符"></a>逗号运算符</h2><p>调用函数时的圆括号里的逗号是标点符号，不是运算符</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i(a,b);</span><br><span class="line">i((a,b));</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i(a,b);</span><br><span class="line">i((a,b));</span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h2><p>循环语句，判断语句可以嵌套，函数则不能嵌套</p>
 <h2 id="本地变量"><a href="#本地变量" class="headerlink" title="本地变量"></a>本地变量</h2><p>定义在函数内部的变量都时本地变量（目前学过的都是）</p>
