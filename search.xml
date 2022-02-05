@@ -1569,12 +1569,8 @@
 <h3 id="1673-机智的字符"><a href="#1673-机智的字符" class="headerlink" title="1673: 机智的字符"></a><a href="http://acm.zzuli.edu.cn/problem.php?id=1673">1673: 机智的字符</a></h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> m,n,idx=<span class="number">0</span>,i,j;</span><br><span class="line">    cin&gt;&gt;m&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;m;i++)</span><br><span class="line">    {</span><br><span class="line">        cout&lt;&lt;<span class="string">"&gt;"</span>;</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n;j++,idx++)</span><br><span class="line">        {</span><br><span class="line">            cout&lt;&lt;(<span class="keyword">char</span>)(<span class="string">'a'</span>+idx%<span class="number">26</span>);</span><br><span class="line">        }</span><br><span class="line">        cout&lt;&lt;<span class="string">"&lt;"</span>&lt;&lt;endl;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="2838-小豪的室友"><a href="#2838-小豪的室友" class="headerlink" title="2838: 小豪的室友"></a><a href="http://acm.zzuli.edu.cn/problem.php?id=2838">2838: 小豪的室友</a></h3><p>最终状态有两种： </p>
-<blockquote>
 <p>要么 wbwbwbw…. </p>
-</blockquote>
-<blockquote>
 <p>要么 bwbwbwb…. </p>
-</blockquote>
 <p>所以我们枚举两种情况，对于任何一种情况，分别用 x 和 y 表示没有 放对位置的黑书和白书的数量。对于每种情况，我们都先找出最小 的 交换次数，即 min(x,y),剩下的我们直接从小豪那里拿书替代。 故每种情况最少的操作次数为 ： </p>
 <blockquote>
 <p>min(x,y)+[max(x,y)-min(x,y)]=max(x,y); </p>
