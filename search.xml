@@ -1536,7 +1536,7 @@
 <p><strong>输入</strong></p>
 <p>输入有两行，第一行首先是一个正整数m，然后是m个整数；第二行首先是一个正整数n，然后是n个整数，m, n均小于等于1000000。</p>
 <p><strong>输出</strong></p>
-<p>输出合并后的m+n个整数，数据之间用空格隔开。输出占一行。</p>
+<p>输出合并后的m+n个整数，数据之间用空格隔开，输出占一行。</p>
 <p><strong>样例输入</strong></p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">4 1 2 5 7</span><br><span class="line">3 6 4 2</span><br></pre></td></tr></tbody></table></figure>
 
