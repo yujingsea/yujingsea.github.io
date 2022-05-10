@@ -2046,4 +2046,35 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
         <tag>contest</tag>
       </tags>
   </entry>
+  <entry>
+    <title>欧拉定理的应用:Counting regions</title>
+    <url>/2022/05/10/41/</url>
+    <content><![CDATA[<h2 id="欧拉定理的应用：Counting-regions"><a href="#欧拉定理的应用：Counting-regions" class="headerlink" title="欧拉定理的应用：Counting regions"></a>欧拉定理的应用：Counting regions</h2><p><a href="https://ac.nowcoder.com/acm/problem/17369">Counting regions</a></p>
+<p>Niuniu likes mathematics. He also likes drawing pictures. One day, he was trying to draw a regular polygon with n vertices. He connected every pair of the vertices by a straight line as well. He counted the number of regions inside the polygon after he completed his picture. He was wondering how to calculate the number of regions without the picture. Can you calculate the number of regions modulo 1000000007? <strong>It is guaranteed that n is odd.</strong></p>
+<p>在图论里有这样一个定理：<strong>对于一个凸多面体，顶点数-边数+面数=2</strong></p>
+<p>我最早看到这个式子是在浙大的高中数学竞赛书中，最近离散数学课也推到图论了，里面讲到了这场多校赛的两个基础知识点，欧拉定理和哈密顿图。</p>
+<p>不过e题的两个飞机点（x+y%2==1）规律没找出来，但软磨硬泡总算把g搞出来了。</p>
+<p>我当时只知道，n阶完全图的边数为C(n,2)，欧拉公式只适用于立体图；</p>
+<p>一开始想找找规律，wa了两发；</p>
+<p>后来我想，如果把完全图看作一个立体图，也就是说<strong>n阶完全图还有一个由外围的n个点形成的面</strong>。</p>
+<p>这样我们要求的区域数再+1就是立体图的面数；</p>
+<p>到这里只需要分别求出顶点数和边数就能带式子了：</p>
+<p>顶点数：我们可以这么想每一个内部的交点都是由两条线相交构成的，这个线的两端点是从外面一圈点中选的，那么内部的交点数就相当于从外围的个点中选四个数，构成两条线，两条线再构成一个交点，即交点数为C(n,4)，然后还要加上外围的n个点，所以顶点数为C(n,4)+n；</p>
+<img src="/2022/05/10/41/1.jpg" class="" title="blog">
+<p>边数：尤其要注意的是，把完全图看成立体图后，对角线之间互相切割的线段才是边，我们首先知道n阶完全图的边数是C(n,2)，同时我们注意到上图中每形成一个交点都会使两条对角线互相切割，切割成了4段，也就是比原边数多了两段，也就是交点数 <em> 2，即C(n,4) </em> 2，然后再把C(n,2)加上就行了，于是边数也就是C(n,4) * 2+C(n,2)；</p>
+<p>带入公式：</p>
+<p>C(n,4)+n-C(n,4) * 2-C(n,2)+x=2;</p>
+<p>x=qu+1;</p>
+<p>于是求得</p>
+<p>qu=C(n,4)+1-n;</p>
+<p>接下来用组合数求就行了；</p>
+<p>当然要用到费马小定理求逆元，就不再赘述了。。。</p>
+<p>代码：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> ll M=<span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="function">ll <span class="title">qmi</span><span class="params">(ll a,ll k,ll p)</span></span>{</span><br><span class="line">    ll res=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(k){</span><br><span class="line">        <span class="keyword">if</span>(k&amp;<span class="number">1</span>)res=(ll)res*a%p;</span><br><span class="line">        a=(ll)a*a%p;</span><br><span class="line">        k&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">C</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> p)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(a&lt;b) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    ll x=<span class="number">1</span>,y=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=a,j=<span class="number">1</span>;j&lt;=b;i--,j++){</span><br><span class="line">        x=(ll)x*i%p;</span><br><span class="line">        y=(ll)y*j%p;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> x*(ll)<span class="built_in">qmi</span>(y,p<span class="number">-2</span>,p)%p;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">lucas</span><span class="params">(ll a,ll b,<span class="keyword">int</span> p)</span></span>{</span><br><span class="line">    <span class="keyword">if</span> (a&lt;p&amp;&amp;b&lt;p) <span class="keyword">return</span> <span class="built_in">C</span>(a,b,p);</span><br><span class="line">    <span class="keyword">return</span> (ll)<span class="built_in">C</span>(a%p,b%p,p)*<span class="built_in">lucas</span>(a/p,b/p,p)%p;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	ll n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	cout&lt;&lt;(((<span class="built_in">C</span>(n,<span class="number">2</span>,M)%M+<span class="built_in">C</span>(n,<span class="number">4</span>,M)%M)%M)%M+(<span class="number">1</span>-n+M)%M)%M;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>这着实是个好题，但不太正经。。。</p>
+]]></content>
+      <tags>
+        <tag>contest</tag>
+      </tags>
+  </entry>
 </search>
