@@ -1729,4 +1729,19 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
         <tag>C</tag>
       </tags>
   </entry>
+  <entry>
+    <title>butterfly图标不能加载的问题（cdn更换）</title>
+    <url>/2022/06/07/43/</url>
+    <content><![CDATA[<h2 id="butterfly图标不能加载的问题"><a href="#butterfly图标不能加载的问题" class="headerlink" title="butterfly图标不能加载的问题"></a>butterfly图标不能加载的问题</h2><p>期末考试的我兴奋的打开网站，却发现图标君不在了，这对我这种菜狗来说是搞不明白的😥</p>
+<p>f12一下看到有很多cdn.jsdelivr.net的文件出现了网络问题</p>
+<p>于是我挂上梯子试了试，发现图片正常显示了，但我一直不知道为什么</p>
+<p>直到我搜到相同的问题，才发现jsdelivr的cdn在5月17日挂了</p>
+<p><a href="https://blog.zhheo.com/p/790087d9.html">这里</a>是一位大佬发的butterfly主题的cdn更换教程，等jsdelivr修好了再说吧</p>
+<p>只需要把主题配置文件下的cdn更换即可</p>
+<p>我不懂什么seo，也没打算用国内的服务器什么的，网站图片加载速度太慢什么的以后再说吧🤦‍♂️（摆烂ing）</p>
+]]></content>
+      <tags>
+        <tag>problem</tag>
+      </tags>
+  </entry>
 </search>
