@@ -2045,7 +2045,7 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
     <content><![CDATA[<h2 id="欧拉定理的应用：Counting-regions"><a href="#欧拉定理的应用：Counting-regions" class="headerlink" title="欧拉定理的应用：Counting regions"></a>欧拉定理的应用：Counting regions</h2><p><a href="https://ac.nowcoder.com/acm/problem/17369">Counting regions</a></p>
 <p>Niuniu likes mathematics. He also likes drawing pictures. One day, he was trying to draw a regular polygon with n vertices. He connected every pair of the vertices by a straight line as well. He counted the number of regions inside the polygon after he completed his picture. He was wondering how to calculate the number of regions without the picture. Can you calculate the number of regions modulo 1000000007? <strong>It is guaranteed that n is odd.</strong></p>
 <p>在图论里有这样一个定理：</p>
-<p><strong>对于一个凸多面体，顶点数-边数+面数=2</strong></p>
+<p><strong>对于一个平面图，顶点数-边数+面数=2</strong></p>
 <p>我最早看到这个式子是在浙大的高中数学竞赛书中，最近离散数学课也推到图论了，里面讲到了这场多校赛的两个基础知识点，欧拉定理和哈密顿图。</p>
 <p>我当时只知道，n阶完全图的边数为C(n,2)，欧拉公式只适用于立体图；</p>
 <p>一开始想找找规律，wa了两发；</p>
@@ -2054,7 +2054,7 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
 <p>到这里只需要分别求出顶点数和边数就能带式子了：</p>
 <p>顶点数：我们可以这么想每一个内部的交点都是由两条线相交构成的，这个线的两端点是从外面一圈点中选的，那么内部的交点数就相当于从外围的个点中选四个数，构成两条线，两条线再构成一个交点，即交点数为C(n,4)，然后还要加上外围的n个点，所以顶点数为C(n,4)+n；</p>
 <img src="/2022/05/10/41/1.jpg" class="" title="blog">
-<p>边数：尤其要注意的是，把完全图看成立体图后，对角线之间互相切割的线段才是边，我们首先知道n阶完全图的边数是C(n,2)，同时我们注意到上图中每形成一个交点都会使两条对角线互相切割，切割成了4段，也就是比原边数多了两段，也就是交点数 <em> 2，即C(n,4) </em> 2，然后再把C(n,2)加上就行了，于是边数也就是C(n,4) * 2+C(n,2)；</p>
+<p>边数：尤其要注意的是，对角线之间互相切割的线段才是边，我们首先知道n阶完全图的边数是C(n,2)，同时我们注意到上图中每形成一个交点都会使两条对角线互相切割，切割成了4段，也就是比原边数多了两段，也就是交点数 <em> 2，即C(n,4) </em> 2，然后再把C(n,2)加上就行了，于是边数也就是C(n,4) * 2+C(n,2)；</p>
 <p>带入公式：</p>
 <p>C(n,4)+n-C(n,4) * 2-C(n,2)+x=2;</p>
 <p>x=qu+1;</p>
