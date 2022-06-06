@@ -1,10 +1,12 @@
-// This is a prime example of what starts out as a simple project
-// and snowballs way beyond its intended size. It's a little clunky
-// reading/working on this single file, but here it is anyways :)
-
+/*
+源码由作者XgpNwb制作，由吾爱论坛碎念_Nian翻译及优化
+*/
 'use strict';
 console.clear();
 
+// This is a prime example of what starts out as a simple project
+// and snowballs way beyond its intended size. It's a little clunky
+// reading/working on this single file, but here it is anyways :)
 
 const IS_MOBILE = window.innerWidth <= 640;
 const IS_DESKTOP = window.innerWidth > 800;
@@ -117,7 +119,7 @@ const store = {
 	state: {
 		// will be unpaused in init()
 		paused: true,
-		soundEnabled: false,
+		soundEnabled: true,
 		menuOpen: false,
 		openHelpTopic: null,
 		fullscreen: isFullscreen(),
@@ -132,7 +134,7 @@ const store = {
 					? '1.2' // Profile header default (doesn't need to be an int)
 					: '2', // Mobile default
 			autoLaunch: true,
-			finale: false,
+			finale: true,
 			skyLighting: SKY_LIGHT_NORMAL + '',
 			hideControls: IS_HEADER,
 			longExposure: false,
@@ -300,44 +302,44 @@ const scaleFactorSelector = () => store.state.config.scaleFactor;
 // Help Content
 const helpContent = {
 	shellType: {
-		header: 'Shell Type',
-		body: 'The type of firework that will be launched. Select "Random" for a nice assortment!'
+		header: '烟花类型',
+		body: '你要放的烟花的类型，选择“随机（Random）”可以获得非常好的体验！'
 	},
 	shellSize: {
-		header: 'Shell Size',
-		body: 'The size of the fireworks. Modeled after real firework shell sizes, larger shells have bigger bursts with more stars, and sometimes more complex effects. However, larger shells also require more processing power and may cause lag.'
+		header: '烟花大小',
+		body: '烟花越大绽放范围就越大，但是烟花越大，设备所需的性能也会增多，大的烟花可能导致你的设备卡顿。'
 	},
 	quality: {
-		header: 'Quality',
-		body: 'Overall graphics quality. If the animation is not running smoothly, try lowering the quality. High quality greatly increases the amount of sparks rendered and may cause lag.'
+		header: '画质',
+		body: '如果动画运行不流畅，你可以试试降低画质。画质越高，烟花绽放后的火花数量就越多，但高画质可能导致你的设备卡顿。'
 	},
 	skyLighting: {
-		header: 'Sky Lighting',
-		body: 'Illuminates the background as fireworks explode. If the background looks too bright on your screen, try setting it to "Dim" or "None".'
+		header: '照亮天空',
+		body: '烟花爆炸时，背景会被照亮。如果你的屏幕看起来太亮了，可以把它改成“暗”或者“无”。'
 	},
 	scaleFactor: {
-		header: 'Scale',
-		body: 'Allows scaling the size of all fireworks, essentially moving you closer or farther away. For larger shell sizes, it can be convenient to decrease the scale a bit, especially on phones or tablets.'
+		header: '缩放',
+		body: '使你与烟花离得更近或更远。对于较大的烟花，你可以选择更小的缩放值，尤其是在手机或平板电脑上。'
 	},
 	autoLaunch: {
-		header: 'Auto Fire',
-		body: 'Launches sequences of fireworks automatically. Sit back and enjoy the show, or disable to have full control.'
+		header: '自动放烟花',
+		body: '开启后你就可以坐在你的设备屏幕前面欣赏烟花了，你也可以关闭它，但关闭后你就只能通过点击屏幕的方式来放烟花。'
 	},
 	finaleMode: {
-		header: 'Finale Mode',
-		body: 'Launches intense bursts of fireworks. May cause lag. Requires "Auto Fire" to be enabled.'
+		header: '同时放更多的烟花',
+		body: '可以在同一时间自动放出更多的烟花（但需要开启先开启“自动放烟花”）。'
 	},
 	hideControls: {
-		header: 'Hide Controls',
-		body: 'Hides the translucent controls along the top of the screen. Useful for screenshots, or just a more seamless experience. While hidden, you can still tap the top-right corner to re-open this menu.'
+		header: '隐藏控制按钮',
+		body: '隐藏屏幕顶部的按钮。如果你要截图，或者需要一个无缝的体验，你就可以将按钮隐藏，隐藏按钮后你仍然可以在右上角打开设置。'
 	},
 	fullscreen: {
-		header: 'Fullscreen',
-		body: 'Toggles fullscreen mode.'
+		header: '全屏',
+		body: '切换至全屏模式'
 	},
 	longExposure: {
-		header: 'Open Shutter',
-		body: 'Experimental effect that preserves long streaks of light, similar to leaving a camera shutter open.'
+		header: '保留烟花的火花',
+		body: '可以保留烟花留下的火花'
 	}
 };
 
@@ -757,6 +759,9 @@ function randomShellName() {
 }
 
 function randomShell(size) {
+	// Special selection for codepen header.
+	if (IS_HEADER) return randomFastShell()(size);
+	// Normal operation
 	return shellTypes[randomShellName()](size);
 }
 
@@ -817,15 +822,15 @@ function init() {
 	appNodes.shellSize.innerHTML = options;
 	
 	setOptionsForSelect(appNodes.quality, [
-		{ label: 'Low', value: QUALITY_LOW },
-		{ label: 'Normal', value: QUALITY_NORMAL },
-		{ label: 'High', value: QUALITY_HIGH }
+		{ label: '低', value: QUALITY_LOW },
+		{ label: '正常', value: QUALITY_NORMAL },
+		{ label: '高', value: QUALITY_HIGH }
 	]);
 	
 	setOptionsForSelect(appNodes.skyLighting, [
-		{ label: 'None', value: SKY_LIGHT_NONE },
-		{ label: 'Dim', value: SKY_LIGHT_DIM },
-		{ label: 'Normal', value: SKY_LIGHT_NORMAL }
+		{ label: '不', value: SKY_LIGHT_NONE },
+		{ label: '暗', value: SKY_LIGHT_DIM },
+		{ label: '正常', value: SKY_LIGHT_NORMAL }
 	]);
 	
 	// 0.9 is mobile default
@@ -1521,7 +1526,21 @@ function createParticleArc(start, arcLength, count, randomness, particleFactory)
 }
 
 
-// Helper used to create a spherical burst of particles
+/**
+ * Helper used to create a spherical burst of particles.
+ *
+ * @param  {Number} count               The desired number of stars/particles. This value is a suggestion, and the
+ *                                      created burst may have more particles. The current algorithm can't perfectly
+ *                                      distribute a specific number of points evenly on a sphere's surface.
+ * @param  {Function} particleFactory   Called once per star/particle generated. Passed two arguments:
+ *                                        `angle`: The direction of the star/particle.
+ *                                        `speed`: A multipler for the particle speed, from 0.0 to 1.0.
+ * @param  {Number} startAngle=0        For segmented bursts, you can generate only a partial arc of particles. This
+ *                                      allows setting the starting arc angle (radians).
+ * @param  {Number} arcLength=TAU       The length of the arc (radians). Defaults to a full circle.
+ *
+ * @return {void}              Returns nothing; it's up to `particleFactory` to use the given data.
+ */
 function createBurst(count, particleFactory, startAngle=0, arcLength=PI_2) {
 	// Assuming sphere with surface area of `count`, calculate various
 	// properties of said sphere (unit is stars).
@@ -2095,7 +2114,7 @@ const Spark = {
 
 
 const soundManager = {
-	baseURL: '',
+	baseURL: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/',
 	ctx: new (window.AudioContext || window.webkitAudioContext),
 	sources: {
 		lift: {
@@ -2103,9 +2122,9 @@ const soundManager = {
 			playbackRateMin: 0.85,
 			playbackRateMax: 0.95,
 			fileNames: [
-				'./music/lift1.mp3',
-				'./music/lift2.mp3',
-				'./music/lift3.mp3',
+				'lift1.mp3',
+				'lift2.mp3',
+				'lift3.mp3'
 			]
 		},
 		burst: {
@@ -2113,8 +2132,8 @@ const soundManager = {
 			playbackRateMin: 0.8,
 			playbackRateMax: 0.9,
 			fileNames: [
-				'./music/burst1.mp3',
-				'./music/burst2.mp3'
+				'burst1.mp3',
+				'burst2.mp3'
 			]
 		},
 		burstSmall: {
@@ -2122,21 +2141,21 @@ const soundManager = {
 			playbackRateMin: 0.8,
 			playbackRateMax: 1,
 			fileNames: [
-				'./music/burst-sm-1.mp3',
-				'./music/burst-sm-2.mp3'
+				'burst-sm-1.mp3',
+				'burst-sm-2.mp3'
 			]
 		},
 		crackle: {
 			volume: 0.2,
 			playbackRateMin: 1,
 			playbackRateMax: 1,
-			fileNames: ['./music/crackle1.mp3']
+			fileNames: ['crackle1.mp3']
 		},
 		crackleSmall: {
 			volume: 0.3,
 			playbackRateMin: 1,
 			playbackRateMax: 1,
-			fileNames: ['./music/crackle-sm-1.mp3']
+			fileNames: ['crackle-sm-1.mp3']
 		}
 	},
 
@@ -2276,7 +2295,7 @@ if (IS_HEADER) {
 	init();
 } else {
 	// Allow status to render, then preload assets and start app.
-	setLoadingStatus('Lighting Fuses');
+	setLoadingStatus('正在点燃导火线');
 	setTimeout(() => {
 		soundManager.preload()
 		.then(

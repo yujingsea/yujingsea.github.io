@@ -1,5 +1,6 @@
-// A manual UMD build of Fscreen: https://github.com/rafrex/fscreen
-
+/*
+源码由作者XgpNwb制作，由吾爱论坛碎念_Nian翻译及优化
+*/
 (function(global) {
   'use strict';
   

@@ -1,15 +1,6 @@
-// OLD VERSION DO NOT USE
-// Older pens still rely on this.
-
-/**
- * MyMath.js
- * -----------
- * Handy math/trig reference.
- * 
- * Author: Caleb Miller
- *         caleb@caleb-miller.com
+/*
+源码由作者XgpNwb制作，由吾爱论坛碎念_Nian翻译及优化
 */
- 
 const MyMath = (function MyMathFactory(Math) {
 
 	const MyMath = {};

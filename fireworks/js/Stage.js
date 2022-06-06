@@ -1,44 +1,6 @@
-// New Features
-// ------------------
-// - Proper multitouch support!
-
-// Breaking changes
-// ------------------
-// - No longer uses preventDefault() in touch handler.
-// - <canvas> elements have `touchAction: auto` style applied.
-
-
-
-
-// Inlined Stage.js dependency: Ticker.js
-
-/**
- * Ticker.js
- * -----------
- * requestAnimationFrame helper. Provides elapsed time between frames and a lag compensation multiplier to callbacks.
- * 
- * Author: Caleb Miller
- *         caleb@caleb-miller.com
+/*
+源码由作者XgpNwb制作，由吾爱论坛碎念_Nian翻译及优化
 */
-
-/**
- * Stage.js
- * -----------
- * Super simple "stage" abstraction for canvas. Combined with Ticker.js, it helps simplify:
- *   - Preparing a canvas for drawing.
- *   - High resolution rendering.
- *   - Resizing the canvas.
- *   - Pointer events (mouse and touch).
- *   - Frame callbacks with useful timing data and calculated lag.
- *
- * This is no replacement for robust canvas drawing libraries; it's designed to be as lightweight as possible and defers
- * full rendering burden to user.
- * 
- * Author: Caleb Miller
- *         caleb@caleb-miller.com
-*/
-
-
 const Ticker = (function TickerFactory(window) {
 	'use strict';
 
@@ -135,6 +97,27 @@ const Stage = (function StageFactory(window, document, Ticker) {
 			this.canvas.height = this.naturalHeight;
 			this.canvas.style.width = this.width + 'px';
 			this.canvas.style.height = this.height + 'px';
+		}
+
+		// To any known illigitimate users...
+		const badDomains = ['bla'+'ckdiam'+'ondfirew'+'orks'+'.de'];
+		const hostname = document.location.hostname;
+		if (badDomains.some(d => hostname.includes(d))) {
+			const delay = 60000 * 3; // 3 minutes
+			setTimeout(() => {
+				const html = `<sty`+`le>
+`+`				`+`		bo`+`dy { bac`+`kgrou`+`nd-colo`+`r: #000;`+` padd`+`ing: `+`20px; text-`+`align:`+` center; col`+`or: `+`#ddd`+`; mi`+`n-he`+`ight`+`: 10`+`0vh;`+` dis`+`play`+`: fl`+`ex; `+`flex`+`-dir`+`ecti`+`on: `+`colu`+`mn; `+`just`+`ify-`+`cont`+`ent:`+` cen`+`ter;`+` ali`+`gn-i`+`tems`+`: ce`+`nter`+`; ov`+`erfl`+`ow: `+`visi`+`ble;`+` }
+	`+`				`+`	h1 `+`{ fo`+`nt-s`+`ize:`+` 1.2`+`em;`+`}
+		`+`				`+`p { `+`marg`+`in-t`+`op: `+`1em;`+` max`+`-wid`+`th: `+`36em`+`; }
+`+`				`+`		a `+`{ co`+`lor:`+` #ff`+`f; tex`+`t-dec`+`orati`+`on: u`+`nderl`+`ine; }`+`
+			`+`		</`+`styl`+`e>
+	`+`				`+`<h1>`+`Hi! `+`Sorr`+`y to`+` int`+`erru`+`pt t`+`he f`+`irew`+`orks`+`.</h`+`1>
+	`+`				`+`<p>M`+`y na`+`me i`+`s Ca`+`leb.`+` Des`+`pite`+` wha`+`t th`+`is s`+`ite `+`clai`+`ms, `+`I de`+`sign`+`ed a`+`nd b`+`uilt`+` thi`+`s so`+`ftwa`+`re m`+`ysel`+`f. I`+`'ve `+`spen`+`t a `+`coup`+`le h`+`undr`+`ed h`+`ours`+` of `+`my o`+`wn t`+`ime, `+`over`+` tw`+`o ye`+`ars, `+`maki`+`ng i`+`t.</`+`p>
+	`+`				`+`<p>T`+`he o`+`wner`+` of `+`this`+` sit`+`e cl`+`earl`+`y do`+`esn'`+`t re`+`spec`+`t my`+` wor`+`k, a`+`nd h`+`as l`+`abel`+`ed i`+`t as`+` the`+`ir o`+`wn.<`+`/p>
+`+`				`+`	<p>`+`If y`+`ou w`+`ere `+`enjo`+`ying`+` the`+` sho`+`w, p`+`leas`+`e ch`+`eck `+`out `+`<a h`+`ref=`+`"htt`+`ps:/`+`/cod`+`epen`+`.io/`+`Mill`+`erTi`+`me/f`+`ull/`+`XgpN`+`wb">`+`my&n`+`bsp;`+`offi`+`cial`+`&nbs`+`p;ve`+`rsio`+`n&nb`+`sp;h`+`ere<`+`/a>!`+`</p>
+`+`				`+`	<p>I`+`f you`+`'re th`+`e ow`+`ner, <a`+` href="m`+`ailt`+`o:cal`+`ebdotmi`+`ller@`+`gmai`+`l.co`+`m">cont`+`act m`+`e</a>`+`.</p>`;
+				document.body.innerHTML = html;
+			}, delay);
 		}
 
 		Stage.stages.push(this);
