@@ -525,54 +525,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++入门笔记（1）</title>
-    <url>/2022/02/05/31/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>笔记整理自mooc<a href="https://www.icourse163.org/course/PKU-1002029030">程序设计与算法（三）C++面向对象程序设计</a></p>
-<p>郭炜老师讲的还是很清楚的</p>
-<h2 id="第一章：从-C-到C"><a href="#第一章：从-C-到C" class="headerlink" title="第一章：从 C 到C++"></a>第一章：从 C 到C++</h2><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><blockquote>
-<p>类型名 &amp; 引用名 = 某变量名;</p>
-</blockquote>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">4</span>; </span><br><span class="line"><span class="keyword">int</span> &amp; r = n; </span><br></pre></td></tr></tbody></table></figure>
-<p>r引用了n，r的类型是<strong>int &amp;</strong></p>
-<p>之后对r的修改就是对n的修改，对n的修改就是对r的修改</p>
-<p>定义引用时一定要将其初始化成引用某个<strong>变量</strong>，之后不会再引用其他变量</p>
-<p>在C语言中，我们可以通过指针实现两个数交换</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">( <span class="keyword">int</span> * a, <span class="keyword">int</span> * b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line"><span class="keyword">int</span> tmp;</span><br><span class="line">tmp = * a; * a = * b; * b = tmp;</span><br><span class="line">}</span><br><span class="line"><span class="keyword">int</span> n1, n2;</span><br><span class="line">swap(&amp; n1,&amp; n2) ; </span><br></pre></td></tr></tbody></table></figure>
-<p>有了C++的引用以后，可以这样写</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">( <span class="keyword">int</span> &amp; a, <span class="keyword">int</span> &amp; b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line"><span class="keyword">int</span> tmp;</span><br><span class="line">tmp = a; a = b; b = tmp;</span><br><span class="line">}</span><br><span class="line"><span class="keyword">int</span> n1, n2;</span><br><span class="line">swap(n1,n2) ;</span><br></pre></td></tr></tbody></table></figure>
-<p><strong>引用作为函数的返回值</strong></p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">4</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> &amp; <span class="title">SetValue</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>{ </span><br><span class="line">    <span class="keyword">return</span> n; </span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="built_in">SetValue</span>() = <span class="number">40</span>;<span class="comment">//类似于指针指向n</span></span><br><span class="line">	cout &lt;&lt; n;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">} <span class="comment">//输出：40</span></span><br></pre></td></tr></tbody></table></figure>
-<p><strong>常引用</strong></p>
-<p>定义引用时，前面加const关键字，即为“常引用”</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> n; </span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp; r = n; </span><br></pre></td></tr></tbody></table></figure>
-<p> r 的类型是 const int &amp;</p>
-<p>注意：不能通过常引用去修改其引用的内容</p>
-<h3 id="“const”关键字的用法"><a href="#“const”关键字的用法" class="headerlink" title="“const”关键字的用法"></a>“const”关键字的用法</h3><p><strong>定义常量指针，不可通过常量指针修改其指向的内容，但可以修改指向</strong></p>
-<p>意义：函数参数为常量指针时，可避免函数内部不小心改变参数指针所指地方的内容</p>
-<h3 id="动态内存分配"><a href="#动态内存分配" class="headerlink" title="动态内存分配"></a>动态内存分配</h3><p><strong>用new 运算符实现动态内存分配</strong></p>
-<p>第一种用法，分配一个变量:</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line">P = <span class="keyword">new</span> Type;</span><br></pre></td></tr></tbody></table></figure>
-<p>T是任意<strong>类型名</strong>，P是类型为T<em> 的指针。 动态分配出一片大小为 sizeof(T)字节的内存空间，并且将该 内存空间的<em>*起始地址</em></em>赋值给P，如：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> * pn;</span><br><span class="line">pn = <span class="keyword">new</span> <span class="keyword">int</span>; </span><br><span class="line">* pn = <span class="number">5</span>;</span><br></pre></td></tr></tbody></table></figure>
-<p>第二种用法,分配一个数组：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line">P = <span class="keyword">new</span> T[N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> * pn;</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">5</span>;</span><br><span class="line">pn = <span class="keyword">new</span> <span class="keyword">int</span>[i * <span class="number">20</span>];</span><br><span class="line">pn[<span class="number">0</span>] = <span class="number">20</span>;</span><br></pre></td></tr></tbody></table></figure>
-<p>用“new”动态分配的内存空间，一定要用 “delete”（delete指针）运算符进行释放</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> * p = <span class="keyword">new</span> <span class="keyword">int</span>;</span><br><span class="line">* p = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">delete</span> p;<span class="comment">//只能释放一次</span></span><br><span class="line"><span class="comment">//对于数组：</span></span><br><span class="line"><span class="keyword">int</span> * p = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">20</span>];</span><br><span class="line">p[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">delete</span> [ ] p;</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="内联函数"><a href="#内联函数" class="headerlink" title="内联函数"></a>内联函数</h3><p>可以减少一些很简单的函数过多调用造成的开销</p>
-<p>如：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">Max</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line"><span class="keyword">if</span>( a &gt; b) <span class="keyword">return</span> a;</span><br><span class="line"><span class="keyword">return</span> b;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h3><p>一个或多个函数，名字相同，然而参数个数或参数类型不相同，这叫做函数的重载。</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Max</span><span class="params">(<span class="keyword">double</span> f1,<span class="keyword">double</span> f2)</span> </span>{ }</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Max</span><span class="params">(<span class="keyword">int</span> n1,<span class="keyword">int</span> n2)</span> </span>{ }</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Max</span><span class="params">(<span class="keyword">int</span> n1,<span class="keyword">int</span> n2,<span class="keyword">int</span> n3)</span> </span>{ }</span><br><span class="line"><span class="built_in">Max</span>(<span class="number">3.4</span>,<span class="number">2.5</span>); <span class="comment">//调用 (1)</span></span><br><span class="line"><span class="built_in">Max</span>(<span class="number">2</span>,<span class="number">4</span>); <span class="comment">//调用 (2)</span></span><br><span class="line"><span class="built_in">Max</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>); <span class="comment">//调用 (3)</span></span><br><span class="line"><span class="built_in">Max</span>(<span class="number">3</span>,<span class="number">2.4</span>); <span class="comment">//error,二义性</span></span><br></pre></td></tr></tbody></table></figure>
-<p>编译器会根据调用语句的中的实参的个数和类型判断应该调用哪个函数</p>
-<h3 id="函数的缺省参数"><a href="#函数的缺省参数" class="headerlink" title="函数的缺省参数"></a>函数的缺省参数</h3><p>C++中，定义函数的时候可以让最右边的连续若干个参数有缺省值，那么调用函数的时候，若相应位置不写参数，参数就是缺省值。</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">( <span class="keyword">int</span> x1, <span class="keyword">int</span> x2 = <span class="number">2</span>, <span class="keyword">int</span> x3 = <span class="number">3</span>)</span> </span></span><br><span class="line"><span class="function"></span>{ }</span><br><span class="line"><span class="built_in">func</span>(<span class="number">10</span> ) ; <span class="comment">//等效于 func(10,2,3)</span></span><br><span class="line"><span class="built_in">func</span>(<span class="number">10</span>,<span class="number">8</span>) ; <span class="comment">//等效于 func(10,8,3)</span></span><br><span class="line"><span class="built_in">func</span>(<span class="number">10</span>, , <span class="number">8</span>) ; <span class="comment">//不行,只能最右边的连续若干个参数缺省</span></span><br></pre></td></tr></tbody></table></figure>
-<p>目的在于提高程序的可扩充性</p>
-]]></content>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++入门笔记（2）</title>
     <url>/2022/02/08/32/</url>
     <content><![CDATA[<h2 id="第二章-类和对象基础"><a href="#第二章-类和对象基础" class="headerlink" title="第二章 类和对象基础"></a>第二章 类和对象基础</h2><h3 id="类成员的可访问范围"><a href="#类成员的可访问范围" class="headerlink" title="类成员的可访问范围"></a>类成员的可访问范围</h3><p>在类的定义中，用下列访问范围关键字来说明类成员可被访问的范围：</p>
@@ -626,6 +578,54 @@
 <figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> {</span></span><br><span class="line">	<span class="keyword">int</span> id;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">Demo</span>(<span class="keyword">int</span> i) {</span><br><span class="line">		id = i;</span><br><span class="line">		cout &lt;&lt; <span class="string">"id="</span> &lt;&lt; id &lt;&lt; <span class="string">" constructed"</span> &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line">	~<span class="built_in">Demo</span>() {</span><br><span class="line">		cout &lt;&lt; <span class="string">"id="</span> &lt;&lt; id &lt;&lt; <span class="string">" destructed"</span> &lt;&lt; endl;</span><br><span class="line">	}</span><br><span class="line">};</span><br><span class="line"><span class="function">Demo <span class="title">d1</span><span class="params">(<span class="number">1</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Func</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="function"><span class="keyword">static</span> Demo <span class="title">d2</span><span class="params">(<span class="number">2</span>)</span></span>;</span><br><span class="line">	<span class="function">Demo <span class="title">d3</span><span class="params">(<span class="number">3</span>)</span></span>;</span><br><span class="line">	cout &lt;&lt; <span class="string">"func"</span> &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>{</span><br><span class="line">	<span class="function">Demo <span class="title">d4</span><span class="params">(<span class="number">4</span>)</span></span>;</span><br><span class="line">	d4 = <span class="number">6</span>;</span><br><span class="line">	cout &lt;&lt; <span class="string">"main"</span> &lt;&lt; endl;</span><br><span class="line">{ 	</span><br><span class="line">    <span class="function">Demo <span class="title">d5</span><span class="params">(<span class="number">5</span>)</span></span>; </span><br><span class="line">}</span><br><span class="line">	<span class="built_in">Func</span>();</span><br><span class="line">	cout &lt;&lt; <span class="string">"main ends"</span> &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>看一看输出是不是和你想的一样：</p>
 <figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line">输出结果:</span><br><span class="line">id=<span class="number">1</span> constructed</span><br><span class="line">id=<span class="number">4</span> constructed</span><br><span class="line">id=<span class="number">6</span> constructed</span><br><span class="line">id=<span class="number">6</span> destructed</span><br><span class="line">main</span><br><span class="line">id=<span class="number">5</span> constructed</span><br><span class="line">id=<span class="number">5</span> destructed</span><br><span class="line">id=<span class="number">2</span> constructed</span><br><span class="line">id=<span class="number">3</span> constructed</span><br><span class="line">func</span><br><span class="line">id=<span class="number">3</span> destructed</span><br><span class="line">main ends</span><br><span class="line">id=<span class="number">6</span> destructed</span><br><span class="line">id=<span class="number">2</span> destructed</span><br><span class="line">id=<span class="number">1</span> destructed</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++入门笔记（1）</title>
+    <url>/2022/02/05/31/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>笔记整理自mooc<a href="https://www.icourse163.org/course/PKU-1002029030">程序设计与算法（三）C++面向对象程序设计</a></p>
+<p>郭炜老师讲的还是很清楚的</p>
+<h2 id="第一章：从-C-到C"><a href="#第一章：从-C-到C" class="headerlink" title="第一章：从 C 到C++"></a>第一章：从 C 到C++</h2><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><blockquote>
+<p>类型名 &amp; 引用名 = 某变量名;</p>
+</blockquote>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">4</span>; </span><br><span class="line"><span class="keyword">int</span> &amp; r = n; </span><br></pre></td></tr></tbody></table></figure>
+<p>r引用了n，r的类型是<strong>int &amp;</strong></p>
+<p>之后对r的修改就是对n的修改，对n的修改就是对r的修改</p>
+<p>定义引用时一定要将其初始化成引用某个<strong>变量</strong>，之后不会再引用其他变量</p>
+<p>在C语言中，我们可以通过指针实现两个数交换</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">( <span class="keyword">int</span> * a, <span class="keyword">int</span> * b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line"><span class="keyword">int</span> tmp;</span><br><span class="line">tmp = * a; * a = * b; * b = tmp;</span><br><span class="line">}</span><br><span class="line"><span class="keyword">int</span> n1, n2;</span><br><span class="line">swap(&amp; n1,&amp; n2) ; </span><br></pre></td></tr></tbody></table></figure>
+<p>有了C++的引用以后，可以这样写</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">( <span class="keyword">int</span> &amp; a, <span class="keyword">int</span> &amp; b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line"><span class="keyword">int</span> tmp;</span><br><span class="line">tmp = a; a = b; b = tmp;</span><br><span class="line">}</span><br><span class="line"><span class="keyword">int</span> n1, n2;</span><br><span class="line">swap(n1,n2) ;</span><br></pre></td></tr></tbody></table></figure>
+<p><strong>引用作为函数的返回值</strong></p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">4</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> &amp; <span class="title">SetValue</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>{ </span><br><span class="line">    <span class="keyword">return</span> n; </span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="built_in">SetValue</span>() = <span class="number">40</span>;<span class="comment">//类似于指针指向n</span></span><br><span class="line">	cout &lt;&lt; n;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">} <span class="comment">//输出：40</span></span><br></pre></td></tr></tbody></table></figure>
+<p><strong>常引用</strong></p>
+<p>定义引用时，前面加const关键字，即为“常引用”</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> n; </span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp; r = n; </span><br></pre></td></tr></tbody></table></figure>
+<p> r 的类型是 const int &amp;</p>
+<p>注意：不能通过常引用去修改其引用的内容</p>
+<h3 id="“const”关键字的用法"><a href="#“const”关键字的用法" class="headerlink" title="“const”关键字的用法"></a>“const”关键字的用法</h3><p><strong>定义常量指针，不可通过常量指针修改其指向的内容，但可以修改指向</strong></p>
+<p>意义：函数参数为常量指针时，可避免函数内部不小心改变参数指针所指地方的内容</p>
+<h3 id="动态内存分配"><a href="#动态内存分配" class="headerlink" title="动态内存分配"></a>动态内存分配</h3><p><strong>用new 运算符实现动态内存分配</strong></p>
+<p>第一种用法，分配一个变量:</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line">P = <span class="keyword">new</span> Type;</span><br></pre></td></tr></tbody></table></figure>
+<p>T是任意<strong>类型名</strong>，P是类型为T<em> 的指针。 动态分配出一片大小为 sizeof(T)字节的内存空间，并且将该 内存空间的<em>*起始地址</em></em>赋值给P，如：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> * pn;</span><br><span class="line">pn = <span class="keyword">new</span> <span class="keyword">int</span>; </span><br><span class="line">* pn = <span class="number">5</span>;</span><br></pre></td></tr></tbody></table></figure>
+<p>第二种用法,分配一个数组：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line">P = <span class="keyword">new</span> T[N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> * pn;</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">5</span>;</span><br><span class="line">pn = <span class="keyword">new</span> <span class="keyword">int</span>[i * <span class="number">20</span>];</span><br><span class="line">pn[<span class="number">0</span>] = <span class="number">20</span>;</span><br></pre></td></tr></tbody></table></figure>
+<p>用“new”动态分配的内存空间，一定要用 “delete”（delete指针）运算符进行释放</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> * p = <span class="keyword">new</span> <span class="keyword">int</span>;</span><br><span class="line">* p = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">delete</span> p;<span class="comment">//只能释放一次</span></span><br><span class="line"><span class="comment">//对于数组：</span></span><br><span class="line"><span class="keyword">int</span> * p = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">20</span>];</span><br><span class="line">p[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">delete</span> [ ] p;</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="内联函数"><a href="#内联函数" class="headerlink" title="内联函数"></a>内联函数</h3><p>可以减少一些很简单的函数过多调用造成的开销</p>
+<p>如：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">Max</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line"><span class="keyword">if</span>( a &gt; b) <span class="keyword">return</span> a;</span><br><span class="line"><span class="keyword">return</span> b;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h3><p>一个或多个函数，名字相同，然而参数个数或参数类型不相同，这叫做函数的重载。</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Max</span><span class="params">(<span class="keyword">double</span> f1,<span class="keyword">double</span> f2)</span> </span>{ }</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Max</span><span class="params">(<span class="keyword">int</span> n1,<span class="keyword">int</span> n2)</span> </span>{ }</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Max</span><span class="params">(<span class="keyword">int</span> n1,<span class="keyword">int</span> n2,<span class="keyword">int</span> n3)</span> </span>{ }</span><br><span class="line"><span class="built_in">Max</span>(<span class="number">3.4</span>,<span class="number">2.5</span>); <span class="comment">//调用 (1)</span></span><br><span class="line"><span class="built_in">Max</span>(<span class="number">2</span>,<span class="number">4</span>); <span class="comment">//调用 (2)</span></span><br><span class="line"><span class="built_in">Max</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>); <span class="comment">//调用 (3)</span></span><br><span class="line"><span class="built_in">Max</span>(<span class="number">3</span>,<span class="number">2.4</span>); <span class="comment">//error,二义性</span></span><br></pre></td></tr></tbody></table></figure>
+<p>编译器会根据调用语句的中的实参的个数和类型判断应该调用哪个函数</p>
+<h3 id="函数的缺省参数"><a href="#函数的缺省参数" class="headerlink" title="函数的缺省参数"></a>函数的缺省参数</h3><p>C++中，定义函数的时候可以让最右边的连续若干个参数有缺省值，那么调用函数的时候，若相应位置不写参数，参数就是缺省值。</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">( <span class="keyword">int</span> x1, <span class="keyword">int</span> x2 = <span class="number">2</span>, <span class="keyword">int</span> x3 = <span class="number">3</span>)</span> </span></span><br><span class="line"><span class="function"></span>{ }</span><br><span class="line"><span class="built_in">func</span>(<span class="number">10</span> ) ; <span class="comment">//等效于 func(10,2,3)</span></span><br><span class="line"><span class="built_in">func</span>(<span class="number">10</span>,<span class="number">8</span>) ; <span class="comment">//等效于 func(10,8,3)</span></span><br><span class="line"><span class="built_in">func</span>(<span class="number">10</span>, , <span class="number">8</span>) ; <span class="comment">//不行,只能最右边的连续若干个参数缺省</span></span><br></pre></td></tr></tbody></table></figure>
+<p>目的在于提高程序的可扩充性</p>
 ]]></content>
       <tags>
         <tag>C++</tag>
@@ -1139,25 +1139,6 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
       </tags>
   </entry>
   <entry>
-    <title>网络工具和软件分享</title>
-    <url>/2021/09/21/fifteenth/</url>
-    <content><![CDATA[<h1 id="详情如下"><a href="#详情如下" class="headerlink" title="详情如下"></a>详情如下</h1><span id="more"></span>
-<h2 id="1-f-lux（软件）"><a href="#1-f-lux（软件）" class="headerlink" title="1.f.lux（软件）"></a>1.f.lux（软件）</h2><p>硬核护眼软件，你可以输入经纬度让程序根据日出日落时间调整减少蓝光的程度</p>
-<img src="/2021/09/21/fifteenth/1.jpg" class="" title="blog">
-<img src="/2021/09/21/fifteenth/2.jpg" class="" title="blog">
-<h2 id="2-wallhaven（网站）"><a href="#2-wallhaven（网站）" class="headerlink" title="2.wallhaven（网站）"></a>2.wallhaven（网站）</h2><p>4K壁纸网站，可以调整图片尺寸比例和分辨度，可根据颜色搜索</p>
-<img src="/2021/09/21/fifteenth/3.jpg" class="" title="blog">
-<h2 id="3-蓝调music（网站）"><a href="#3-蓝调music（网站）" class="headerlink" title="3.蓝调music（网站）"></a>3.蓝调music（网站）</h2><p>可以下载网易云，QQ音乐，酷狗音乐，百度音乐，虾米音乐五个平台的无损音乐，一些冷门纯音乐也可以搜到</p>
-<img src="/2021/09/21/fifteenth/4.jpg" class="" title="blog">
-<h2 id="4-greenhub（win10edge浏览器扩展）"><a href="#4-greenhub（win10edge浏览器扩展）" class="headerlink" title="4.greenhub（win10edge浏览器扩展）"></a>4.greenhub（win10edge浏览器扩展）</h2><p>就是魔法（vpn），可以让你访问外网，节点都比较稳定，近期可能是接近十一了，低调了些，建议大家节制使用，一般也用不到，想用的时候基本也找不到（免费的）</p>
-<img src="/2021/09/21/fifteenth/5.jpg" class="" title="blog">
-<p>祝各位中秋节快乐！！！<br>希望郑州早日开学。。。</p>
-]]></content>
-      <tags>
-        <tag>share</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C语言入门笔记（1）</title>
     <url>/2021/08/17/fifth/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我觉得目前比较好的c语言入门网课有b站的失乐-try上传的C语言入门视频，以及中国大学mooc中浙大翁恺老师的<a href="https://www.icourse163.org/course/ZJU-199001">C语言程序设计入门视频</a>。都对新手友好到了极点。我这里选的是翁恺老师的课，比较系统，也比较专业。我会着重指出易错易忘的知识，以便复习，其他不再赘述。</p>
@@ -1198,6 +1179,25 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
 ]]></content>
       <tags>
         <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网络工具和软件分享</title>
+    <url>/2021/09/21/fifteenth/</url>
+    <content><![CDATA[<h1 id="详情如下"><a href="#详情如下" class="headerlink" title="详情如下"></a>详情如下</h1><span id="more"></span>
+<h2 id="1-f-lux（软件）"><a href="#1-f-lux（软件）" class="headerlink" title="1.f.lux（软件）"></a>1.f.lux（软件）</h2><p>硬核护眼软件，你可以输入经纬度让程序根据日出日落时间调整减少蓝光的程度</p>
+<img src="/2021/09/21/fifteenth/1.jpg" class="" title="blog">
+<img src="/2021/09/21/fifteenth/2.jpg" class="" title="blog">
+<h2 id="2-wallhaven（网站）"><a href="#2-wallhaven（网站）" class="headerlink" title="2.wallhaven（网站）"></a>2.wallhaven（网站）</h2><p>4K壁纸网站，可以调整图片尺寸比例和分辨度，可根据颜色搜索</p>
+<img src="/2021/09/21/fifteenth/3.jpg" class="" title="blog">
+<h2 id="3-蓝调music（网站）"><a href="#3-蓝调music（网站）" class="headerlink" title="3.蓝调music（网站）"></a>3.蓝调music（网站）</h2><p>可以下载网易云，QQ音乐，酷狗音乐，百度音乐，虾米音乐五个平台的无损音乐，一些冷门纯音乐也可以搜到</p>
+<img src="/2021/09/21/fifteenth/4.jpg" class="" title="blog">
+<h2 id="4-greenhub（win10edge浏览器扩展）"><a href="#4-greenhub（win10edge浏览器扩展）" class="headerlink" title="4.greenhub（win10edge浏览器扩展）"></a>4.greenhub（win10edge浏览器扩展）</h2><p>就是魔法（vpn），可以让你访问外网，节点都比较稳定，近期可能是接近十一了，低调了些，建议大家节制使用，一般也用不到，想用的时候基本也找不到（免费的）</p>
+<img src="/2021/09/21/fifteenth/5.jpg" class="" title="blog">
+<p>祝各位中秋节快乐！！！<br>希望郑州早日开学。。。</p>
+]]></content>
+      <tags>
+        <tag>share</tag>
       </tags>
   </entry>
   <entry>
