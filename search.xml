@@ -82,6 +82,18 @@
       </tags>
   </entry>
   <entry>
+    <title>主题由nexT更换到了Butterfly</title>
+    <url>/2021/12/29/23/</url>
+    <content><![CDATA[<h2 id="无法挽回的错误"><a href="#无法挽回的错误" class="headerlink" title="无法挽回的错误"></a>无法挽回的错误</h2><p>昨天夜里想给博客增添一点新功能，没有备份主题配置文件，发布时出了问题，导致页面不显示了，无奈之下更换了Butterfly主题</p>
+<p>令我意外的是这个主题的代码块自带mac风格</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"hello world"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>只不过gittalk要重新设置了，我也真是爱折腾。。。</p>
+]]></content>
+      <tags>
+        <tag>theme</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>琐事记（1）</title>
     <url>/2021/12/31/24/</url>
     <content><![CDATA[<h3 id="题记"><a href="#题记" class="headerlink" title="题记"></a>题记</h3><p><strong>世间好物不坚牢，彩云易散琉璃脆。</strong></p>
@@ -96,18 +108,6 @@
 ]]></content>
       <tags>
         <tag>memories</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>主题由nexT更换到了Butterfly</title>
-    <url>/2021/12/29/23/</url>
-    <content><![CDATA[<h2 id="无法挽回的错误"><a href="#无法挽回的错误" class="headerlink" title="无法挽回的错误"></a>无法挽回的错误</h2><p>昨天夜里想给博客增添一点新功能，没有备份主题配置文件，发布时出了问题，导致页面不显示了，无奈之下更换了Butterfly主题</p>
-<p>令我意外的是这个主题的代码块自带mac风格</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"hello world"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>只不过gittalk要重新设置了，我也真是爱折腾。。。</p>
-]]></content>
-      <tags>
-        <tag>theme</tag>
       </tags>
   </entry>
   <entry>
@@ -981,7 +981,7 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
   <entry>
     <title>HTML5入门</title>
     <url>/2022/06/25/45/</url>
-    <content><![CDATA[<h2 id="HTML5入门"><a href="#HTML5入门" class="headerlink" title="HTML5入门"></a>HTML5入门</h2><p>刚学1小时，简单做了个主页，没有css美化真的不堪入目</p>
+    <content><![CDATA[<h2 id="HTML5入门"><a href="#HTML5入门" class="headerlink" title="HTML5入门"></a>HTML5入门</h2><p>刚学html1小时，简单做了个主页，没有css美化真的不堪入目</p>
 <figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--注释--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>瑜璟的小屋<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>说明<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">strong</span>&gt;</span>这是一个登录界面<span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>前往我的<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://yujingsea.github.io"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>技术博客<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>博客的特点<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>绿色无广告<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>分享编程基础教学内容<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>内置烟花播放器网页<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>加载迅速<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">th</span>&gt;</span>作者<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">th</span>&gt;</span>位置<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">th</span>&gt;</span>邮箱<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">td</span>&gt;</span>瑜璟<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">td</span>&gt;</span>河南郑州<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">td</span>&gt;</span>3224057107@qq.com<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"form.js"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">label</span>&gt;</span>账号<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">placeholder</span>=<span class="string">"输入你的账号"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">label</span>&gt;</span>密码<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">placeholder</span>=<span class="string">"输入你的密码"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"登录"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">"按钮"</span> <span class="attr">value</span>=<span class="string">"注册"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">"按钮"</span> <span class="attr">value</span>=<span class="string">"这是一只可爱的按钮"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">abbr</span> <span class="attr">title</span>=<span class="string">"你怎么这么笨"</span>&gt;</span>忘记密码？<span class="tag">&lt;/<span class="name">abbr</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 ]]></content>
       <tags>
@@ -1590,6 +1590,23 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
       </tags>
   </entry>
   <entry>
+    <title>计算机入门图书分享</title>
+    <url>/2021/08/21/tenth/</url>
+    <content><![CDATA[<h1 id="3本入门图书"><a href="#3本入门图书" class="headerlink" title="3本入门图书"></a>3本入门图书</h1><p><a href="https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg">https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg</a><br>0000</p>
+<span id="more"></span>
+<p>包含3本</p>
+<p>1.c++primerplus6</p>
+<img src="/2021/08/21/tenth/1.jpg" class="" title="blog">
+<p>2.算法竞赛入门经典 紫书</p>
+<img src="/2021/08/21/tenth/2.jpg" class="" title="blog">
+<p>3.算法竞赛入门经典训练指南</p>
+<img src="/2021/08/21/tenth/3.jpg" class="" title="blog">
+]]></content>
+      <tags>
+        <tag>share</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>搭建博客的原因</title>
     <url>/2021/08/15/third/</url>
     <content><![CDATA[<h1 id="搭建博客的原因"><a href="#搭建博客的原因" class="headerlink" title="搭建博客的原因"></a>搭建博客的原因</h1><p>也许是心血来潮，看到别人的博客满满都是学习编程的<strong>笔记</strong>，忍不住要试一下。也许这也算是<strong>他律</strong>了，尽管访问量不见上涨，我依旧有发博客的动力，也许只是刚开始有新鲜感（都这么说），但这东西确实上瘾。我觉得程序员的快乐来源中，成功运行程序的<strong>成就感，满足感</strong>应该是占比不少的。</p>
@@ -1607,23 +1624,6 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
 ]]></content>
       <tags>
         <tag>message</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机入门图书分享</title>
-    <url>/2021/08/21/tenth/</url>
-    <content><![CDATA[<h1 id="3本入门图书"><a href="#3本入门图书" class="headerlink" title="3本入门图书"></a>3本入门图书</h1><p><a href="https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg">https://pan.baidu.com/s/1wvdQ6bQqB3cdNQRzeLcrxg</a><br>0000</p>
-<span id="more"></span>
-<p>包含3本</p>
-<p>1.c++primerplus6</p>
-<img src="/2021/08/21/tenth/1.jpg" class="" title="blog">
-<p>2.算法竞赛入门经典 紫书</p>
-<img src="/2021/08/21/tenth/2.jpg" class="" title="blog">
-<p>3.算法竞赛入门经典训练指南</p>
-<img src="/2021/08/21/tenth/3.jpg" class="" title="blog">
-]]></content>
-      <tags>
-        <tag>share</tag>
       </tags>
   </entry>
   <entry>
