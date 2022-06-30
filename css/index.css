@@ -1417,7 +1417,7 @@ canvas:not(#ribbon-canvas),
   --tab-button-active-bg: #fff;
   --card-bg: #fff;
   --sidebar-bg: #f6f8fa;
-  --btn-hover-color: #ff7242;
+  --btn-hover-color: #7fffaa;
   --btn-color: #fff;
   --btn-bg: #4682b4;
   --text-bg-hover: rgba(70,130,180,0.7);
@@ -1433,7 +1433,7 @@ canvas:not(#ribbon-canvas),
   --card-hover-box-shadow: 0 3px 8px 6px rgba(7,17,27,0.09);
   --timeline-bg: #f6f6f6;
   --timeline-border-color: #4682b4;
-  --pseudo-hover: #ff7242;
+  --pseudo-hover: #7fffaa;
   --headline-presudo: #a0a0a0;
   --scrollbar-color: #4682b4;
 }
@@ -2075,7 +2075,7 @@ figure.highlight pre .javascript .function {
   border-color: var(--pseudo-hover);
 }
 .article-sort-item-time {
-  color: #858585;
+  color: #6495ed;
   font-size: 95%;
 }
 .article-sort-item-time time {
@@ -2134,7 +2134,7 @@ figure.highlight pre .javascript .function {
 }
 .category-lists .category-list .category-list-count {
   margin-left: 8px;
-  color: #858585;
+  color: #6495ed;
 }
 .category-lists .category-list .category-list-count:before {
   content: '(';
@@ -2467,7 +2467,7 @@ figure.highlight pre .javascript .function {
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap {
   margin: 6px 0;
-  color: #858585;
+  color: #6495ed;
   font-size: 90%;
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .post-meta-date {
@@ -2489,7 +2489,7 @@ figure.highlight pre .javascript .function {
   margin: 0 4px;
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap a {
-  color: #858585;
+  color: #6495ed;
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap a:hover {
   color: #4682b4;
@@ -2696,7 +2696,7 @@ h1.page-title + .tag-cloud-list {
 #aside-content .aside-list > .aside-list-item .content > time,
 #aside-content .aside-list > .aside-list-item .content > .name {
   display: block;
-  color: #858585;
+  color: #6495ed;
   font-size: 85%;
 }
 #aside-content .aside-list > .aside-list-item .content > .title,
@@ -3788,7 +3788,7 @@ h1.page-title + .tag-cloud-list {
   overflow-wrap: break-word;
 }
 #article-container a {
-  color: #99a9bf;
+  color: #6495ed;
 }
 #article-container a:hover {
   text-decoration: underline;
@@ -4267,7 +4267,7 @@ h1.page-title + .tag-cloud-list {
 #waline-wrap {
   --waline-font-size: 1.1em;
   --waline-theme-color: #4682b4;
-  --waline-active-color: #ff7242;
+  --waline-active-color: #7fffaa;
 }
 #waline-wrap .vuser {
   -webkit-transition: all 0.5s;
