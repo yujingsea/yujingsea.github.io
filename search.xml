@@ -82,6 +82,18 @@
       </tags>
   </entry>
   <entry>
+    <title>主题由nexT更换到了Butterfly</title>
+    <url>/2021/12/29/23/</url>
+    <content><![CDATA[<h2 id="无法挽回的错误"><a href="#无法挽回的错误" class="headerlink" title="无法挽回的错误"></a>无法挽回的错误</h2><p>昨天夜里想给博客增添一点新功能，没有备份主题配置文件，发布时出了问题，导致页面不显示了，无奈之下更换了Butterfly主题</p>
+<p>令我意外的是这个主题的代码块自带mac风格</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"hello world"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>只不过gittalk要重新设置了，我也真是爱折腾。。。</p>
+]]></content>
+      <tags>
+        <tag>theme</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>琐事记（1）</title>
     <url>/2021/12/31/24/</url>
     <content><![CDATA[<h3 id="题记"><a href="#题记" class="headerlink" title="题记"></a>题记</h3><p><strong>世间好物不坚牢，彩云易散琉璃脆。</strong></p>
@@ -96,18 +108,6 @@
 ]]></content>
       <tags>
         <tag>memories</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>主题由nexT更换到了Butterfly</title>
-    <url>/2021/12/29/23/</url>
-    <content><![CDATA[<h2 id="无法挽回的错误"><a href="#无法挽回的错误" class="headerlink" title="无法挽回的错误"></a>无法挽回的错误</h2><p>昨天夜里想给博客增添一点新功能，没有备份主题配置文件，发布时出了问题，导致页面不显示了，无奈之下更换了Butterfly主题</p>
-<p>令我意外的是这个主题的代码块自带mac风格</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"hello world"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>只不过gittalk要重新设置了，我也真是爱折腾。。。</p>
-]]></content>
-      <tags>
-        <tag>theme</tag>
       </tags>
   </entry>
   <entry>
@@ -1022,6 +1022,16 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
       </tags>
   </entry>
   <entry>
+    <title>用c++编写文字小游戏的一个小尝试</title>
+    <url>/2022/07/05/48/</url>
+    <content><![CDATA[<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>懒得写函数了😅</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">char</span> c[<span class="number">100</span>],j,s[<span class="number">100</span>];</span><br><span class="line">	<span class="keyword">int</span> num=<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">char</span> wz[<span class="number">100</span>]=<span class="string">"平平无奇的生活 by yujingsea\n"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(wz);i++){</span><br><span class="line">		cout&lt;&lt;wz[i];</span><br><span class="line">		<span class="keyword">if</span>(wz[i]&gt;=<span class="string">'a'</span>&amp;&amp;wz[i]&lt;=<span class="string">'z'</span>)</span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">120</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">120</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">Sleep</span>(<span class="number">250</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"输入a开始游戏\n"</span>);</span><br><span class="line">	cin&gt;&gt;c;</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">"cls"</span>);</span><br><span class="line">	<span class="keyword">char</span> t1[]=<span class="string">"02年的某一天,枫出生在了一个贫困县的小农村里,枫的家庭并不富裕,还欠有许多外债,但不论有多少困难,她们还是决定带枫来到这个世界\n"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(t1);i++){</span><br><span class="line">		cout&lt;&lt;t1[i];</span><br><span class="line">		<span class="keyword">if</span>(t1[i]==<span class="string">','</span>||t1[i]==<span class="string">' '</span>)</span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">350</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">90</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"输入a继续\n"</span>);</span><br><span class="line">	cin&gt;&gt;c; </span><br><span class="line">	<span class="keyword">char</span> t2[]=<span class="string">"第一幕 泪水  \n从出生起,枫便不像是一个爱哭的孩子,他总是好奇地张望着这个世界,半夜也不愿合眼 \n直至他记事起的某一天,他看见那个从不在孩子面前流泪的父亲却哭地像一个孩子 \n“父亲为什么哭？” \n母亲摸着枫的脸蛋说：“你的老奶奶走了，长大可别学你爸那样遇事就哭哭啼啼”\n枫觉得父亲很伤心，\n"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(t2);i++){</span><br><span class="line">		cout&lt;&lt;t2[i];</span><br><span class="line">		<span class="keyword">if</span>(t2[i]==<span class="string">','</span>||t2[i]==<span class="string">' '</span>)</span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">350</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">90</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"1.也跟着哭起来	2.认同母亲的看法\n"</span>);</span><br><span class="line">	cin&gt;&gt;num;</span><br><span class="line">	<span class="keyword">if</span>(num==<span class="number">1</span>){</span><br><span class="line">	<span class="keyword">char</span> t21[]=<span class="string">"枫也哭了起来,父亲看到枫在装模做样,不禁笑出声来...\n"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(t21);i++){</span><br><span class="line">		cout&lt;&lt;t21[i];</span><br><span class="line">		<span class="keyword">if</span>(t21[i]==<span class="string">','</span>||t21[i]==<span class="string">' '</span>)</span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">350</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">90</span>);</span><br><span class="line">	 }</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">char</span> t3[]=<span class="string">"枫不知道泪水的滋味,直到一滴泪水滑入他的嘴中 \n"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(t3);i++){</span><br><span class="line">		cout&lt;&lt;t3[i];</span><br><span class="line">		<span class="keyword">if</span>(t3[i]==<span class="string">','</span>||t3[i]==<span class="string">' '</span>)</span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">350</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">90</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"1.“泪水是咸的”	2.枫坚信着自己的看法\n"</span>);</span><br><span class="line">	cin&gt;&gt;num;</span><br><span class="line">	<span class="keyword">if</span>(num==<span class="number">1</span>){</span><br><span class="line">	<span class="keyword">char</span> t31[]=<span class="string">"于是他对父亲说泪水是咸咸的味道,父亲却说泪水是五味瓶,枫那孩童的心里充满了不解 \n"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(t31);i++){</span><br><span class="line">		cout&lt;&lt;t31[i];</span><br><span class="line">		<span class="keyword">if</span>(t31[i]==<span class="string">','</span>||t31[i]==<span class="string">' '</span>)</span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">350</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">90</span>);</span><br><span class="line">	 }</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">char</span> t4[]=<span class="string">"长大以后,枫渐渐明白了父亲的话，他如数家珍地回忆起自己品尝过的每一种泪水，\n08年的泪水是骄傲的，《北京欢迎您》的歌声响彻神州大地； \n09年的泪水是苦中带有甜味的，那年枫的母亲赚到了人生中第一桶金，枫在新搬的小镇上也得以安稳入学； \n11年的泪水是苦涩的，那年的暑假枫因为英语不及格未能转入一所重点小学； \n15年的泪是愤怒且无奈的，那年因为外地高考政策枫不得不回老家念初中； \n17年的泪是感激且愧疚的，枫第一次透过餐馆玻璃看见母亲深夜里忙碌的身影； \n21年，枫没有流泪，看到高考成绩的那一刻他的心情像湖心的水一样平静，他并没有再感到失去什么，没有什么值得让他垂泪，为了纪念他逝去的青春？他望向客厅里的一家人，嘴角不经意间泛起了笑意"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(t4);i++){</span><br><span class="line">		cout&lt;&lt;t4[i];</span><br><span class="line">		<span class="keyword">if</span>(t4[i]==<span class="string">','</span>||t4[i]==<span class="string">' '</span>)</span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">350</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">90</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <tags>
+        <tag>game</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C语言入门笔记（4）</title>
     <url>/2021/08/20/eight/</url>
     <content><![CDATA[<h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2><figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a [<span class="number">3</span>] [<span class="number">5</span>]</span><br></pre></td></tr></tbody></table></figure>
@@ -1191,49 +1201,6 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
       </tags>
   </entry>
   <entry>
-    <title>C语言入门笔记（1）</title>
-    <url>/2021/08/17/fifth/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我觉得目前比较好的c语言入门网课有b站的失乐-try上传的C语言入门视频，以及中国大学mooc中浙大翁恺老师的<a href="https://www.icourse163.org/course/ZJU-199001">C语言程序设计入门视频</a>。都对新手友好到了极点。我这里选的是翁恺老师的课，比较系统，也比较专业。我会着重指出易错易忘的知识，以便复习，其他不再赘述。</p>
-<span id="more"></span>
-<p>关于对计算机知识的深入理解，我推荐b站搬运的YouTube的<a href="https://b23.tv/J0ghf3">计算机科学速成课</a>，里面把计算机的历史，发展，进化讲的<strong>相对容易</strong>理解些，虽然有些知识我听不懂，但我大为震撼。</p>
-<h2 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h2><p>Windows系统推荐dev-C++，当然也可以线上编译，不过不能保存</p>
-<h2 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h2><figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="built_in">printf</span> ( <span class="string">"hello world\n"</span> );</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>除了printf函数，剩下的是c语言的基本框架</p>
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>a = 0;</p>
-<p>把0赋值给a，a作为变量保存了数据0，a之后还可变为其它值。</p>
-<p>a是一种标识符，<font color="red">只能有字母，数字，下划线组成，数字不能位于头部，关键字不能做标识符</font>。</p>
-<p>关键字用多了就记住了，例如char,do,while,if,sizeof….</p>
-<h2 id="赋值与初始化"><a href="#赋值与初始化" class="headerlink" title="赋值与初始化"></a>赋值与初始化</h2><figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a;</span><br></pre></td></tr></tbody></table></figure>
-<p>这里定义了一个变量a,但你不知道a是几，系统保存的可能是一个任意的数；</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a =<span class="number">0</span>;</span><br></pre></td></tr></tbody></table></figure>
-<p>在定义变量时，建议<font color="red">在代码开头的地方定义变量</font>，因为ansi c标准只能在代码开头的地方定义变量，c99标准则无此要求。</p>
-<p>a被初始化为0，系统保存的a的值是0。</p>
-<p><font color="red">初始化是一个好习惯</font>，不这样做可能会莫名报错，尤其到指针那一块。</p>
-<h2 id="scanf函数"><a href="#scanf函数" class="headerlink" title="scanf函数"></a>scanf函数</h2><figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line">a=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a);</span><br></pre></td></tr></tbody></table></figure>
-<p>%d意为取整数a，&amp;取地址，让我输入a</p>
-<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line">b = <span class="number">1</span></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">1</span> + b</span><br></pre></td></tr></tbody></table></figure>
-<p>直接写在程序里的1是直接量，是常量的一种。</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> a = <span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
-<p>const作为修饰符加在int的前面，使a成为一个具有常属性的变量，即常变量a不能再被修改，否则会报错。</p>
-<h2 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h2><p>分为单精度浮点数和双精度浮点数，双精度浮点数能保留更多位小数，更精确,%f是取小数。</p>
-<p>我们试一下下面的运算</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">"%d %d"</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"结果为%d。\n"</span>,((a+b)/<span class="number">3</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>这里输入5，5，结果为3，没有小数</p>
-<p>如果输入10 ，10，结果不是6.666…而是6，这里说明4舍5入不符合</p>
-<p>这里需要知道%f是取单精度，%lf是双精度</p>
-<p>我们再试一下输出小数结果</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">"%d %d"</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"结果为%f。\n"</span>,((a+b)/<span class="number">3</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>这里输入5，5，结果为0.000000，又出错了</p>
-<p>到这里要指出：</p>
-<p>在c语言中<font color="red">两个整数的运算结果只能是整数</font>，用%d得到的是整数，用%f得不到正确结果，如果把3换成3.0，系统在计算时会把a+b的结果化为浮点数，<font color="red">浮点数间的运算就是浮点数</font>。我们再试一下</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">"%d %d"</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"结果为%f。\n"</span>,((a+b)/<span class="number">3.0</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>这里输入5，5，结果正确，为3.333333</p>
-]]></content>
-      <tags>
-        <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>markdown语法笔记（Typora)</title>
     <url>/2021/08/13/first/</url>
     <content><![CDATA[<h2 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h2><h1 id="空格-内容-回车执行-ctrl-1，ctrl-0复原"><a href="#空格-内容-回车执行-ctrl-1，ctrl-0复原" class="headerlink" title="+空格+内容 回车执行/ctrl+1，ctrl+0复原"></a>+空格+内容 回车执行/ctrl+1，ctrl+0复原</h1><span id="more"></span>
@@ -1311,6 +1278,58 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
 ]]></content>
   </entry>
   <entry>
+    <title>C语言入门笔记（1）</title>
+    <url>/2021/08/17/fifth/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我觉得目前比较好的c语言入门网课有b站的失乐-try上传的C语言入门视频，以及中国大学mooc中浙大翁恺老师的<a href="https://www.icourse163.org/course/ZJU-199001">C语言程序设计入门视频</a>。都对新手友好到了极点。我这里选的是翁恺老师的课，比较系统，也比较专业。我会着重指出易错易忘的知识，以便复习，其他不再赘述。</p>
+<span id="more"></span>
+<p>关于对计算机知识的深入理解，我推荐b站搬运的YouTube的<a href="https://b23.tv/J0ghf3">计算机科学速成课</a>，里面把计算机的历史，发展，进化讲的<strong>相对容易</strong>理解些，虽然有些知识我听不懂，但我大为震撼。</p>
+<h2 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h2><p>Windows系统推荐dev-C++，当然也可以线上编译，不过不能保存</p>
+<h2 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h2><figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="built_in">printf</span> ( <span class="string">"hello world\n"</span> );</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>除了printf函数，剩下的是c语言的基本框架</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>a = 0;</p>
+<p>把0赋值给a，a作为变量保存了数据0，a之后还可变为其它值。</p>
+<p>a是一种标识符，<font color="red">只能有字母，数字，下划线组成，数字不能位于头部，关键字不能做标识符</font>。</p>
+<p>关键字用多了就记住了，例如char,do,while,if,sizeof….</p>
+<h2 id="赋值与初始化"><a href="#赋值与初始化" class="headerlink" title="赋值与初始化"></a>赋值与初始化</h2><figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a;</span><br></pre></td></tr></tbody></table></figure>
+<p>这里定义了一个变量a,但你不知道a是几，系统保存的可能是一个任意的数；</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a =<span class="number">0</span>;</span><br></pre></td></tr></tbody></table></figure>
+<p>在定义变量时，建议<font color="red">在代码开头的地方定义变量</font>，因为ansi c标准只能在代码开头的地方定义变量，c99标准则无此要求。</p>
+<p>a被初始化为0，系统保存的a的值是0。</p>
+<p><font color="red">初始化是一个好习惯</font>，不这样做可能会莫名报错，尤其到指针那一块。</p>
+<h2 id="scanf函数"><a href="#scanf函数" class="headerlink" title="scanf函数"></a>scanf函数</h2><figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line">a=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a);</span><br></pre></td></tr></tbody></table></figure>
+<p>%d意为取整数a，&amp;取地址，让我输入a</p>
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line">b = <span class="number">1</span></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">1</span> + b</span><br></pre></td></tr></tbody></table></figure>
+<p>直接写在程序里的1是直接量，是常量的一种。</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> a = <span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+<p>const作为修饰符加在int的前面，使a成为一个具有常属性的变量，即常变量a不能再被修改，否则会报错。</p>
+<h2 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h2><p>分为单精度浮点数和双精度浮点数，双精度浮点数能保留更多位小数，更精确,%f是取小数。</p>
+<p>我们试一下下面的运算</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">"%d %d"</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"结果为%d。\n"</span>,((a+b)/<span class="number">3</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>这里输入5，5，结果为3，没有小数</p>
+<p>如果输入10 ，10，结果不是6.666…而是6，这里说明4舍5入不符合</p>
+<p>这里需要知道%f是取单精度，%lf是双精度</p>
+<p>我们再试一下输出小数结果</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">"%d %d"</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"结果为%f。\n"</span>,((a+b)/<span class="number">3</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>这里输入5，5，结果为0.000000，又出错了</p>
+<p>到这里要指出：</p>
+<p>在c语言中<font color="red">两个整数的运算结果只能是整数</font>，用%d得到的是整数，用%f得不到正确结果，如果把3换成3.0，系统在计算时会把a+b的结果化为浮点数，<font color="red">浮点数间的运算就是浮点数</font>。我们再试一下</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="built_in">scanf</span> (<span class="string">"%d %d"</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"结果为%f。\n"</span>,((a+b)/<span class="number">3.0</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>这里输入5，5，结果正确，为3.333333</p>
+]]></content>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>评论区开放！</title>
+    <url>/2021/08/15/fourth/</url>
+    <content><![CDATA[<h1 id="gitalk已启用"><a href="#gitalk已启用" class="headerlink" title="gitalk已启用"></a>gitalk已启用</h1><p>nexT支持gitalk,评论者只需有GitHub账号即可，账号可在github官网免费注册，注册真不麻烦，github是一个共享源码的网站，不会有安全隐患，欢迎注册/登录github留言！又白嫖了一次嘿嘿</p>
+]]></content>
+      <tags>
+        <tag>message</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C语言程序设计进阶（1）</title>
     <url>/2021/09/14/fourteenth/</url>
     <content><![CDATA[<h1 id="数组和字符串"><a href="#数组和字符串" class="headerlink" title="数组和字符串"></a>数组和字符串</h1><h2 id="指针的使用"><a href="#指针的使用" class="headerlink" title="指针的使用"></a>指针的使用</h2><span id="more"></span>
@@ -1356,15 +1375,6 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
 ]]></content>
       <tags>
         <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>评论区开放！</title>
-    <url>/2021/08/15/fourth/</url>
-    <content><![CDATA[<h1 id="gitalk已启用"><a href="#gitalk已启用" class="headerlink" title="gitalk已启用"></a>gitalk已启用</h1><p>nexT支持gitalk,评论者只需有GitHub账号即可，账号可在github官网免费注册，注册真不麻烦，github是一个共享源码的网站，不会有安全隐患，欢迎注册/登录github留言！又白嫖了一次嘿嘿</p>
-]]></content>
-      <tags>
-        <tag>message</tag>
       </tags>
   </entry>
   <entry>
@@ -1802,16 +1812,6 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
 ]]></content>
       <tags>
         <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用c++编写文字小游戏的一个小尝试</title>
-    <url>/2022/07/05/48/</url>
-    <content><![CDATA[<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>懒得写函数了😅</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">char</span> c[<span class="number">100</span>],j,s[<span class="number">100</span>];</span><br><span class="line">	<span class="keyword">int</span> num=<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">char</span> wz[<span class="number">100</span>]=<span class="string">"平平无奇的生活 by yujingsea\n"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(wz);i++){</span><br><span class="line">		cout&lt;&lt;wz[i];</span><br><span class="line">		<span class="keyword">if</span>(wz[i]&gt;=<span class="string">'a'</span>&amp;&amp;wz[i]&lt;=<span class="string">'z'</span>)</span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">120</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">120</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">Sleep</span>(<span class="number">250</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"输入a开始游戏\n"</span>);</span><br><span class="line">	cin&gt;&gt;c;</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">"cls"</span>);</span><br><span class="line">	<span class="keyword">char</span> t1[]=<span class="string">"02年的某一天,枫出生在了一个贫困县的小农村里,枫的家庭并不富裕,还欠有许多外债,但不论有多少困难,她们还是决定带枫来到这个世界\n"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(t1);i++){</span><br><span class="line">		cout&lt;&lt;t1[i];</span><br><span class="line">		<span class="keyword">if</span>(t1[i]==<span class="string">','</span>||t1[i]==<span class="string">' '</span>)</span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">350</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">90</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"输入a继续\n"</span>);</span><br><span class="line">	cin&gt;&gt;c; </span><br><span class="line">	<span class="keyword">char</span> t2[]=<span class="string">"第一幕 泪水  \n从出生起,枫便不像是一个爱哭的孩子,他总是好奇地张望着这个世界,半夜也不愿合眼 \n直至他记事起的某一天,他看见那个从不在孩子面前流泪的父亲却哭地像一个孩子 \n“父亲为什么哭？” \n母亲摸着枫的脸蛋说：“你的老奶奶走了，长大可别学你爸那样遇事就哭哭啼啼”\n枫觉得父亲很伤心，\n"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(t2);i++){</span><br><span class="line">		cout&lt;&lt;t2[i];</span><br><span class="line">		<span class="keyword">if</span>(t2[i]==<span class="string">','</span>||t2[i]==<span class="string">' '</span>)</span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">350</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">90</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"1.也跟着哭起来	2.认同母亲的看法\n"</span>);</span><br><span class="line">	cin&gt;&gt;num;</span><br><span class="line">	<span class="keyword">if</span>(num==<span class="number">1</span>){</span><br><span class="line">	<span class="keyword">char</span> t21[]=<span class="string">"枫也哭了起来,父亲看到枫在装模做样,不禁笑出声来...\n"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(t21);i++){</span><br><span class="line">		cout&lt;&lt;t21[i];</span><br><span class="line">		<span class="keyword">if</span>(t21[i]==<span class="string">','</span>||t21[i]==<span class="string">' '</span>)</span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">350</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">90</span>);</span><br><span class="line">	 }</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">char</span> t3[]=<span class="string">"枫不知道泪水的滋味,直到一滴泪水滑入他的嘴中 \n"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(t3);i++){</span><br><span class="line">		cout&lt;&lt;t3[i];</span><br><span class="line">		<span class="keyword">if</span>(t3[i]==<span class="string">','</span>||t3[i]==<span class="string">' '</span>)</span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">350</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">90</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"1.“泪水是咸的”	2.枫坚信着自己的看法\n"</span>);</span><br><span class="line">	cin&gt;&gt;num;</span><br><span class="line">	<span class="keyword">if</span>(num==<span class="number">1</span>){</span><br><span class="line">	<span class="keyword">char</span> t31[]=<span class="string">"于是他对父亲说泪水是咸咸的味道,父亲却说泪水是五味瓶,枫那孩童的心里充满了不解 \n"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(t31);i++){</span><br><span class="line">		cout&lt;&lt;t31[i];</span><br><span class="line">		<span class="keyword">if</span>(t31[i]==<span class="string">','</span>||t31[i]==<span class="string">' '</span>)</span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">350</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">90</span>);</span><br><span class="line">	 }</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">char</span> t4[]=<span class="string">"长大以后,枫渐渐明白了父亲的话，他如数家珍地回忆起自己品尝过的每一种泪水，\n08年的泪水是骄傲的，《北京欢迎您》的歌声响彻神州大地； \n09年的泪水是苦中带有甜味的，那年枫的母亲赚到了人生中第一桶金，枫在新搬的小镇上也得以安稳入学； \n11年的泪水是苦涩的，那年的暑假枫因为英语不及格未能转入一所重点小学； \n15年的泪是愤怒且无奈的，那年因为外地高考政策枫不得不回老家念初中； \n17年的泪是感激且愧疚的，枫第一次透过餐馆玻璃看见母亲深夜里忙碌的身影； \n21年，枫没有流泪，看到高考成绩的那一刻他的心情像湖心的水一样平静，他并没有再感到失去什么，没有什么值得让他垂泪，为了纪念他逝去的青春？他望向客厅里的一家人，嘴角不经意间泛起了笑意"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(t4);i++){</span><br><span class="line">		cout&lt;&lt;t4[i];</span><br><span class="line">		<span class="keyword">if</span>(t4[i]==<span class="string">','</span>||t4[i]==<span class="string">' '</span>)</span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">350</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">90</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <tags>
-        <tag>game</tag>
       </tags>
   </entry>
 </search>
