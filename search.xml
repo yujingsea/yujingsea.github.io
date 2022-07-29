@@ -43,6 +43,35 @@
       </tags>
   </entry>
   <entry>
+    <title>主题由nexT更换到了Butterfly</title>
+    <url>/2021/12/29/23/</url>
+    <content><![CDATA[<h2 id="无法挽回的错误"><a href="#无法挽回的错误" class="headerlink" title="无法挽回的错误"></a>无法挽回的错误</h2><p>昨天夜里想给博客增添一点新功能，没有备份主题配置文件，发布时出了问题，导致页面不显示了，无奈之下更换了Butterfly主题</p>
+<p>令我意外的是这个主题的代码块自带mac风格</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"hello world"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>只不过gittalk要重新设置了，我也真是爱折腾。。。</p>
+]]></content>
+      <tags>
+        <tag>theme</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>琐事记（1）</title>
+    <url>/2021/12/31/24/</url>
+    <content><![CDATA[<h3 id="题记"><a href="#题记" class="headerlink" title="题记"></a>题记</h3><p><strong>世间好物不坚牢，彩云易散琉璃脆。</strong></p>
+<p><strong>—白居易《简简吟》</strong></p>
+<h3 id="旧忆"><a href="#旧忆" class="headerlink" title="旧忆"></a>旧忆</h3><p>常常梦到春天里断了线的风筝，夏日里碧绿池塘边的蛙鸣，秋天里晒了满院的玉米，冬日里煤球炉中温暖的火苗……</p>
+<p>我那思绪也像断了线的风筝，乘着自由的风，邂逅一幕幕回忆。</p>
+<p>一切故事仿佛都是从冬天开始的，冬天对我而言象征着温暖的相聚，而春天则是怀着希望的分别，不论结果如何，年底一家人总会相聚一团，和和气气，畅叙往事。</p>
+<p>从故乡到第一次走出家门，我们家就已经做好了用勤劳的双手换取幸福生活的准备。在西辛庄，我母亲挣得第一笔金，她说，那个加班的夜晚她永远也不会忘记；在昆山，母亲仅用几天时间就赶上了工厂机器运转的速度，母亲说了一句让我永远忘不了的话：“别人能做，我也可以！”在濮阳，母亲服务员的工作一干就是七年，生活越来月可观了，家里盖起了二层楼，往日的负债一一还清，仿佛什么样的累活都难不倒我的母亲，直到我第一次听到母亲说脚疼的只能慢慢得走路，第一次看到母亲滑倒差点再也没起来，第一次看到母亲失眠……我方才发现，那个无比坚强的母亲，老了。常年陪在母亲身边，却不知母亲常去染头是为了掩盖岁月的痕迹，脚疼去医院被检查出来是骨质增生，母亲又独自消化了多少疼痛和孤独？</p>
+<p>父亲常年打工在外，记得高中放假每次都是母亲接我，不曾料到有一次父亲专门赶回家来接我，我在校门口等了两个小时，愣是没认出来父亲。“那是我爸吗，我真没认出来！”“你不知道你爸额头上添了多少皱纹和黑斑……”</p>
+<img src="/2021/12/31/24/2.jpg" class="" title="blog">
+<p>如今的年，也失色了不少。以往的除夕夜的天空，是烟花的舞台：每一次轰鸣，每一簇火花，每一次绽放，携卷着人们一年的烦恼与不幸，冲向穹顶，化作星光万丈。手里捧一碗热乎的饺子，便会震起层层涟漪。那些过往的人和事，兴许仍记得，兴许早已忘记了，都融进这新年的梦里。梦醒时，天朗气清，一切如初。</p>
+]]></content>
+      <tags>
+        <tag>memories</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构（1）</title>
     <url>/2021/12/19/22/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><span id="more"></span>
@@ -79,35 +108,6 @@
 ]]></content>
       <tags>
         <tag>Data Structure</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>主题由nexT更换到了Butterfly</title>
-    <url>/2021/12/29/23/</url>
-    <content><![CDATA[<h2 id="无法挽回的错误"><a href="#无法挽回的错误" class="headerlink" title="无法挽回的错误"></a>无法挽回的错误</h2><p>昨天夜里想给博客增添一点新功能，没有备份主题配置文件，发布时出了问题，导致页面不显示了，无奈之下更换了Butterfly主题</p>
-<p>令我意外的是这个主题的代码块自带mac风格</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"hello world"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>只不过gittalk要重新设置了，我也真是爱折腾。。。</p>
-]]></content>
-      <tags>
-        <tag>theme</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>琐事记（1）</title>
-    <url>/2021/12/31/24/</url>
-    <content><![CDATA[<h3 id="题记"><a href="#题记" class="headerlink" title="题记"></a>题记</h3><p><strong>世间好物不坚牢，彩云易散琉璃脆。</strong></p>
-<p><strong>—白居易《简简吟》</strong></p>
-<h3 id="旧忆"><a href="#旧忆" class="headerlink" title="旧忆"></a>旧忆</h3><p>常常梦到春天里断了线的风筝，夏日里碧绿池塘边的蛙鸣，秋天里晒了满院的玉米，冬日里煤球炉中温暖的火苗……</p>
-<p>我那思绪也像断了线的风筝，乘着自由的风，邂逅一幕幕回忆。</p>
-<p>一切故事仿佛都是从冬天开始的，冬天对我而言象征着温暖的相聚，而春天则是怀着希望的分别，不论结果如何，年底一家人总会相聚一团，和和气气，畅叙往事。</p>
-<p>从故乡到第一次走出家门，我们家就已经做好了用勤劳的双手换取幸福生活的准备。在西辛庄，我母亲挣得第一笔金，她说，那个加班的夜晚她永远也不会忘记；在昆山，母亲仅用几天时间就赶上了工厂机器运转的速度，母亲说了一句让我永远忘不了的话：“别人能做，我也可以！”在濮阳，母亲服务员的工作一干就是七年，生活越来月可观了，家里盖起了二层楼，往日的负债一一还清，仿佛什么样的累活都难不倒我的母亲，直到我第一次听到母亲说脚疼的只能慢慢得走路，第一次看到母亲滑倒差点再也没起来，第一次看到母亲失眠……我方才发现，那个无比坚强的母亲，老了。常年陪在母亲身边，却不知母亲常去染头是为了掩盖岁月的痕迹，脚疼去医院被检查出来是骨质增生，母亲又独自消化了多少疼痛和孤独？</p>
-<p>父亲常年打工在外，记得高中放假每次都是母亲接我，不曾料到有一次父亲专门赶回家来接我，我在校门口等了两个小时，愣是没认出来父亲。“那是我爸吗，我真没认出来！”“你不知道你爸额头上添了多少皱纹和黑斑……”</p>
-<img src="/2021/12/31/24/2.jpg" class="" title="blog">
-<p>如今的年，也失色了不少。以往的除夕夜的天空，是烟花的舞台：每一次轰鸣，每一簇火花，每一次绽放，携卷着人们一年的烦恼与不幸，冲向穹顶，化作星光万丈。手里捧一碗热乎的饺子，便会震起层层涟漪。那些过往的人和事，兴许仍记得，兴许早已忘记了，都融进这新年的梦里。梦醒时，天朗气清，一切如初。</p>
-]]></content>
-      <tags>
-        <tag>memories</tag>
       </tags>
   </entry>
   <entry>
@@ -1091,6 +1091,22 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
       </tags>
   </entry>
   <entry>
+    <title>存图的三种方式</title>
+    <url>/2022/07/29/52/</url>
+    <content><![CDATA[<h2 id="存图的三种方式"><a href="#存图的三种方式" class="headerlink" title="存图的三种方式"></a>存图的三种方式</h2><h3 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h3><p>空间复杂度过高</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> V = <span class="number">1000</span>;  <span class="comment">//最大顶点数</span></span><br><span class="line"><span class="keyword">int</span> mat[maxn][maxn];<span class="comment">//开设二维数组来存矩阵</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> i,j,w;</span><br><span class="line">    <span class="built_in">memset</span>(mat, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(mat));  <span class="comment">//初始化操作假设权值为0表示没有该边</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;i,&amp;j,&amp;w);<span class="comment">//输入边的信息：起点、终点、权重</span></span><br><span class="line">    mat[i][j] = w;<span class="comment">// //增加顶点i到顶点j的权值为w的边</span></span><br><span class="line">    mat[i][j] = <span class="number">0</span>;<span class="comment">//删除边</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,mat[i][j]);<span class="comment">//查询边</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h3><p>内存利用率较高，但重边不好处理</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> V = <span class="number">100000</span>;<span class="comment">// 最大顶点数</span></span><br><span class="line">vector&lt;<span class="keyword">int</span>&gt; e[V];<span class="comment">// 不考虑边权，存储类型为int型</span></span><br><span class="line">e[i].<span class="built_in">clear</span>();<span class="comment">// 邻接表的初始化操作,将起点为`i`的边链表全部清空</span></span><br><span class="line">e[i].<span class="built_in">push_back</span>(j);<span class="comment">// 新增边</span></span><br><span class="line">e[i][<span class="number">0</span>];<span class="comment">// 查询边</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;(<span class="keyword">int</span>)e[i].<span class="built_in">size</span>(); ++j) {</span><br><span class="line">    <span class="keyword">if</span> (e[i][j] == k) {</span><br><span class="line">        ......</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>数组模拟邻接表</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1010</span>, M = <span class="number">1010</span>;</span><br><span class="line"><span class="keyword">int</span> h[N], e[M], w[M], nxt[M], eidx;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v, <span class="keyword">int</span> weight)</span></span>{   <span class="comment">// 添加有向边 u-&gt;v, 权重为weight</span></span><br><span class="line">    e[eidx] = v;        <span class="comment">// 记录边的终点</span></span><br><span class="line">    w[eidx] = weight;   <span class="comment">// 记录边的权重</span></span><br><span class="line">    nxt[eidx] = h[u];   <span class="comment">// 将下一条边指向结点u此时的第一条边</span></span><br><span class="line">    h[u] = eidx;        <span class="comment">// 将结点u的第一条边的编号改为此时的eidx</span></span><br><span class="line">    eidx++;             <span class="comment">// 递增边的编号edix, 为将来使用</span></span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">iterate</span><span class="params">(<span class="keyword">int</span> u)</span></span>{   <span class="comment">// 遍历结点u的所有邻边</span></span><br><span class="line">    <span class="comment">// 从u的第一条边开始遍历，直到eid==-1为止</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> eid = h[u]; eid != <span class="number">-1</span>; eid = nxt[eid]){</span><br><span class="line">        <span class="keyword">int</span> v = e[eid];</span><br><span class="line">        <span class="keyword">int</span> weight = w[eid];</span><br><span class="line">        cout &lt;&lt; u &lt;&lt; <span class="string">"-&gt;"</span> &lt;&lt; v &lt;&lt; <span class="string">", weight: "</span> &lt;&lt; weight &lt;&lt; endl;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> n, m;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="built_in">memset</span>(h, <span class="number">-1</span>, <span class="keyword">sizeof</span> h);  <span class="comment">// 初始化h数组为-1</span></span><br><span class="line">    eidx = <span class="number">0</span>;                 <span class="comment">// 初始化边的编号为0</span></span><br><span class="line">    <span class="keyword">while</span>(m--){</span><br><span class="line">        <span class="keyword">int</span> u, v, weight;</span><br><span class="line">        cin &gt;&gt; u &gt;&gt; v &gt;&gt; weight;</span><br><span class="line">        <span class="built_in">add</span>(u, v, weight);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> u = <span class="number">1</span>; u &lt;= n; ++u)</span><br><span class="line">        <span class="built_in">iterate</span>(u);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="链式前向星"><a href="#链式前向星" class="headerlink" title="链式前向星"></a>链式前向星</h3><p>内存利用率高，不像vector实现的邻接表有爆内存的风险，但重边不好处理</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">10005</span>;<span class="comment">//点的最大个数</span></span><br><span class="line"><span class="keyword">int</span> head[maxn], cnt=<span class="number">0</span>;<span class="comment">//head数组用来表示以i为起点的一条边存储的位置,cnt用来记录序号</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Edge</span>{</span></span><br><span class="line">    <span class="keyword">int</span> to; <span class="comment">//此边的终点</span></span><br><span class="line">    <span class="keyword">int</span> w; <span class="comment">//此边的权重</span></span><br><span class="line">    <span class="keyword">int</span> next; <span class="comment">//同一起点的上一条边的储存位置</span></span><br><span class="line">}Edge edge[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v,<span class="keyword">int</span> w)</span></span>{  <span class="comment">//初始化加边</span></span><br><span class="line">    edge[cnt].w = w;<span class="comment">//记录边的权重</span></span><br><span class="line">    edge[cnt].to = v;<span class="comment">//记录边的终点</span></span><br><span class="line">    edge[cnt].next = head[u];<span class="comment">//存储同一起点的上一条边的位置</span></span><br><span class="line">    head[u] = cnt++;<span class="comment">//给边赋予序号</span></span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=n; i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=head[i]; j！=<span class="number">-1</span>; j=edge[j].next){</span><br><span class="line">            ......</span><br><span class="line">        }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <tags>
+        <tag>graph</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C语言入门笔记（4）</title>
     <url>/2021/08/20/eight/</url>
     <content><![CDATA[<h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2><figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a [<span class="number">3</span>] [<span class="number">5</span>]</span><br></pre></td></tr></tbody></table></figure>
@@ -1380,15 +1396,6 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
 ]]></content>
   </entry>
   <entry>
-    <title>评论区开放！</title>
-    <url>/2021/08/15/fourth/</url>
-    <content><![CDATA[<h1 id="gitalk已启用"><a href="#gitalk已启用" class="headerlink" title="gitalk已启用"></a>gitalk已启用</h1><p>nexT支持gitalk,评论者只需有GitHub账号即可，账号可在github官网免费注册，注册真不麻烦，github是一个共享源码的网站，不会有安全隐患，欢迎注册/登录github留言！又白嫖了一次嘿嘿</p>
-]]></content>
-      <tags>
-        <tag>message</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C语言程序设计进阶（1）</title>
     <url>/2021/09/14/fourteenth/</url>
     <content><![CDATA[<h1 id="数组和字符串"><a href="#数组和字符串" class="headerlink" title="数组和字符串"></a>数组和字符串</h1><h2 id="指针的使用"><a href="#指针的使用" class="headerlink" title="指针的使用"></a>指针的使用</h2><span id="more"></span>
@@ -1434,6 +1441,15 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
 ]]></content>
       <tags>
         <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>评论区开放！</title>
+    <url>/2021/08/15/fourth/</url>
+    <content><![CDATA[<h1 id="gitalk已启用"><a href="#gitalk已启用" class="headerlink" title="gitalk已启用"></a>gitalk已启用</h1><p>nexT支持gitalk,评论者只需有GitHub账号即可，账号可在github官网免费注册，注册真不麻烦，github是一个共享源码的网站，不会有安全隐患，欢迎注册/登录github留言！又白嫖了一次嘿嘿</p>
+]]></content>
+      <tags>
+        <tag>message</tag>
       </tags>
   </entry>
   <entry>
@@ -1570,6 +1586,42 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
       </tags>
   </entry>
   <entry>
+    <title>zzuli OJ 1077：空心菱形及其延伸</title>
+    <url>/2021/09/24/sixteenth/</url>
+    <content><![CDATA[<h1 id="zzuli-OJ-1077：空心菱形"><a href="#zzuli-OJ-1077：空心菱形" class="headerlink" title="zzuli OJ 1077：空心菱形"></a><a href="http://acm.zzuli.edu.cn/problem.php?id=1077">zzuli OJ 1077：空心菱形</a></h1><span id="more"></span>
+<p>题目描述</p>
+<p>输入一个整数n，（1&lt;=n&lt;=20）,输出一个空心菱形，其中每个边由n个’*’组成</p>
+<p>输入：</p>
+<p>输入包含一个整数,n（1&lt;=n&lt;=20）</p>
+<p>输出：</p>
+<p>输出一个空心菱形，每个边由n个’*’组成</p>
+<p>样例输入</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">5</span></span><br></pre></td></tr></tbody></table></figure>
+<p>样例输出</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line">    *</span><br><span class="line">   * *</span><br><span class="line">  *   *</span><br><span class="line"> *     *</span><br><span class="line">*       *</span><br><span class="line"> *     *</span><br><span class="line">  *   *</span><br><span class="line">   * *</span><br><span class="line">    *</span><br></pre></td></tr></tbody></table></figure>
+<p>我的解法（题目没要求多组输入）：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)!=EOF){</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">2</span>*n<span class="number">-1</span>;i++){</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;<span class="number">2</span>*n<span class="number">-1</span>;j++){</span><br><span class="line">                <span class="keyword">if</span>(j-i==n<span class="number">-1</span>||i+j==n<span class="number">-1</span>||i-j==n<span class="number">-1</span>||i+j==<span class="number">3</span>*n<span class="number">-3</span>){</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">"*"</span>);</span><br><span class="line">                }<span class="keyword">else</span>{</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>首先我们会发现填*的i和j满足某种函数关系,如果输入为n,我们可用以下框架建立一个空白棋盘，然后我们只需要找到i和j在矩阵中的一种或多种关系，以及棋盘的大小范围，就能随心所欲，画出想要的图案</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)!=EOF){</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;行的范围;i++){</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;列的范围;j++){</span><br><span class="line">                <span class="keyword">if</span>(i和j在矩阵中的一种或多种关系){</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">"*"</span>);</span><br><span class="line">                }<span class="keyword">else</span>{</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="再举一个X形图案例子（牛客网bc68）"><a href="#再举一个X形图案例子（牛客网bc68）" class="headerlink" title="再举一个X形图案例子（牛客网bc68）"></a><a href="https://www.nowcoder.com/practice/83d6afe3018e44539c51265165806ee4?tpId=107&amp;&amp;tqId=33349&amp;rp=1&amp;ru=/ta/beginner-programmers&amp;qru=/ta/beginner-programmers/question-ranking">再举一个X形图案例子（牛客网bc68）</a></h2><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>KiKi学习了循环，BoBo老师给他出了一系列打印图案的练习，该任务是打印用“*”组成的X形图案。</p>
+<h3 id="输入描述："><a href="#输入描述：" class="headerlink" title="输入描述："></a>输入描述：</h3><p>多组输入，一个整数（2~20），表示输出的行数，也表示组成“X”的反斜线和正斜线的长度。</p>
+<h3 id="输出描述："><a href="#输出描述：" class="headerlink" title="输出描述："></a>输出描述：</h3><p>针对每行输入，输出用“*”组成的X形图案。</p>
+<h2 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h2><p>输入：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">5</span></span><br></pre></td></tr></tbody></table></figure>
+<p>输出：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line">*   *</span><br><span class="line"> * * </span><br><span class="line">  *  </span><br><span class="line"> * * </span><br><span class="line">*   *</span><br></pre></td></tr></tbody></table></figure>
+<p>可以用刚刚提到的框架写：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)!=EOF){</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++){</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n;j++){</span><br><span class="line">                <span class="keyword">if</span>(i==j||i+j==n<span class="number">-1</span>){</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">"*"</span>);</span><br><span class="line">                }<span class="keyword">else</span>{</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>你学废了吗，嘿嘿</p>
+<p>可能对你来说太简单了</p>
+<p>其实我们还可以用&lt; &gt;号来填充图形或镂空图形，总之，这不比嵌套的if语句简单？</p>
+<p>感谢大佬的光临让本站蓬荜生辉 : )</p>
+]]></content>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C语言入门笔记（3）</title>
     <url>/2021/08/18/seventh/</url>
     <content><![CDATA[<h2 id="多重循环"><a href="#多重循环" class="headerlink" title="多重循环"></a>多重循环</h2><p>goto的使用</p>
@@ -1606,42 +1658,6 @@ ans=n*k-\displaystyle\sum_{i=1}^n\lfloor\frac{k}{i}\rfloor*i</script><p>只要�
 <p>对于本地变量，它的生存期和作用域就是大括号（块）</p>
 <h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><p>本地变量定义在块内，可以是函数的块，也可以是语句的块内，也可以定义在语句的块内，甚至可以随便拉一对大括号来定义变量</p>
 <p>块外定义的变量在块内仍有效</p>
-]]></content>
-      <tags>
-        <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>zzuli OJ 1077：空心菱形及其延伸</title>
-    <url>/2021/09/24/sixteenth/</url>
-    <content><![CDATA[<h1 id="zzuli-OJ-1077：空心菱形"><a href="#zzuli-OJ-1077：空心菱形" class="headerlink" title="zzuli OJ 1077：空心菱形"></a><a href="http://acm.zzuli.edu.cn/problem.php?id=1077">zzuli OJ 1077：空心菱形</a></h1><span id="more"></span>
-<p>题目描述</p>
-<p>输入一个整数n，（1&lt;=n&lt;=20）,输出一个空心菱形，其中每个边由n个’*’组成</p>
-<p>输入：</p>
-<p>输入包含一个整数,n（1&lt;=n&lt;=20）</p>
-<p>输出：</p>
-<p>输出一个空心菱形，每个边由n个’*’组成</p>
-<p>样例输入</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">5</span></span><br></pre></td></tr></tbody></table></figure>
-<p>样例输出</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line">    *</span><br><span class="line">   * *</span><br><span class="line">  *   *</span><br><span class="line"> *     *</span><br><span class="line">*       *</span><br><span class="line"> *     *</span><br><span class="line">  *   *</span><br><span class="line">   * *</span><br><span class="line">    *</span><br></pre></td></tr></tbody></table></figure>
-<p>我的解法（题目没要求多组输入）：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)!=EOF){</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">2</span>*n<span class="number">-1</span>;i++){</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;<span class="number">2</span>*n<span class="number">-1</span>;j++){</span><br><span class="line">                <span class="keyword">if</span>(j-i==n<span class="number">-1</span>||i+j==n<span class="number">-1</span>||i-j==n<span class="number">-1</span>||i+j==<span class="number">3</span>*n<span class="number">-3</span>){</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">"*"</span>);</span><br><span class="line">                }<span class="keyword">else</span>{</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>首先我们会发现填*的i和j满足某种函数关系,如果输入为n,我们可用以下框架建立一个空白棋盘，然后我们只需要找到i和j在矩阵中的一种或多种关系，以及棋盘的大小范围，就能随心所欲，画出想要的图案</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)!=EOF){</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;行的范围;i++){</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;列的范围;j++){</span><br><span class="line">                <span class="keyword">if</span>(i和j在矩阵中的一种或多种关系){</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">"*"</span>);</span><br><span class="line">                }<span class="keyword">else</span>{</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="再举一个X形图案例子（牛客网bc68）"><a href="#再举一个X形图案例子（牛客网bc68）" class="headerlink" title="再举一个X形图案例子（牛客网bc68）"></a><a href="https://www.nowcoder.com/practice/83d6afe3018e44539c51265165806ee4?tpId=107&amp;&amp;tqId=33349&amp;rp=1&amp;ru=/ta/beginner-programmers&amp;qru=/ta/beginner-programmers/question-ranking">再举一个X形图案例子（牛客网bc68）</a></h2><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>KiKi学习了循环，BoBo老师给他出了一系列打印图案的练习，该任务是打印用“*”组成的X形图案。</p>
-<h3 id="输入描述："><a href="#输入描述：" class="headerlink" title="输入描述："></a>输入描述：</h3><p>多组输入，一个整数（2~20），表示输出的行数，也表示组成“X”的反斜线和正斜线的长度。</p>
-<h3 id="输出描述："><a href="#输出描述：" class="headerlink" title="输出描述："></a>输出描述：</h3><p>针对每行输入，输出用“*”组成的X形图案。</p>
-<h2 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h2><p>输入：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">5</span></span><br></pre></td></tr></tbody></table></figure>
-<p>输出：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line">*   *</span><br><span class="line"> * * </span><br><span class="line">  *  </span><br><span class="line"> * * </span><br><span class="line">*   *</span><br></pre></td></tr></tbody></table></figure>
-<p>可以用刚刚提到的框架写：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)!=EOF){</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++){</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n;j++){</span><br><span class="line">                <span class="keyword">if</span>(i==j||i+j==n<span class="number">-1</span>){</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">"*"</span>);</span><br><span class="line">                }<span class="keyword">else</span>{</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>你学废了吗，嘿嘿</p>
-<p>可能对你来说太简单了</p>
-<p>其实我们还可以用&lt; &gt;号来填充图形或镂空图形，总之，这不比嵌套的if语句简单？</p>
-<p>感谢大佬的光临让本站蓬荜生辉 : )</p>
 ]]></content>
       <tags>
         <tag>C</tag>
