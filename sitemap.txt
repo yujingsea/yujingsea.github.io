@@ -59,9 +59,9 @@ https://yujingsea.github.io/tags/index-1.html
 https://yujingsea.github.io/categories/index.html
 https://yujingsea.github.io/tags/index.html
 https://yujingsea.github.io/
-https://yujingsea.github.io/tags/Data-Structure/
 https://yujingsea.github.io/tags/algorithm/
 https://yujingsea.github.io/tags/theme/
+https://yujingsea.github.io/tags/Data-Structure/
 https://yujingsea.github.io/tags/memories/
 https://yujingsea.github.io/tags/contest/
 https://yujingsea.github.io/tags/C/
