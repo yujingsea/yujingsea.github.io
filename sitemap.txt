@@ -60,15 +60,15 @@ https://accat.top/tags/index-1.html
 https://accat.top/categories/index.html
 https://accat.top/tags/index.html
 https://accat.top/
-https://accat.top/tags/algorithm/
 https://accat.top/tags/Data-Structure/
+https://accat.top/tags/algorithm/
 https://accat.top/tags/theme/
 https://accat.top/tags/memories/
 https://accat.top/tags/contest/
 https://accat.top/tags/C/
 https://accat.top/tags/meaningless/
-https://accat.top/tags/life/
 https://accat.top/tags/problem/
+https://accat.top/tags/life/
 https://accat.top/tags/html5/
 https://accat.top/tags/game/
 https://accat.top/tags/graph/
