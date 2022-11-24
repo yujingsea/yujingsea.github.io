@@ -22,7 +22,7 @@ function daka($url, $jsonStr)
            'Content-Type:application/json',
            'Connection:keep-alive',
            'Host:h-api.jielong.co',
-           'Authorization:Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiLmrrXnkp_ojIIiLCJvcGVuSWQiOiJvb3JvRTVsanN0TlhDdFpfQkQ5SzlMRk52VGZrIiwiaXNzIjoiYXBpLmppZWxvbmcuY28iLCJhdWQiOiJjbGllbnQuamllbG9uZy5jbyIsImlhdCI6MTY2OTI0Njc5NiwiZXhwIjoxNjY5NTA1OTk2fQ.o9YH1w1akDYQqaI0Vo3e9pPnHiI_X--1DzOcixz34sc
+           'Authorization:Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiLmrrXnkp_ojIIiLCJvcGVuSWQiOiJvb3JvRTVsanN0TlhDdFpfQkQ5SzlMRk52VGZrIiwiaXNzIjoiYXBpLmppZWxvbmcuY28iLCJhdWQiOiJjbGllbnQuamllbG9uZy5jbyIsImlhdCI6MTY2OTI0Njc5NiwiZXhwIjoxNjY5NTA1OTk2fQ.o9YH1w1akDYQqaI0Vo3e9pPnHiI_X--1DzOcixz34sc',
        )
    );
    $response = curl_exec($ch);
