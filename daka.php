@@ -6,7 +6,7 @@
 */
 
 $url = "https://h-api.jielong.co/api/Thread/EditCheckInRecord";
-$jsonStr='{"Id":3438994942095,"OpenId":"67353AE35621D5AC996260ED713C7C54","Nickname":"段璟茂","IsMember":false,"Mobile":null,"Avatar":"https://obs.jielong.co/User/3438994942095.jpg?t=1669246700\u0026x-image-process=image/resize,m_lfit,h_430,w_430","ExperiencePoints":0,"TradePoints":0,"NoticeSetting":228,"FormInfo":{"IsFilled":true,"IsSaveed":true,"CommentAuthor":null,"Author":"段璟茂","Nickname":"段璟茂","Name":"段璟茂","FormUserName":"段璟茂","Gender":null,"Moblie":null,"GroupNickname":null,"Wechat":null,"Address":null,"IdCard":null,"Birthday":null,"Email":null,"School":null,"Colleges":null,"Class":null,"StudentNumber":null,"JobNumber":null,"Company":null,"Units":null,"Department":null,"Position":null,"ChildName":null},"IsBanned":false,"BanReason":null,"ViewCount":0,"IsFollowMP":false,"IsTemplateManage":false,"IsWechat":true,"VisitMiniType":3,"BindInfo":{"IsBind":true,"Nickname":"瑜璟","MiniType":0},"IsAuthor":false,"IsFilled":true,"IsSaveed":true,"City":"410100"},"Description":""}'; 
+$jsonStr='{"Id":3438994942095,"OpenId":"67353AE35621D5AC996260ED713C7C54","Nickname":"段璟茂","IsMember":false}'
 
 function daka($url, $jsonStr)
 {
